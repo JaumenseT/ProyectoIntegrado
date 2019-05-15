@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
+using System.Collections;
 using Dapper;
+using RedBeetle.Clases;
 
 /****
  * 
@@ -20,12 +20,12 @@ using Dapper;
 namespace RedBeetle
 {
 	//En esta clase pondremos TODAS los metodos que usen MySQL, para asi hacer mejor distribución de las clases que tendremos, y también para separar
-	//el Front-End y el Back-End y también para poder usar Dapper.
+	//el Front-End y el Back-End y también para poder usar Dapper
 	public class AccesoDatos
 	{
-		/*public static void AgregarEmpleado(Empleado emp) //EJEMPLO DE FUNCION USANDO DAPPER
+		public static void AgregarEmpleado(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
 		{
-			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+			var dbCon=DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
 			if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
 			{
 				//using va a crear una conexion y luego la va a destruir, de esta forma nos ahorramos futuros problemas de conexiones ya abiertas, 
@@ -33,11 +33,31 @@ namespace RedBeetle
 				using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
 				{
 					//Insertamos en la tabla de empleado el nif nombreapellido y clave
-					conexion.Execute($"INSERT INTO empleados VALUES ('{emp.Nif}', '{ emp.Nombre }', '{ emp.Apellido }', '{ emp.Admin }', '{ emp.Clave }');");
+					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.NombreUsuario}', '{ usu.Nombre }', '{ usu.Contrasenya }', '{ usu.Correo }');");
 				}
 			}
-		}*/
+		}
+
+        public static bool ComprobarUsuario(string nombreUsuario, string contrasenya) //EJEMPLO DE FUNCION USANDO DAPPER
+        {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
+            {
+                //using va a crear una conexion y luego la va a destruir, de esta forma nos ahorramos futuros problemas de conexiones ya abiertas, 
+                //y a parte, debido a que Dapper se ha creado especificamente para consultas SQL, nos ahorraremos MUCHO codigo.
+                using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
+                {
+                    //Insertamos en la tabla de empleado el nif nombreapellido y clave
+                    var output = conexion.Query<Usuario>($"SELECT nombre_usuario, contraseña FROM usuario WHERE nombre_usuario = '{ nombreUsuario}' AND contraseña= '{contrasenya}'").ToList();
+                    if (output.Count != 0) {
+                        return true;
+                    }
+                }
+                
+            }
+            return false;
+        }
 
 
-	}
+    }
 }

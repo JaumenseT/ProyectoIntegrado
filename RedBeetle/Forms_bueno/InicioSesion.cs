@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RedBeetle.Clases;
+using RedBeetle.Forms;
 
 namespace RedBeetle
 {
@@ -28,7 +30,22 @@ namespace RedBeetle
 			formRegistro.Show();
 			Hide();
 		}
-	}
+
+        public void Join() {
+            if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text)) {
+                MessageBox.Show("Datos incorrectos!");
+            } else {
+                MessageBox.Show("Usuario y contraseña correctos!");
+                Home r1 = new Home();
+                r1.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e) {
+            Join();
+        }
+    }
 }
 
 
