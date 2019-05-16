@@ -1,6 +1,6 @@
-﻿namespace RedBeetle.Forms
+﻿namespace RedBeetle.Forms_bueno
 {
-    partial class Home
+    partial class Cambiar_Contraseña
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.dgvListaSeguidos = new System.Windows.Forms.DataGridView();
-            this.Personas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picLogoBeetle = new System.Windows.Forms.PictureBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.ptbFavorito1 = new System.Windows.Forms.PictureBox();
-            this.ptbFavorito2 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cambiar_Contraseña));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,21 +42,15 @@
             this.ptbPerfil = new System.Windows.Forms.PictureBox();
             this.ptbInicio = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblEditarPerf = new System.Windows.Forms.Label();
+            this.lblCambiarContra = new System.Windows.Forms.Label();
+            this.txtContraActu = new System.Windows.Forms.TextBox();
+            this.txtContraNuev = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContra = new System.Windows.Forms.TextBox();
+            this.btnGuardCamb = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.ptbImagenUsu = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorito1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorito2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,72 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagenUsu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvListaSeguidos
-            // 
-            this.dgvListaSeguidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListaSeguidos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvListaSeguidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaSeguidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Personas});
-            this.dgvListaSeguidos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvListaSeguidos.Location = new System.Drawing.Point(766, 207);
-            this.dgvListaSeguidos.MultiSelect = false;
-            this.dgvListaSeguidos.Name = "dgvListaSeguidos";
-            this.dgvListaSeguidos.ReadOnly = true;
-            this.dgvListaSeguidos.Size = new System.Drawing.Size(203, 267);
-            this.dgvListaSeguidos.TabIndex = 10;
-            // 
-            // Personas
-            // 
-            this.Personas.HeaderText = "Gente a la que sigues";
-            this.Personas.Name = "Personas";
-            this.Personas.ReadOnly = true;
-            // 
-            // picLogoBeetle
-            // 
-            this.picLogoBeetle.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoBeetle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogoBeetle.BackgroundImage")));
-            this.picLogoBeetle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picLogoBeetle.Location = new System.Drawing.Point(1, 554);
-            this.picLogoBeetle.Name = "picLogoBeetle";
-            this.picLogoBeetle.Size = new System.Drawing.Size(49, 44);
-            this.picLogoBeetle.TabIndex = 5;
-            this.picLogoBeetle.TabStop = false;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(1006, 110);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(18, 488);
-            this.vScrollBar1.TabIndex = 6;
-            // 
-            // ptbFavorito1
-            // 
-            this.ptbFavorito1.BackColor = System.Drawing.Color.Red;
-            this.ptbFavorito1.Location = new System.Drawing.Point(108, 207);
-            this.ptbFavorito1.Name = "ptbFavorito1";
-            this.ptbFavorito1.Size = new System.Drawing.Size(259, 267);
-            this.ptbFavorito1.TabIndex = 7;
-            this.ptbFavorito1.TabStop = false;
-            // 
-            // ptbFavorito2
-            // 
-            this.ptbFavorito2.BackColor = System.Drawing.Color.Red;
-            this.ptbFavorito2.Location = new System.Drawing.Point(433, 207);
-            this.ptbFavorito2.Name = "ptbFavorito2";
-            this.ptbFavorito2.Size = new System.Drawing.Size(259, 267);
-            this.ptbFavorito2.TabIndex = 8;
-            this.ptbFavorito2.TabStop = false;
             // 
             // panel2
             // 
@@ -157,15 +81,15 @@
             this.panel2.Controls.Add(this.ptbLike);
             this.panel2.Controls.Add(this.ptbPerfil);
             this.panel2.Controls.Add(this.ptbInicio);
-            this.panel2.Location = new System.Drawing.Point(-2, 0);
+            this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1026, 112);
-            this.panel2.TabIndex = 15;
+            this.panel2.TabIndex = 16;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(2, 112);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +137,7 @@
             this.lblCerrar.Size = new System.Drawing.Size(41, 49);
             this.lblCerrar.TabIndex = 11;
             this.lblCerrar.Text = "x";
-            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click_1);
+            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
             // 
             // ptbLupa
             // 
@@ -281,153 +205,120 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox5.Location = new System.Drawing.Point(-5, 597);
+            this.pictureBox5.Location = new System.Drawing.Point(124, 110);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1011, 2);
+            this.pictureBox5.Size = new System.Drawing.Size(1, 490);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
             // 
+            // lblEditarPerf
+            // 
+            this.lblEditarPerf.AutoSize = true;
+            this.lblEditarPerf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditarPerf.Location = new System.Drawing.Point(12, 192);
+            this.lblEditarPerf.Name = "lblEditarPerf";
+            this.lblEditarPerf.Size = new System.Drawing.Size(90, 18);
+            this.lblEditarPerf.TabIndex = 50;
+            this.lblEditarPerf.Text = "Editar Perfil";
+            // 
+            // lblCambiarContra
+            // 
+            this.lblCambiarContra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarContra.Location = new System.Drawing.Point(12, 266);
+            this.lblCambiarContra.Name = "lblCambiarContra";
+            this.lblCambiarContra.Size = new System.Drawing.Size(106, 49);
+            this.lblCambiarContra.TabIndex = 51;
+            this.lblCambiarContra.Text = "Cambiar Contraseña";
+            // 
+            // txtContraActu
+            // 
+            this.txtContraActu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraActu.Location = new System.Drawing.Point(396, 192);
+            this.txtContraActu.Name = "txtContraActu";
+            this.txtContraActu.Size = new System.Drawing.Size(321, 29);
+            this.txtContraActu.TabIndex = 52;
+            this.txtContraActu.Text = "Contraseña Actual";
+            // 
+            // txtContraNuev
+            // 
+            this.txtContraNuev.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraNuev.Location = new System.Drawing.Point(396, 266);
+            this.txtContraNuev.Name = "txtContraNuev";
+            this.txtContraNuev.Size = new System.Drawing.Size(321, 29);
+            this.txtContraNuev.TabIndex = 53;
+            this.txtContraNuev.Text = "Nueva Contraseña";
+            // 
+            // txtConfirmarContra
+            // 
+            this.txtConfirmarContra.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContra.Location = new System.Drawing.Point(396, 335);
+            this.txtConfirmarContra.Name = "txtConfirmarContra";
+            this.txtConfirmarContra.Size = new System.Drawing.Size(321, 29);
+            this.txtConfirmarContra.TabIndex = 54;
+            this.txtConfirmarContra.Text = "Confirmar Nueva Contraseña";
+            // 
+            // btnGuardCamb
+            // 
+            this.btnGuardCamb.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardCamb.Location = new System.Drawing.Point(470, 418);
+            this.btnGuardCamb.Name = "btnGuardCamb";
+            this.btnGuardCamb.Size = new System.Drawing.Size(178, 31);
+            this.btnGuardCamb.TabIndex = 55;
+            this.btnGuardCamb.Text = "Guardar Cambios";
+            this.btnGuardCamb.UseVisualStyleBackColor = true;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox6.Location = new System.Drawing.Point(-1, 112);
+            this.pictureBox6.Location = new System.Drawing.Point(1022, 109);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(2, 490);
+            this.pictureBox6.Size = new System.Drawing.Size(1, 490);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabIndex = 56;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox7.Location = new System.Drawing.Point(106, 207);
+            this.pictureBox7.Location = new System.Drawing.Point(1, 111);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(2, 267);
+            this.pictureBox7.Size = new System.Drawing.Size(1, 490);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 23;
+            this.pictureBox7.TabIndex = 57;
             this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox8.Location = new System.Drawing.Point(365, 207);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(2, 267);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 24;
-            this.pictureBox8.TabStop = false;
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox9.Location = new System.Drawing.Point(433, 207);
+            this.pictureBox9.Location = new System.Drawing.Point(2, 597);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(2, 267);
+            this.pictureBox9.Size = new System.Drawing.Size(1021, 2);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 25;
+            this.pictureBox9.TabIndex = 58;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox10.Location = new System.Drawing.Point(690, 207);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(2, 267);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 26;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox11.Location = new System.Drawing.Point(433, 205);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(259, 2);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 27;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox12.Location = new System.Drawing.Point(106, 207);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(259, 2);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 28;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox13.Location = new System.Drawing.Point(108, 472);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(259, 2);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 29;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox14.Location = new System.Drawing.Point(433, 472);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(259, 2);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 30;
-            this.pictureBox14.TabStop = false;
-            // 
-            // ptbImagenUsu
-            // 
-            this.ptbImagenUsu.Location = new System.Drawing.Point(766, 140);
-            this.ptbImagenUsu.Name = "ptbImagenUsu";
-            this.ptbImagenUsu.Size = new System.Drawing.Size(61, 61);
-            this.ptbImagenUsu.TabIndex = 31;
-            this.ptbImagenUsu.TabStop = false;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(833, 174);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(94, 27);
-            this.lblUsuario.TabIndex = 32;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // Home
+            // Cambiar_Contraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1024, 600);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.ptbImagenUsu);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.btnGuardCamb);
+            this.Controls.Add(this.txtConfirmarContra);
+            this.Controls.Add(this.txtContraNuev);
+            this.Controls.Add(this.txtContraActu);
+            this.Controls.Add(this.lblCambiarContra);
+            this.Controls.Add(this.lblEditarPerf);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.ptbFavorito2);
-            this.Controls.Add(this.ptbFavorito1);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.picLogoBeetle);
-            this.Controls.Add(this.dgvListaSeguidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
+            this.Name = "Cambiar_Contraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorito1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorito2)).EndInit();
+            this.Text = "Cambiar_Contraseña";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -442,27 +333,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagenUsu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvListaSeguidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Personas;
-        private System.Windows.Forms.PictureBox picLogoBeetle;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.PictureBox ptbFavorito1;
-        private System.Windows.Forms.PictureBox ptbFavorito2;
+
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblCerrar;
         private System.Windows.Forms.PictureBox ptbLupa;
         private System.Windows.Forms.TextBox txtBuscador;
@@ -470,21 +353,15 @@
         private System.Windows.Forms.PictureBox ptbLike;
         private System.Windows.Forms.PictureBox ptbPerfil;
         private System.Windows.Forms.PictureBox ptbInicio;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lblEditarPerf;
+        private System.Windows.Forms.Label lblCambiarContra;
+        private System.Windows.Forms.TextBox txtContraActu;
+        private System.Windows.Forms.TextBox txtContraNuev;
+        private System.Windows.Forms.TextBox txtConfirmarContra;
+        private System.Windows.Forms.Button btnGuardCamb;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox ptbImagenUsu;
-        private System.Windows.Forms.Label lblUsuario;
     }
 }
