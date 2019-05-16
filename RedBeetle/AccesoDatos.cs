@@ -23,7 +23,7 @@ namespace RedBeetle
 	//el Front-End y el Back-End y también para poder usar Dapper
 	public class AccesoDatos
 	{
-		public static void AgregarEmpleado(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
+		public static void AgregarUsuario(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
 		{
 			var dbCon=DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
 			if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
@@ -38,7 +38,7 @@ namespace RedBeetle
 			}
 		}
 
-        public static bool ComprobarUsuario(string nombreUsuario, string contrasenya) //EJEMPLO DE FUNCION USANDO DAPPER
+        public static bool ComprobarUsuario(string nombreUsuario, string contrasenya)
         {
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
             if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
@@ -47,7 +47,6 @@ namespace RedBeetle
                 //y a parte, debido a que Dapper se ha creado especificamente para consultas SQL, nos ahorraremos MUCHO codigo.
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
-                    //Insertamos en la tabla de empleado el nif nombreapellido y clave
                     var output = conexion.Query<Usuario>($"SELECT nombre_usuario, contraseña FROM usuario WHERE nombre_usuario = '{ nombreUsuario}' AND contraseña= '{contrasenya}'").ToList();
                     if (output.Count != 0) {
                         return true;

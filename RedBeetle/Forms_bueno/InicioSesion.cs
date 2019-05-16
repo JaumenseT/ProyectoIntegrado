@@ -26,9 +26,9 @@ namespace RedBeetle
 
 		private void llbRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			var formRegistro = new Registrarse();
+			Registrarse formRegistro = new Registrarse(this);
 			formRegistro.Show();
-			Hide();
+			this.Hide();
 		}
 
         public void Join() {
@@ -36,7 +36,7 @@ namespace RedBeetle
                 MessageBox.Show("Datos incorrectos!");
             } else {
                 MessageBox.Show("Usuario y contraseña correctos!");
-                Home r1 = new Home();
+                Home r1 = new Home(this);
                 r1.Show();
                 this.Hide();
             }
@@ -44,6 +44,12 @@ namespace RedBeetle
 
         private void btnEntrar_Click(object sender, EventArgs e) {
             Join();
+            txtNombreUsuario.Clear();
+            txtContrasenya.Clear();
+        }
+
+        public string ObtenerUsuario() {
+            return txtNombreUsuario.Text;
         }
     }
 }
