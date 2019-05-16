@@ -49,7 +49,7 @@
             this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLogo.Location = new System.Drawing.Point(556, 81);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(289, 266);
             this.picLogo.TabIndex = 9;
@@ -59,38 +59,42 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(556, 380);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(288, 34);
             this.txtUsuario.TabIndex = 10;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(556, 423);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(288, 34);
             this.txtNombre.TabIndex = 11;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             // 
             // txtContrasenya
             // 
             this.txtContrasenya.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasenya.Location = new System.Drawing.Point(556, 466);
-            this.txtContrasenya.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasenya.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasenya.Name = "txtContrasenya";
             this.txtContrasenya.Size = new System.Drawing.Size(288, 34);
             this.txtContrasenya.TabIndex = 12;
             this.txtContrasenya.UseSystemPasswordChar = true;
+            this.txtContrasenya.Enter += new System.EventHandler(this.txtContrasenya_Enter);
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(556, 510);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(288, 34);
             this.txtCorreo.TabIndex = 13;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
             // 
             // btnRegistrarse
             // 
@@ -99,7 +103,7 @@
             this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarse.Location = new System.Drawing.Point(556, 564);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(289, 48);
             this.btnRegistrarse.TabIndex = 15;
@@ -112,6 +116,7 @@
             this.llbRegistro.AutoSize = true;
             this.llbRegistro.BackColor = System.Drawing.Color.Transparent;
             this.llbRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbRegistro.LinkColor = System.Drawing.Color.Maroon;
             this.llbRegistro.Location = new System.Drawing.Point(1243, 705);
             this.llbRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.llbRegistro.Name = "llbRegistro";
@@ -119,6 +124,7 @@
             this.llbRegistro.TabIndex = 17;
             this.llbRegistro.TabStop = true;
             this.llbRegistro.Text = "Inicia sesión";
+            this.llbRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbRegistro_LinkClicked);
             // 
             // lblYaTienesCuenta
             // 
@@ -152,7 +158,7 @@
             this.picLogoBeetle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogoBeetle.BackgroundImage")));
             this.picLogoBeetle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLogoBeetle.Location = new System.Drawing.Point(16, 678);
-            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4);
             this.picLogoBeetle.Name = "picLogoBeetle";
             this.picLogoBeetle.Size = new System.Drawing.Size(55, 46);
             this.picLogoBeetle.TabIndex = 19;
@@ -175,8 +181,9 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.picLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registrarse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarse";
             this.Load += new System.EventHandler(this.Registrarse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
