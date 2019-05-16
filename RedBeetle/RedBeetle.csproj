@@ -82,7 +82,7 @@
     <Compile Include="Forms_bueno\Modificar_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms_bueno\Modificar_Usuario.designer.cs">
+    <Compile Include="Forms_bueno\Modificar_Usuario.Designer.cs">
       <DependentUpon>Modificar_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms_bueno\Registrarse.cs">
@@ -92,11 +92,11 @@
       <DependentUpon>Registrarse.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Imagen.cs" />
-    <Compile Include="Forms_bueno\Perfil.cs">
+    <Compile Include="Forms_bueno\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms_bueno\Perfil.Designer.cs">
-      <DependentUpon>Perfil.cs</DependentUpon>
+    <Compile Include="Forms_bueno\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,8 +113,8 @@
     <EmbeddedResource Include="Forms_bueno\Registrarse.resx">
       <DependentUpon>Registrarse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_bueno\Perfil.resx">
-      <DependentUpon>Perfil.cs</DependentUpon>
+    <EmbeddedResource Include="Forms_bueno\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -21,7 +21,8 @@ namespace RedBeetle.Forms
             InitializeComponent();
         }
 
-        private void lblCerrar_Click(object sender, EventArgs e)
+
+        private void lblCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
             caller.Show();
@@ -40,5 +41,7 @@ namespace RedBeetle.Forms
         public string ObtenerUsuario() {
             return lblUsuario.Text;
         }
+
+
     }
 }
