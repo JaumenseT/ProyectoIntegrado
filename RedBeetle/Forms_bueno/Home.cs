@@ -14,6 +14,7 @@ namespace RedBeetle.Forms
 {
     public partial class Home : Form
     {
+        ConexionBD conexionBD;
         InicioSesion caller;
         public Home(InicioSesion caller)
         {
@@ -29,7 +30,7 @@ namespace RedBeetle.Forms
         }
 
         private void Home_Load(object sender, EventArgs e) {
-            lblUsuario.Text = caller.ObtenerUsuario();
+            lblUsuario.Text = AccesoDatos.DevolverUsuario(conexionBD.Conexion, caller.).NombreUsuario;
         }
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
@@ -38,10 +39,10 @@ namespace RedBeetle.Forms
             p1.Show();
         }
 
-        public string ObtenerUsuario() {
-            return lblUsuario.Text;
+        private void ptbCamara_Click(object sender, EventArgs e) {
+            AgregarImagen agregar = new AgregarImagen(this);
+            this.Hide();
+            agregar.Show();
         }
-
-
     }
 }

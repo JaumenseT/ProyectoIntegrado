@@ -31,7 +31,7 @@ namespace RedBeetle
 			this.Hide();
 		}
 
-        public void Join() {
+        public void Login() {
             if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text)) {
                 MessageBox.Show("Datos incorrectos!");
             } else {
@@ -42,14 +42,38 @@ namespace RedBeetle
             }
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e) {
-            Join();
-            txtNombreUsuario.Clear();
-            txtContrasenya.Clear();
+        private bool ValidarInicioSesion() {
+            bool error = false;
+            string mensaje = "";
+
+            if (txtNombreUsuario.Text == "") {
+                error = true;
+                mensaje += "El nombre de usuario no puede estar vacío. \n";
+            }
+            if (txtContrasenya.Text == "") {
+                error = true;
+                mensaje += "La contraseña no puede estar vacía. \n";
+            }
+            if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text))
+            {
+                error = true;
+                mensaje += "El usuario no existe. \n";
+            }
+            MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return error;
         }
 
-        public string ObtenerUsuario() {
-            return txtNombreUsuario.Text;
+        private void btnEntrar_Click(object sender, EventArgs e) {
+            Login();
+            txtNombreUsuario.Clear();
+            txtContrasenya.Clear();
+            /*
+            if (ValidarInicioSesion()) {
+                var formInicio = new InicioSesion();
+                formInicio.Show();
+                Close();
+            }
+            */
         }
     }
 }

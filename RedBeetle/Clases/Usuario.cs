@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace RedBeetle.Clases {
     public class Usuario {
 
+        private int idUsuario;
         private string nombreUsuario;
 		private string nombre;
 		private string contrasenya;
@@ -14,6 +15,7 @@ namespace RedBeetle.Clases {
 		private string correo;
         private string paginaWeb;
 
+        public int IdUsuario { get { return idUsuario; } }
         public string NombreUsuario { get { return nombreUsuario; } }
         public string Nombre { get { return nombre; } }
         public string Contrasenya { get { return contrasenya; } }
@@ -29,6 +31,15 @@ namespace RedBeetle.Clases {
 			this.correo = correo;
 		}
 
+		public Usuario(int idUsuario, string nombreUsuario, string nombre, string contrasenya, string correo)
+		{
+            this.idUsuario = idUsuario;
+			this.nombreUsuario = nombreUsuario;
+			this.nombre = nombre;
+			this.contrasenya = contrasenya;
+			this.correo = correo;
+		}
+
 		public Usuario(string nombreUsuario, string nombre, string contrasenya, string biografia, string correo)
 		{
 			this.nombreUsuario = nombreUsuario;
@@ -38,8 +49,9 @@ namespace RedBeetle.Clases {
 			this.correo = correo;
 		}
 
-		public Usuario(string nombreUsuario, string nombre, string contrasenya, string biografia, string correo, string paginaWeb)
+		public Usuario(int idUsuario , string nombreUsuario, string nombre, string contrasenya, string biografia, string correo, string paginaWeb)
 		{
+			this.idUsuario = idUsuario;
 			this.nombreUsuario = nombreUsuario;
 			this.nombre = nombre;
 			this.contrasenya = contrasenya;

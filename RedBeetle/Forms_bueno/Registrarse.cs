@@ -66,12 +66,25 @@ namespace RedBeetle
 
 		private void btnRegistrarse_Click(object sender, EventArgs e)
 		{
+			var mensaje = "";
 			if (ValidarDatos())
 			{
 				//ValidarDatos automaticamente te muestra un message box por lo que aqui no hay que hacer nada.
 			}
 			else
 			{
+				if(AccesoDatos.BuscarNombreUsuario(txtUsuario.Text).Count > 0)
+				{
+					mensaje += "Ese nombre de usuario ya está en uso, por favor utilice otro. \n";
+				}
+				else if(AccesoDatos.BuscarCorreo(txtCorreo.Text).Count > 0)
+				{
+                    mensaje += "Este correo electrónico ya está registrado, por favor use otro.";
+				}
+				else if(mensaje != "")
+				{
+					MessageBox.Show(mensaje, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				}
 				Usuario usu = new Usuario(txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text);
 				AccesoDatos.AgregarUsuario(usu);
 				var formInicio = new InicioSesion();
@@ -81,7 +94,7 @@ namespace RedBeetle
 		}
 
         private void llbRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            this.Close();
+            Close();
             caller.Show();
         }
 

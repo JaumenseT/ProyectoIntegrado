@@ -66,7 +66,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="ConexionBD.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Forms_bueno\AgregarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_bueno\AgregarImagen.Designer.cs">
+      <DependentUpon>AgregarImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_bueno\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="Forms_bueno\AgregarImagen.resx">
+      <DependentUpon>AgregarImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_bueno\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
