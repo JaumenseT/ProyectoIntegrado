@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Forms;
 using RedBeetle.Clases;
+using RedBeetle.Forms_bueno;
 
 namespace RedBeetle.Forms_bueno
 {

@@ -26,8 +26,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCerrar = new System.Windows.Forms.Label();
-            this.ptbLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.ptbCamara = new System.Windows.Forms.PictureBox();
             this.ptbLike = new System.Windows.Forms.PictureBox();
             this.ptbPerfil = new System.Windows.Forms.PictureBox();
@@ -56,8 +54,9 @@
             this.lblContP = new System.Windows.Forms.Label();
             this.lblContSeguidores2 = new System.Windows.Forms.Label();
             this.lblContSeguidos2 = new System.Windows.Forms.Label();
+            this.ptbLupa = new System.Windows.Forms.PictureBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCamara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLike)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
@@ -73,14 +72,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.Controls.Add(this.lblCerrar);
             this.panel2.Controls.Add(this.ptbLupa);
             this.panel2.Controls.Add(this.txtBuscador);
+            this.panel2.Controls.Add(this.lblCerrar);
             this.panel2.Controls.Add(this.ptbCamara);
             this.panel2.Controls.Add(this.ptbLike);
             this.panel2.Controls.Add(this.ptbPerfil);
@@ -104,28 +104,6 @@
             this.lblCerrar.TabIndex = 11;
             this.lblCerrar.Text = "x";
             this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
-            // 
-            // ptbLupa
-            // 
-            this.ptbLupa.BackColor = System.Drawing.Color.White;
-            this.ptbLupa.Image = ((System.Drawing.Image)(resources.GetObject("ptbLupa.Image")));
-            this.ptbLupa.Location = new System.Drawing.Point(483, 85);
-            this.ptbLupa.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbLupa.Name = "ptbLupa";
-            this.ptbLupa.Size = new System.Drawing.Size(68, 55);
-            this.ptbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLupa.TabIndex = 5;
-            this.ptbLupa.TabStop = false;
-            // 
-            // txtBuscador
-            // 
-            this.txtBuscador.Location = new System.Drawing.Point(483, 85);
-            this.txtBuscador.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscador.Multiline = true;
-            this.txtBuscador.Name = "txtBuscador";
-            this.txtBuscador.Size = new System.Drawing.Size(357, 54);
-            this.txtBuscador.TabIndex = 4;
-            this.txtBuscador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ptbCamara
             // 
@@ -431,6 +409,28 @@
             this.lblContSeguidos2.TabIndex = 37;
             this.lblContSeguidos2.Text = "0";
             // 
+            // ptbLupa
+            // 
+            this.ptbLupa.BackColor = System.Drawing.Color.White;
+            this.ptbLupa.Image = ((System.Drawing.Image)(resources.GetObject("ptbLupa.Image")));
+            this.ptbLupa.Location = new System.Drawing.Point(482, 57);
+            this.ptbLupa.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbLupa.Name = "ptbLupa";
+            this.ptbLupa.Size = new System.Drawing.Size(63, 41);
+            this.ptbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLupa.TabIndex = 13;
+            this.ptbLupa.TabStop = false;
+            // 
+            // txtBuscador
+            // 
+            this.txtBuscador.Location = new System.Drawing.Point(482, 57);
+            this.txtBuscador.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscador.Multiline = true;
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(357, 40);
+            this.txtBuscador.TabIndex = 12;
+            this.txtBuscador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,7 +470,6 @@
             this.Load += new System.EventHandler(this.Usuario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCamara)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLike)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
@@ -486,6 +485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,8 +494,6 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCerrar;
-        private System.Windows.Forms.PictureBox ptbLupa;
-        private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.PictureBox ptbCamara;
         private System.Windows.Forms.PictureBox ptbLike;
         private System.Windows.Forms.PictureBox ptbPerfil;
@@ -524,5 +522,7 @@
         private System.Windows.Forms.Label lblContP;
         private System.Windows.Forms.Label lblContSeguidores2;
         private System.Windows.Forms.Label lblContSeguidos2;
+        private System.Windows.Forms.PictureBox ptbLupa;
+        private System.Windows.Forms.TextBox txtBuscador;
     }
 }

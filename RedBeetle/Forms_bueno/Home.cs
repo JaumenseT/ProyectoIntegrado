@@ -34,7 +34,7 @@ namespace RedBeetle.Forms
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
             this.Hide();
-            Forms_bueno.Perfil p1 = new Forms_bueno.Perfil(this);
+            Perfil p1 = new Perfil(this);
             p1.Show();
         }
 
