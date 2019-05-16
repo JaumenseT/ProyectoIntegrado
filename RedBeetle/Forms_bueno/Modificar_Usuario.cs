@@ -16,5 +16,11 @@ namespace RedBeetle.Forms_bueno
         {
             InitializeComponent();
         }
+        private void lblCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 }
