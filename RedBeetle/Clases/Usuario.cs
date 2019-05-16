@@ -52,7 +52,7 @@ namespace RedBeetle.Clases {
 		{
 		}
 
-        public bool ValidarUsuario(string nomUsu)
+      /*  public bool ValidarUsuario(string nomUsu)
 		{
 			var error = false;
 			if (nomUsu == "") error = true;
@@ -62,7 +62,7 @@ namespace RedBeetle.Clases {
 				if (elem != "(A-Z, 0-9)") error = true;
 			}
 		}
-
+        */
 
         private bool ValidarContraseña(string contraseña) {
             bool error = true;
