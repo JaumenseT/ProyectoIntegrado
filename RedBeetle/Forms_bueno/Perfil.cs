@@ -29,7 +29,7 @@ namespace RedBeetle.Forms_bueno
         }
 
         private void Usuario_Load(object sender, EventArgs e) {
-            txtNombre.Text = "";
+            txtNombre.Text = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario()).NombreUsuario;
         }
     }
 }

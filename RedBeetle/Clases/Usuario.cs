@@ -7,57 +7,57 @@ using System.Threading.Tasks;
 namespace RedBeetle.Clases {
     public class Usuario {
 
-        private int idUsuario;
-        private string nombreUsuario;
+        private int id_usuario;
+        private string nombre_usuario;
 		private string nombre;
-		private string contrasenya;
+		private string contraseña;
 		private string biografia;
 		private string correo;
-        private string paginaWeb;
+        private string pagina_web;
 
-        public int IdUsuario { get { return idUsuario; } }
-        public string NombreUsuario { get { return nombreUsuario; } }
+        public int IdUsuario { get { return id_usuario; } }
+        public string NombreUsuario { get { return nombre_usuario; } }
         public string Nombre { get { return nombre; } }
-        public string Contrasenya { get { return contrasenya; } }
+        public string Contraseña { get { return contraseña; } }
 		public string Biografia { get { return biografia; } }
 		public string Correo { get { return correo; } }
-		public string PaginaWeb {get { return paginaWeb; } }
+		public string PaginaWeb {get { return pagina_web; } }
 
 		public Usuario(string nombreUsuario, string nombre, string contrasenya, string correo)
 		{
-			this.nombreUsuario = nombreUsuario;
+			this.nombre_usuario = nombreUsuario;
 			this.nombre = nombre;
-			this.contrasenya = contrasenya;
+			this.contraseña = contrasenya;
 			this.correo = correo;
 		}
 
 		public Usuario(int idUsuario, string nombreUsuario, string nombre, string contrasenya, string correo)
 		{
-            this.idUsuario = idUsuario;
-			this.nombreUsuario = nombreUsuario;
+            this.id_usuario = idUsuario;
+			this.nombre_usuario = nombreUsuario;
 			this.nombre = nombre;
-			this.contrasenya = contrasenya;
+			this.contraseña = contrasenya;
 			this.correo = correo;
 		}
 
 		public Usuario(string nombreUsuario, string nombre, string contrasenya, string biografia, string correo)
 		{
-			this.nombreUsuario = nombreUsuario;
+			this.nombre_usuario = nombreUsuario;
 			this.nombre = nombre;
-			this.contrasenya = contrasenya;
+			this.contraseña = contrasenya;
 			this.biografia = biografia;
 			this.correo = correo;
 		}
 
 		public Usuario(int idUsuario , string nombreUsuario, string nombre, string contrasenya, string biografia, string correo, string paginaWeb)
 		{
-			this.idUsuario = idUsuario;
-			this.nombreUsuario = nombreUsuario;
+			this.id_usuario = idUsuario;
+			this.nombre_usuario = nombreUsuario;
 			this.nombre = nombre;
-			this.contrasenya = contrasenya;
+			this.contraseña = contrasenya;
 			this.biografia = biografia;
 			this.correo = correo;
-			this.paginaWeb = paginaWeb;
+			this.pagina_web = paginaWeb;
 		}
 
 		public Usuario()
@@ -81,7 +81,7 @@ namespace RedBeetle.Clases {
 
             if (contraseña == "") error = false;
             if (contraseña.Length < 5) error = false;
-            if (contraseña == nombreUsuario) error = false;
+            if (contraseña == nombre_usuario) error = false;
 
             return error;
         }

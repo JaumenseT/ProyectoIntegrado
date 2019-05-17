@@ -38,6 +38,9 @@
             this.ptbPerfil = new System.Windows.Forms.PictureBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInicio)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -222,12 +225,40 @@
             this.pbFoto.TabIndex = 18;
             this.pbFoto.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 32);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Descripción:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 20;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(65, 244);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(494, 189);
+            this.textBox2.TabIndex = 21;
+            // 
             // AgregarImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1344, 690);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.panel2);
@@ -247,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -266,5 +298,8 @@
         private System.Windows.Forms.PictureBox ptbPerfil;
         private System.Windows.Forms.Button btnSubirFoto;
         private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

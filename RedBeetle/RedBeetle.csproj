@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
-    <Compile Include="ConexionBD.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Forms_bueno\AgregarImagen.cs">
       <SubType>Form</SubType>

@@ -24,19 +24,20 @@ namespace RedBeetle
 	//el Front-End y el Back-End y también para poder usar Dapper
 	public class AccesoDatos
 	{
-		public static Usuario DevolverUsuario(MySqlConnection conexion, string nombreUsuario)
+		public static Usuario DevolverUsuario(string nombreUsuario)
 		{
-            Usuario usu = null;
-            string consulta = "SELECT * from empleados where nombre_usuario=@nombre_usuario";
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-            comando.Parameters.AddWithValue("@nombre_usuario", nombreUsuario);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.Read()) {
-                usu = new Usuario(reader.GetInt16(0), reader.GetString(1), reader.GetString(2),
-                        reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
-            }
-            reader.Close();
-            return usu;
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
+                using (IDbConnection conexion = dbCon.Conexion) {
+                    var output = conexion.Query<Usuario>($"SELECT * FROM usuario WHERE nombre_usuario = '{ nombreUsuario }';").ToList();
+                    if (output.Count != 0) {
+                        Usuario usu = output[0];
+                        return usu;
+
+                    } else return null;
+                    
+                }
+            } else return null;
         }
 
 		public static void AgregarUsuario(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
@@ -49,10 +50,24 @@ namespace RedBeetle
 				using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
 				{
 					//Insertamos en la tabla de empleado el nif nombreapellido y clave
-					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.NombreUsuario}', '{ usu.Nombre }', '{ usu.Contrasenya }', '{ usu.Correo }');");
+					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.NombreUsuario}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
 				}
 			}
 		}
+
+        public static void AgregarImagen(Imagen imagen) {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
+            {
+                //using va a crear una conexion y luego la va a destruir, de esta forma nos ahorramos futuros problemas de conexiones ya abiertas, 
+                //y a parte, debido a que Dapper se ha creado especificamente para consultas SQL, nos ahorraremos MUCHO codigo.
+                using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
+                {
+                    //Insertamos en la tabla de empleado el nif nombreapellido y clave
+                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, contraseña, correo) VALUES ('{imagen.Descripcion}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
+                }
+            }
+        }
 
 		public static List<Usuario> BuscarNombreUsuario(string usu) //Comprueba si existe un usuario con x nombre de usuario
 		{

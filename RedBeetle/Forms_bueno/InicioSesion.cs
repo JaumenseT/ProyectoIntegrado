@@ -14,10 +14,40 @@ namespace RedBeetle
 {
     public partial class InicioSesion : Form
     {
+		private static bool error = false;
+
         public InicioSesion()
         {
             InitializeComponent();
         }
+
+		private bool ValidarInicioSesion()
+		{
+			bool correcto = false;
+			string mensaje = "";
+
+			if (txtNombreUsuario.Text == "")
+			{
+				correcto = true;
+				mensaje += "El nombre de usuario no puede estar vacío. \n";
+			}
+			if (txtContrasenya.Text == "")
+			{
+				correcto = true;
+				mensaje += "La contraseña no puede estar vacía. \n";
+			}
+			/*if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text))
+			{
+				error = true;
+				mensaje += "El usuario no existe. \n";
+			}*/
+			if(mensaje != ""){
+
+				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
+			
+			return correcto;
+		}
 
 		private void lblCerrar_Click(object sender, EventArgs e)
 		{
@@ -42,39 +72,51 @@ namespace RedBeetle
             }
         }
 
-        private bool ValidarInicioSesion() {
-            bool error = false;
-            string mensaje = "";
+		public void Login2()
+		{
+			if (!ValidarInicioSesion())
+			{ //Si no hay ningun campo vacio
 
-            if (txtNombreUsuario.Text == "") {
-                error = true;
-                mensaje += "El nombre de usuario no puede estar vacío. \n";
-            }
-            if (txtContrasenya.Text == "") {
-                error = true;
-                mensaje += "La contraseña no puede estar vacía. \n";
-            }
-            if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text))
-            {
-                error = true;
-                mensaje += "El usuario no existe. \n";
-            }
-            MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return error;
-        }
+                Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text);
+
+				if (usu == null)
+				{
+					error = true;
+					MessageBox.Show("Este usuario no existe en la base de datos.");
+				}
+				else
+				{
+					if (usu.Contraseña != txtContrasenya.Text)
+					{
+						MessageBox.Show("La contraseña introducida es incorrecta.");
+						error = true;
+					}
+				}
+			}
+			else
+			{
+				error = true;
+			}
+		}
 
         private void btnEntrar_Click(object sender, EventArgs e) {
-            Login();
-            txtNombreUsuario.Clear();
-            txtContrasenya.Clear();
-            /*
-            if (ValidarInicioSesion()) {
-                var formInicio = new InicioSesion();
-                formInicio.Show();
-                Close();
-            }
-            */
+            Login2();
+			if (!error)
+			{
+				Home r1 = new Home(this);
+				r1.Show();
+				Hide();
+			}
+			else
+			{
+				error = false;
+			}
+		}
+        
+        public string ObtenerNombreUsuario() {
+            return txtNombreUsuario.Text;
         }
+
     }
 }
 

@@ -7,16 +7,17 @@ using System.Drawing;
 using RedBeetle.Clases;
 
 namespace RedBeetle.Clases {
-    class Imagen {
+    public class Imagen {
         private string descripcion;
-        //Image newImage = Image.FromFile(
-        private Usuario usuario = new Usuario();
-
+        Image newImage;
+        int id_usuario;
         public string Descripcion { get { return descripcion; } }
-        public Usuario Usuario { get { return usuario; } }
+        public int Usuario { get { return id_usuario; } }
 
-        public Imagen(Usuario usu) {
-            usuario = usu;
+        public Imagen(string descripcion, Image image, int id_usuario) {
+            this.descripcion = descripcion;
+            newImage = image;
+            this.id_usuario = id_usuario;
         }
 
         /*Subir imagen a sql convertida.

@@ -251,7 +251,7 @@
             // 
             this.ptbCamara.BackColor = System.Drawing.Color.Red;
             this.ptbCamara.Image = ((System.Drawing.Image)(resources.GetObject("ptbCamara.Image")));
-            this.ptbCamara.Location = new System.Drawing.Point(1175, 52);
+            this.ptbCamara.Location = new System.Drawing.Point(1176, 42);
             this.ptbCamara.Margin = new System.Windows.Forms.Padding(4);
             this.ptbCamara.Name = "ptbCamara";
             this.ptbCamara.Size = new System.Drawing.Size(89, 60);
@@ -264,19 +264,21 @@
             // 
             this.ptbLike.BackColor = System.Drawing.Color.Red;
             this.ptbLike.Image = ((System.Drawing.Image)(resources.GetObject("ptbLike.Image")));
-            this.ptbLike.Location = new System.Drawing.Point(965, 52);
+            this.ptbLike.Location = new System.Drawing.Point(966, 42);
             this.ptbLike.Margin = new System.Windows.Forms.Padding(4);
             this.ptbLike.Name = "ptbLike";
             this.ptbLike.Size = new System.Drawing.Size(88, 60);
             this.ptbLike.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLike.TabIndex = 2;
             this.ptbLike.TabStop = false;
+            this.ptbLike.Click += new System.EventHandler(this.ptbLike_Click);
             // 
             // ptbPerfil
             // 
             this.ptbPerfil.BackColor = System.Drawing.Color.Red;
+            this.ptbPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("ptbPerfil.Image")));
-            this.ptbPerfil.Location = new System.Drawing.Point(1076, 52);
+            this.ptbPerfil.Location = new System.Drawing.Point(1077, 42);
             this.ptbPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.ptbPerfil.Name = "ptbPerfil";
             this.ptbPerfil.Size = new System.Drawing.Size(88, 60);
@@ -418,6 +420,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(1121, 194);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -425,6 +428,7 @@
             this.lblUsuario.Size = new System.Drawing.Size(118, 35);
             this.lblUsuario.TabIndex = 32;
             this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // Home
             // 
