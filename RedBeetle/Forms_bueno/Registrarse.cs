@@ -54,7 +54,10 @@ namespace RedBeetle
 				error = true;
 				mensaje += "El campo \"Contraseña\" no puede estar vacio. \n";
 			}
-			MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			if(mensaje == "")
+			{
+				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
 			return error;
 		}
 
@@ -73,20 +76,23 @@ namespace RedBeetle
 			}
 			else
 			{
-				if(AccesoDatos.BuscarNombreUsuario(txtUsuario.Text).Count > 0)
+				var usu = AccesoDatos.DevolverUsuario(txtUsuario.Text);
+
+				if(usu != null)
 				{
 					mensaje += "Ese nombre de usuario ya está en uso, por favor utilice otro. \n";
 				}
-				else if(AccesoDatos.BuscarCorreo(txtCorreo.Text).Count > 0)
+				if(usu.Correo == txtCorreo.Text)
 				{
                     mensaje += "Este correo electrónico ya está registrado, por favor use otro.";
 				}
-				else if(mensaje != "")
+				if(mensaje != "")
 				{
 					MessageBox.Show(mensaje, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
-				Usuario usu = new Usuario(txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text);
-				AccesoDatos.AgregarUsuario(usu);
+				var usuario = new Usuario(txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text);
+
+				AccesoDatos.AgregarUsuario(usuario);
 				var formInicio = new InicioSesion();
 				formInicio.Show();
 				Close();

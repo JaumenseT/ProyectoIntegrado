@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Forms;
 using RedBeetle.Forms_bueno;
+using RedBeetle.Clases;
 
 namespace RedBeetle.Forms_bueno {
     public partial class AgregarImagen : Form {
@@ -32,6 +33,7 @@ namespace RedBeetle.Forms_bueno {
                 string picPath = dialog.FileName.ToString();
                 pbFoto.ImageLocation = picPath;
             }
+            Imagen newImage = new Imagen(txtDescripcion.Text, )
         }
     }
 }

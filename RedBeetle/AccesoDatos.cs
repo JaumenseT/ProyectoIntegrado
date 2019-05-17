@@ -55,6 +55,27 @@ namespace RedBeetle
 			}
 		}
 
+		public static void EliminarUsuario(string nomUsu, string pass) //Si el usuario quiere borrar su perfil, le pediremos la pass
+		{
+			var dbCon = DBConnection.Instancia();
+			if(dbCon.Conectado())
+			{
+				using (IDbConnection conexion = dbCon.Conexion)
+				{
+					conexion.Execute($"DELETE FROM usuarios WHERE nombre_usuario = '{ nomUsu }' AND contraseña = '{ pass }';");
+				}
+			}
+		}
+
+        public static void ModificarUsuario(string nomUsu, string nombre, string bio, string pagWeb, int id) {
+            var dbCon = DBConnection.Instancia();
+            if (dbCon.Conectado()) {
+                using (IDbConnection conexion = dbCon.Conexion) { //Modificamos todos los campos, para ello, los textbox correspondientes deben autorrellenarse, y solo se modificarán en los que el usuario realize cambios.
+                    conexion.Execute($"UPDATE usuario set nombre_usuario = '{ nomUsu }', nombre = '{ nombre }', biografia = '{ bio }', pagina_web = '{ pagWeb }' WHERE id_usuario = '{ id }'");
+                }
+            }
+        }
+
         public static void AgregarImagen(Imagen imagen) {
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
             if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
@@ -64,11 +85,11 @@ namespace RedBeetle
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
                     //Insertamos en la tabla de empleado el nif nombreapellido y clave
-                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, contraseña, correo) VALUES ('{imagen.Descripcion}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
+                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, id_usuario) VALUES ('{imagen.Descripcion}', '{ imagen.NewImage }', '{ imagen.IdUsuario }');");
                 }
             }
         }
-
+/*
 		public static List<Usuario> BuscarNombreUsuario(string usu) //Comprueba si existe un usuario con x nombre de usuario
 		{
 			var dbCon = DBConnection.Instancia();
@@ -95,7 +116,7 @@ namespace RedBeetle
 				}
 			}
 			else return null;
-		}
+		}*/
 
         public static bool ComprobarUsuario(string nombreUsuario, string contrasenya)
         {
@@ -111,11 +132,10 @@ namespace RedBeetle
                         return true;
                     }
                 }
-                
             }
             return false;
         }
 
-
+		
     }
 }

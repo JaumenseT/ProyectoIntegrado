@@ -9,10 +9,11 @@ using RedBeetle.Clases;
 namespace RedBeetle.Clases {
     public class Imagen {
         private string descripcion;
-        Image newImage;
+        Image newImage = null;
         int id_usuario;
         public string Descripcion { get { return descripcion; } }
-        public int Usuario { get { return id_usuario; } }
+        public int IdUsuario { get { return id_usuario; } }
+        public Image NewImage { get { return newImage; } }
 
         public Imagen(string descripcion, Image image, int id_usuario) {
             this.descripcion = descripcion;
