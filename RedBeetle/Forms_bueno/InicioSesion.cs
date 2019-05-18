@@ -117,7 +117,11 @@ namespace RedBeetle
             return txtNombreUsuario.Text;
         }
 
-    }
+		private void InicioSesion_Load(object sender, EventArgs e)
+		{
+			ActiveControl = picLogo;
+		}
+	}
 }
 
 

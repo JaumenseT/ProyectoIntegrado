@@ -67,6 +67,9 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="ExTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms_bueno\AgregarImagen.cs">
       <SubType>Form</SubType>
     </Compile>

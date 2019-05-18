@@ -23,10 +23,7 @@ namespace RedBeetle
 		}
 
         private void Registrarse_Load(object sender, EventArgs e) {
-            txtUsuario.Text = "Nombre de Usuario";
-            txtNombre.Text = "Nombre";
-            txtContrasenya.Text = "Contraseña";
-            txtCorreo.Text = "Correo";
+			ActiveControl = picLogo;
         }
 
 		private bool ValidarDatos()
