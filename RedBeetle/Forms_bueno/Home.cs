@@ -28,11 +28,12 @@ namespace RedBeetle.Forms
             caller.Show();
         }
 
-        private void Home_Load(object sender, EventArgs e) {
-
+		private void Home_Load(object sender, EventArgs e) {
             var usu = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario());
 			lblUsuario.Text = usu.Nombre_usuario;
-        }
+
+			foreach(string elem in )
+		}
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
             this.Hide();

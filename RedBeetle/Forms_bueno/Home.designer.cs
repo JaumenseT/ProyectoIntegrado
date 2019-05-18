@@ -228,6 +228,7 @@
 			// 
 			// txtBuscar
 			// 
+			this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
 			this.txtBuscar.Location = new System.Drawing.Point(380, 42);
 			this.txtBuscar.Multiline = true;
 			this.txtBuscar.Name = "txtBuscar";
