@@ -31,7 +31,7 @@ namespace RedBeetle.Forms
         private void Home_Load(object sender, EventArgs e) {
 
             var usu = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario());
-			lblUsuario.Text = usu.NombreUsuario;
+			lblUsuario.Text = usu.Nombre_usuario;
         }
 
         private void ptbPerfil_Click(object sender, EventArgs e) {

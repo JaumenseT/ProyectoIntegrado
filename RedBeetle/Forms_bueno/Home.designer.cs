@@ -42,7 +42,7 @@
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.lblCerrar = new System.Windows.Forms.Label();
 			this.ptbLupa = new System.Windows.Forms.PictureBox();
-			this.txtBuscador = new System.Windows.Forms.TextBox();
+			this.txtBuscar = new System.Windows.Forms.TextBox();
 			this.ptbCamara = new System.Windows.Forms.PictureBox();
 			this.ptbLike = new System.Windows.Forms.PictureBox();
 			this.ptbPerfil = new System.Windows.Forms.PictureBox();
@@ -145,14 +145,14 @@
 			// 
 			// panel2
 			// 
-			this.panel2.BackColor = System.Drawing.Color.Red;
+			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
 			this.panel2.Controls.Add(this.pictureBox4);
 			this.panel2.Controls.Add(this.pictureBox3);
 			this.panel2.Controls.Add(this.pictureBox1);
 			this.panel2.Controls.Add(this.pictureBox2);
 			this.panel2.Controls.Add(this.lblCerrar);
 			this.panel2.Controls.Add(this.ptbLupa);
-			this.panel2.Controls.Add(this.txtBuscador);
+			this.panel2.Controls.Add(this.txtBuscar);
 			this.panel2.Controls.Add(this.ptbCamara);
 			this.panel2.Controls.Add(this.ptbLike);
 			this.panel2.Controls.Add(this.ptbPerfil);
@@ -226,14 +226,14 @@
 			this.ptbLupa.TabIndex = 5;
 			this.ptbLupa.TabStop = false;
 			// 
-			// txtBuscador
+			// txtBuscar
 			// 
-			this.txtBuscador.Location = new System.Drawing.Point(380, 42);
-			this.txtBuscador.Multiline = true;
-			this.txtBuscador.Name = "txtBuscador";
-			this.txtBuscador.Size = new System.Drawing.Size(269, 33);
-			this.txtBuscador.TabIndex = 4;
-			this.txtBuscador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtBuscar.Location = new System.Drawing.Point(380, 42);
+			this.txtBuscar.Multiline = true;
+			this.txtBuscar.Name = "txtBuscar";
+			this.txtBuscar.Size = new System.Drawing.Size(269, 33);
+			this.txtBuscar.TabIndex = 4;
+			this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// ptbCamara
 			// 
@@ -472,7 +472,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCerrar;
         private System.Windows.Forms.PictureBox ptbLupa;
-        private System.Windows.Forms.TextBox txtBuscador;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox ptbCamara;
         private System.Windows.Forms.PictureBox ptbLike;
         private System.Windows.Forms.PictureBox ptbPerfil;

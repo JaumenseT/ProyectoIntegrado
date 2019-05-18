@@ -50,7 +50,7 @@ namespace RedBeetle
 				using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
 				{
 					//Insertamos en la tabla de empleado el nif nombreapellido y clave
-					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.NombreUsuario}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
+					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.Nombre_usuario}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
 				}
 			}
 		}
