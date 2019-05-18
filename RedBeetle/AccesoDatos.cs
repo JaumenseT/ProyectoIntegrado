@@ -50,7 +50,7 @@ namespace RedBeetle
 				using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
 				{
 					//Insertamos en la tabla de empleado el nif nombreapellido y clave
-					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.Nombre_usuario}', '{ usu.Nombre }', '{ usu.Contraseña }', '{ usu.Correo }');");
+					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.Nombre_usuario}', '{ usu.Nombre }', '{ usu.Contrasenya }', '{ usu.Correo }');");
 				}
 			}
 		}
@@ -127,7 +127,7 @@ namespace RedBeetle
                 //y a parte, debido a que Dapper se ha creado especificamente para consultas SQL, nos ahorraremos MUCHO codigo.
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
-                    var output = conexion.Query<Usuario>($"SELECT nombre_usuario, contraseña FROM usuario WHERE nombre_usuario = '{ nombreUsuario}' AND contraseña= '{contrasenya}'").ToList();
+                    var output = conexion.Query<Usuario>($"SELECT nombre_usuario, contrasenya FROM usuario WHERE nombre_usuario = '{ nombreUsuario}' AND contrasenya= '{contrasenya}'").ToList();
                     if (output.Count != 0) {
                         return true;
                     }

@@ -86,7 +86,7 @@ namespace RedBeetle
 				}
 				else
 				{
-					if (usu.Contraseña != txtContrasenya.Text)
+					if (usu.Contrasenya != txtContrasenya.Text)
 					{
 						MessageBox.Show("La contraseña introducida es incorrecta.");
 						error = true;
