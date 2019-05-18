@@ -9,7 +9,7 @@ namespace RedBeetle.Clases {
 		public int Id_Usuario { get; }
 		public string Nombre_usuario { get; }
 		public string Nombre { get; set; }
-		public string Contraseña { get; set; }
+		public string Contrasenya { get; set; }
 		public string Biografia { get; }
 		public string Correo { get; }
 		public string Pagina_web { get; }
@@ -19,7 +19,7 @@ namespace RedBeetle.Clases {
 		{
 			Nombre_usuario = nombreUsuario;
 			Nombre = nombre;
-			Contraseña = contraseña;
+			Contrasenya = contraseña;
 			Correo = correo;
 		}
 
@@ -28,7 +28,7 @@ namespace RedBeetle.Clases {
 			Id_Usuario = idUsuario;
 			Nombre_usuario = nombreUsuario;
 			Nombre = nombre;
-			Contraseña = contraseña;
+			Contrasenya = contraseña;
 			Biografia = biografia;
 			Correo = correo;
 			Pagina_web = paginaWeb;
