@@ -214,7 +214,7 @@
             this.btnSeleccionar.TabIndex = 17;
             this.btnSeleccionar.Text = "Seleccionar Foto";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSubirFoto_Click);
+//            this.btnSeleccionar.Click += new System.EventHandler(this.btnSubirFoto_Click);
             // 
             // pbFoto
             // 
