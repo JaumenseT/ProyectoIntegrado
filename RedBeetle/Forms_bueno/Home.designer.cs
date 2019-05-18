@@ -229,10 +229,10 @@
 			// txtBuscar
 			// 
 			this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.txtBuscar.Location = new System.Drawing.Point(380, 42);
-			this.txtBuscar.Multiline = true;
+			this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			this.txtBuscar.Location = new System.Drawing.Point(435, 55);
 			this.txtBuscar.Name = "txtBuscar";
-			this.txtBuscar.Size = new System.Drawing.Size(269, 33);
+			this.txtBuscar.Size = new System.Drawing.Size(269, 20);
 			this.txtBuscar.TabIndex = 4;
 			this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 

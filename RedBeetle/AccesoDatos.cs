@@ -40,6 +40,30 @@ namespace RedBeetle
             } else return null;
         }
 
+		public static List<string> DevolverNombres()
+		{
+			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+			if (dbCon.Conectado())
+			{ //Abrimos la conexión con la base de datos 
+				using (IDbConnection conexion = dbCon.Conexion)
+				{
+					var output = conexion.Query($"SELECT nombre FROM usuario;").ToList();
+
+					var lista = new List<string>();
+
+					foreach (IDictionary<string, object> row in output) //Convierte el objeto Usuario a string para luego a;adirlo a una lista de strings.
+					{
+						foreach (var pair in row)
+						{
+							lista.Add(pair.Value.ToString());
+						}
+					}
+					return lista;
+				}
+			}
+			else return null;
+		}
+
 		public static void AgregarUsuario(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.

@@ -32,7 +32,14 @@ namespace RedBeetle.Forms
             var usu = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario());
 			lblUsuario.Text = usu.Nombre_usuario;
 
-			foreach(string elem in )
+			var nombres = AccesoDatos.DevolverNombres();
+			var lista = new AutoCompleteStringCollection();
+
+			foreach(string elem in nombres)
+			{
+				lista.Add(elem);
+			}
+			txtBuscar.AutoCompleteCustomSource = lista;
 		}
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
