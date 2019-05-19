@@ -24,6 +24,11 @@ namespace RedBeetle
 	//el Front-End y el Back-End y también para poder usar Dapper
 	public class AccesoDatos
 	{
+		/// <summary>
+		/// Metodo que devolvera un usuario entero segun el nombre de usuario suministrado
+		/// </summary>
+		/// <param name="nombreUsuario"></param>
+		/// <returns></returns>
 		public static Usuario DevolverUsuario(string nombreUsuario)
 		{
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
@@ -41,10 +46,30 @@ namespace RedBeetle
         }
 
 		/// <summary>
-		/// Metodo que devuelve una lista de strings con los nombres de usuario de la base de datos de todos los usarios
+		/// Metodo que comprueba si existe un correo
+		/// </summary>
+		/// <param name="correo"></param>
+		/// <returns></returns>
+		public static bool ExisteCorreo(string correo)
+		{
+			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+			if (dbCon.Conectado())
+			{ //Abrimos la conexión con la base de datos 
+				using (IDbConnection conexion = dbCon.Conexion)
+				{
+					var output = conexion.Query<string>($"SELECT correo FROM usuario WHERE correo = '{ correo }';").ToList();
+					if (output.Count == 0) return false;
+					else return true;
+				}
+			}
+			else return false;
+		}
+
+		/// <summary>
+		/// Metodo que devuelve una lista de strings con TODOS los nombres de usuario de la base de datos de todos los usarios
 		/// </summary>
 		/// <returns></returns>
-		public static List<string> DevolverNombreUsuario()
+		public static List<string> DevolverNombresUsuario()
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
 			if (dbCon.Conectado())
@@ -68,7 +93,7 @@ namespace RedBeetle
 				using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
 				{
 					//Insertamos en la tabla de empleado el nif nombreapellido y clave
-					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contraseña, correo) VALUES ('{usu.Nombre_usuario}', '{ usu.Nombre }', '{ usu.Contrasenya }', '{ usu.Correo }');");
+					conexion.Execute($"INSERT INTO usuario (nombre_usuario, nombre, contrasenya, correo) VALUES ('{usu.Nombre_usuario}', '{ usu.Nombre }', '{ usu.Contrasenya }', '{ usu.Correo }');");
 				}
 			}
 		}
@@ -80,7 +105,7 @@ namespace RedBeetle
 			{
 				using (IDbConnection conexion = dbCon.Conexion)
 				{
-					conexion.Execute($"DELETE FROM usuarios WHERE nombre_usuario = '{ nomUsu }' AND contraseña = '{ pass }';");
+					conexion.Execute($"DELETE FROM usuarios WHERE nombre_usuario = '{ nomUsu }' AND contrasenya = '{ pass }';");
 				}
 			}
 		}
@@ -136,6 +161,7 @@ namespace RedBeetle
 			else return null;
 		}*/
 
+			/*
         public static bool ComprobarUsuario(string nombreUsuario, string contrasenya)
         {
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
@@ -154,6 +180,6 @@ namespace RedBeetle
             return false;
         }
 
-		
+		*/
     }
 }

@@ -129,6 +129,7 @@
 			// 
 			this.lblCerrar.AutoSize = true;
 			this.lblCerrar.BackColor = System.Drawing.Color.Transparent;
+			this.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.lblCerrar.Font = new System.Drawing.Font("Century Gothic", 30F);
 			this.lblCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
 			this.lblCerrar.Location = new System.Drawing.Point(984, -5);
@@ -293,6 +294,7 @@
 			this.txtCorreo.Name = "txtCorreo";
 			this.txtCorreo.Size = new System.Drawing.Size(217, 29);
 			this.txtCorreo.TabIndex = 13;
+			this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// txtContrasenya
 			// 
@@ -304,6 +306,7 @@
 			this.txtContrasenya.Size = new System.Drawing.Size(217, 29);
 			this.txtContrasenya.TabIndex = 12;
 			this.txtContrasenya.UseSystemPasswordChar = true;
+			this.txtContrasenya.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// txtNombre
 			// 
@@ -313,6 +316,7 @@
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(217, 29);
 			this.txtNombre.TabIndex = 11;
+			this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// txtUsuario
 			// 
@@ -322,6 +326,7 @@
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(217, 29);
 			this.txtUsuario.TabIndex = 10;
+			this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// Registrarse
 			// 
