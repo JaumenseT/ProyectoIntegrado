@@ -24,8 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
-			this.txtNombreUsuario = new RedBeetle.ExTextBox();
-			this.txtContrasenya = new RedBeetle.ExTextBox();
 			this.btnEntrar = new System.Windows.Forms.Button();
 			this.picLogoBeetle = new System.Windows.Forms.PictureBox();
 			this.lblNoTienesCuenta = new System.Windows.Forms.Label();
@@ -42,6 +40,8 @@
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.txtContrasenya = new RedBeetle.ExTextBox();
+			this.txtNombreUsuario = new RedBeetle.ExTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -54,30 +54,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// txtNombreUsuario
-			// 
-			this.txtNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtNombreUsuario.Hint = "Nombre de usuario";
-			this.txtNombreUsuario.Location = new System.Drawing.Point(417, 328);
-			this.txtNombreUsuario.Name = "txtNombreUsuario";
-			this.txtNombreUsuario.Size = new System.Drawing.Size(217, 29);
-			this.txtNombreUsuario.TabIndex = 1;
-			this.txtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
-			// 
-			// txtContrasenya
-			// 
-			this.txtContrasenya.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtContrasenya.Hint = "Contraseña";
-			this.txtContrasenya.Location = new System.Drawing.Point(417, 391);
-			this.txtContrasenya.Name = "txtContrasenya";
-			this.txtContrasenya.Size = new System.Drawing.Size(217, 29);
-			this.txtContrasenya.TabIndex = 2;
-			this.txtContrasenya.UseSystemPasswordChar = true;
-			this.txtContrasenya.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
-			// 
 			// btnEntrar
 			// 
-			this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEntrar.ForeColor = System.Drawing.Color.White;
@@ -168,10 +147,12 @@
 			this.lblCerrar.TabIndex = 10;
 			this.lblCerrar.Text = "x";
 			this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
+			this.lblCerrar.MouseEnter += new System.EventHandler(this.LblCerrar_MouseEnter);
+			this.lblCerrar.MouseLeave += new System.EventHandler(this.LblCerrar_MouseLeave);
 			// 
 			// pictureBox13
 			// 
-			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox13.Location = new System.Drawing.Point(415, 356);
 			this.pictureBox13.Name = "pictureBox13";
 			this.pictureBox13.Size = new System.Drawing.Size(223, 5);
@@ -188,7 +169,7 @@
 			// 
 			// pictureBox8
 			// 
-			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox8.Location = new System.Drawing.Point(415, 326);
 			this.pictureBox8.Name = "pictureBox8";
 			this.pictureBox8.Size = new System.Drawing.Size(3, 35);
@@ -205,7 +186,7 @@
 			// 
 			// pictureBox2
 			// 
-			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox2.Location = new System.Drawing.Point(415, 419);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(223, 5);
@@ -222,7 +203,7 @@
 			// 
 			// pictureBox4
 			// 
-			this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox4.Location = new System.Drawing.Point(415, 389);
 			this.pictureBox4.Name = "pictureBox4";
 			this.pictureBox4.Size = new System.Drawing.Size(3, 35);
@@ -236,6 +217,27 @@
 			this.pictureBox5.Size = new System.Drawing.Size(8, 39);
 			this.pictureBox5.TabIndex = 38;
 			this.pictureBox5.TabStop = false;
+			// 
+			// txtContrasenya
+			// 
+			this.txtContrasenya.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtContrasenya.Hint = "Contraseña";
+			this.txtContrasenya.Location = new System.Drawing.Point(417, 391);
+			this.txtContrasenya.Name = "txtContrasenya";
+			this.txtContrasenya.Size = new System.Drawing.Size(217, 29);
+			this.txtContrasenya.TabIndex = 2;
+			this.txtContrasenya.UseSystemPasswordChar = true;
+			this.txtContrasenya.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
+			// 
+			// txtNombreUsuario
+			// 
+			this.txtNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNombreUsuario.Hint = "Nombre de usuario";
+			this.txtNombreUsuario.Location = new System.Drawing.Point(417, 328);
+			this.txtNombreUsuario.Name = "txtNombreUsuario";
+			this.txtNombreUsuario.Size = new System.Drawing.Size(217, 29);
+			this.txtNombreUsuario.TabIndex = 1;
+			this.txtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// InicioSesion
 			// 

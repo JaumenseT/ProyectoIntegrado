@@ -15,21 +15,20 @@ namespace RedBeetle.Forms_bueno
 {
     public partial class Perfil : Form
     {
-        Home caller;
-        public Perfil(Home caller)
+		string nombreUsuario;
+        public Perfil(string nomUsu)
         {
-            this.caller = caller;
+            nombreUsuario = nomUsu;
             InitializeComponent();
         }
 
         private void lblCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            caller.Show();
+            Close();
         }
 
         private void Usuario_Load(object sender, EventArgs e) {
-            txtNombre.Text = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario()).Nombre_usuario;
+            txtNombre.Text = AccesoDatos.DevolverUsuario(nombreUsuario).Nombre_usuario;
         }
     }
 }

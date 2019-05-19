@@ -88,7 +88,7 @@
 			// 
 			// btnRegistrarse
 			// 
-			this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegistrarse.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
@@ -131,13 +131,15 @@
 			this.lblCerrar.BackColor = System.Drawing.Color.Transparent;
 			this.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.lblCerrar.Font = new System.Drawing.Font("Century Gothic", 30F);
-			this.lblCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.lblCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.lblCerrar.Location = new System.Drawing.Point(984, -5);
 			this.lblCerrar.Name = "lblCerrar";
 			this.lblCerrar.Size = new System.Drawing.Size(41, 49);
 			this.lblCerrar.TabIndex = 18;
 			this.lblCerrar.Text = "x";
 			this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
+			this.lblCerrar.MouseEnter += new System.EventHandler(this.LblCerrar_MouseEnter);
+			this.lblCerrar.MouseLeave += new System.EventHandler(this.LblCerrar_MouseLeave);
 			// 
 			// picLogoBeetle
 			// 
@@ -216,7 +218,7 @@
 			// 
 			// pictureBox13
 			// 
-			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox13.Location = new System.Drawing.Point(415, 335);
 			this.pictureBox13.Name = "pictureBox13";
 			this.pictureBox13.Size = new System.Drawing.Size(223, 5);
@@ -225,7 +227,7 @@
 			// 
 			// pictureBox14
 			// 
-			this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox14.Location = new System.Drawing.Point(415, 379);
 			this.pictureBox14.Name = "pictureBox14";
 			this.pictureBox14.Size = new System.Drawing.Size(223, 5);
@@ -234,7 +236,7 @@
 			// 
 			// pictureBox15
 			// 
-			this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox15.Location = new System.Drawing.Point(415, 465);
 			this.pictureBox15.Name = "pictureBox15";
 			this.pictureBox15.Size = new System.Drawing.Size(223, 5);
@@ -243,7 +245,7 @@
 			// 
 			// pictureBox16
 			// 
-			this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox16.Location = new System.Drawing.Point(415, 422);
 			this.pictureBox16.Name = "pictureBox16";
 			this.pictureBox16.Size = new System.Drawing.Size(223, 5);
@@ -252,7 +254,7 @@
 			// 
 			// pictureBox5
 			// 
-			this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox5.Location = new System.Drawing.Point(415, 392);
 			this.pictureBox5.Name = "pictureBox5";
 			this.pictureBox5.Size = new System.Drawing.Size(3, 35);
@@ -261,7 +263,7 @@
 			// 
 			// pictureBox8
 			// 
-			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox8.Location = new System.Drawing.Point(415, 305);
 			this.pictureBox8.Name = "pictureBox8";
 			this.pictureBox8.Size = new System.Drawing.Size(3, 35);
@@ -270,7 +272,7 @@
 			// 
 			// pictureBox6
 			// 
-			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox6.Location = new System.Drawing.Point(415, 435);
 			this.pictureBox6.Name = "pictureBox6";
 			this.pictureBox6.Size = new System.Drawing.Size(3, 35);
@@ -279,7 +281,7 @@
 			// 
 			// pictureBox7
 			// 
-			this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+			this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox7.Location = new System.Drawing.Point(415, 349);
 			this.pictureBox7.Name = "pictureBox7";
 			this.pictureBox7.Size = new System.Drawing.Size(3, 35);

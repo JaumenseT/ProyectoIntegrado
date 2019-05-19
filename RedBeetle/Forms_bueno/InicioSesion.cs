@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Input; //Necesario para los eventos de key input
 using RedBeetle.Clases;
 using RedBeetle.Forms;
+using System.Text.RegularExpressions; //Para poder usar Regex
 
 namespace RedBeetle
 {
@@ -36,7 +37,7 @@ namespace RedBeetle
 		}
 
 		/// <summary>
-		/// Metodo privado de la clase para validar si hay campos vacios
+		/// Metodo privado de la clase para validar si hay campos vacios y para comprobar que no se sobrepasen longitud de caracteres o haya caracteres especiales
 		/// </summary>
 		/// <returns>Devuelve un boolean indicando si ha habido errores</returns>
 		private bool ValidarInicioSesion()
@@ -54,13 +55,24 @@ namespace RedBeetle
 				error = true;
 				mensaje += "La contraseña no puede estar vacía. \n";
 			}
+			if(txtNombreUsuario.TextLength > 25)
+			{
+				error = true;
+				mensaje += "El nombre de usuario no puede tener mas de 25 caracteres.";
+			}
+			var regex = new Regex("^[a-zA-Z0-9_]*$"); //A esto se le llama Regular Expresion(RegEx) y sirve para evitar caracteres especiales.
+			if (!regex.IsMatch(txtNombreUsuario.Text) || !regex.IsMatch(txtContrasenya.Text)) //IsMatch determina si coinciden los caracteres del string con los seteados en el var
+			{
+				error = true;
+				mensaje += "No se pueden usar caracteres especiales.";
+			}
 			if(mensaje != ""){
 
 				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
-			
 			return error;
 		}
+
 
 		private void lblCerrar_Click(object sender, EventArgs e)
 		{
@@ -113,7 +125,7 @@ namespace RedBeetle
             Login(); //Llamamos al metodo Login para hacer la validacion
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
-				Home r1 = new Home(this);
+				Home r1 = new Home(txtContrasenya.Text);
 				r1.Show();
 				Hide();
 			}
@@ -124,12 +136,23 @@ namespace RedBeetle
 		}
         
         public string ObtenerNombreUsuario() {
-            return txtNombreUsuario.Text;
+			var nomUsu = txtContrasenya.Text;
+			return nomUsu;
         }
 
 		private void InicioSesion_Load(object sender, EventArgs e)
 		{
 			ActiveControl = picLogo; //Estetica
+		}
+
+		private void LblCerrar_MouseEnter(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.FromArgb(216, 21, 25);
+		}
+
+		private void LblCerrar_MouseLeave(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.FromArgb(251, 26, 30);
 		}
 	}
 }

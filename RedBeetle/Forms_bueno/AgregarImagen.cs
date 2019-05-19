@@ -13,10 +13,11 @@ using RedBeetle.Clases;
 
 namespace RedBeetle.Forms_bueno {
     public partial class AgregarImagen : Form {
-        Home h1;
-        Perfil p1;
-        public AgregarImagen(Home caller) {
-            h1 = caller;
+
+		Perfil p1;
+		string nombreUsuario;
+        public AgregarImagen(string nomUsu) {
+            nombreUsuario = nomUsu;
             InitializeComponent();
         }
     

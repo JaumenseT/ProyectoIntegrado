@@ -9,22 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Clases;
 using RedBeetle.Forms_bueno;
+using System.Text.RegularExpressions; //Para poder usar Regex
 
 namespace RedBeetle
 {
-    
+
 	public partial class Registrarse : Form
 	{
-        InicioSesion caller;
-        public Registrarse(InicioSesion caller)
+		InicioSesion caller;
+		public Registrarse(InicioSesion caller)
 		{
-            this.caller = caller;
+			this.caller = caller;
 			InitializeComponent();
 		}
 
-        private void Registrarse_Load(object sender, EventArgs e) {
+		private void Registrarse_Load(object sender, EventArgs e) {
 			ActiveControl = picLogo; //estetica
-        }
+		}
 
 		/// <summary>
 		/// Metodo privado de clase que al apretar cualquier boton comprobara si es el enter para asi darle directamente al boton entrar. Comodidad
@@ -33,22 +34,40 @@ namespace RedBeetle
 		/// <param name="e"></param>
 		private void CheckEnter(object sender, KeyPressEventArgs e)
 		{
-			if(e.KeyChar == (char)13)
+			if (e.KeyChar == (char)13)
 			{
 				btnRegistrarse.PerformClick();
 			}
 		}
 
 		/// <summary>
-		/// Comprueba que no haya ningun campo vacio
+		/// Metodo que comprobara si el email introducido es valido
 		/// </summary>
-		/// <returns></returns>
+		/// <param name="email"></param>
+		/// <returns>Devuelve true si es valido o false</returns>
+		private bool EmailValido(string email)
+		{
+			try
+			{
+				var addr = new System.Net.Mail.MailAddress(email);
+				return addr.Address == email;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+
+		/// <summary>
+		/// Comprueba que no haya ningun campo vacio y que no hayan caracteres especiales
+		/// </summary>
+		/// <returns>Devuelve true si hay error o false</returns>
 		private bool ValidarDatos()
 		{
 			var error = false;
 			var mensaje = "";
 
-			if(txtUsuario.Text == "")
+			if (txtUsuario.Text == "")
 			{
 				error = true;
 				mensaje = "El campo \"Nombre de usuario\" no puede estar vacio. \n";
@@ -68,6 +87,27 @@ namespace RedBeetle
 				error = true;
 				mensaje += "El campo \"Contraseña\" no puede estar vacio. \n";
 			}
+			if(txtContrasenya.TextLength < 6)
+			{
+				error = true;
+				mensaje += "La contraseña debe tener al menos 6 caracteres. \n";
+			}
+			if(txtContrasenya.TextLength > 18)
+			{
+				mensaje += "La contraseña no puede superar los 18 caracteres. \n";
+			}
+
+			var regex = new Regex("^[a-zA-Z0-9_]*$");//A esto se le llama Regular Expresion(RegEx) y sirve para evitar caracteres especiales.
+			if (!regex.IsMatch(txtUsuario.Text) || !regex.IsMatch(txtNombre.Text) || !regex.IsMatch(txtContrasenya.Text))//IsMatch determina si coinciden los caracteres del string con los seteados en el var
+			{
+				error = true;
+				mensaje += "No se pueden usar caracteres especiales. \n";
+			}
+			if (!EmailValido(txtCorreo.Text))
+			{
+				error = true;
+				mensaje += "El email no tiene el formato correcto. \n";
+			}
 			if(mensaje != "") //Si el mensjae no esta vacio te salta el MessageBox
 			{
 				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -75,7 +115,7 @@ namespace RedBeetle
 			return error;
 		}
 
-        private void lblCerrar_Click(object sender, EventArgs e)
+		private void lblCerrar_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
@@ -143,5 +183,15 @@ namespace RedBeetle
         private void txtCorreo_Enter(object sender, EventArgs e) {
 			txtCorreo.Clear();
 		}
-    }
+
+		private void LblCerrar_MouseEnter(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.FromArgb(216, 21, 25);
+		}
+
+		private void LblCerrar_MouseLeave(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.FromArgb(251, 26, 30);
+		}
+	}
 }
