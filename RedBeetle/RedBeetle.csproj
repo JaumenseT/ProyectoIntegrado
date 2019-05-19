@@ -76,12 +76,6 @@
     <Compile Include="Forms_bueno\AgregarImagen.Designer.cs">
       <DependentUpon>AgregarImagen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms_bueno\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_bueno\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms_bueno\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +112,6 @@
     <Compile Include="Clases\Usuario.cs" />
     <EmbeddedResource Include="Forms_bueno\AgregarImagen.resx">
       <DependentUpon>AgregarImagen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_bueno\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_bueno\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

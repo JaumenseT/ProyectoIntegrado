@@ -40,25 +40,19 @@ namespace RedBeetle
             } else return null;
         }
 
-		public static List<string> DevolverNombres()
+		/// <summary>
+		/// Metodo que devuelve una lista de strings con los nombres de usuario de la base de datos de todos los usarios
+		/// </summary>
+		/// <returns></returns>
+		public static List<string> DevolverNombreUsuario()
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
 			if (dbCon.Conectado())
 			{ //Abrimos la conexión con la base de datos 
 				using (IDbConnection conexion = dbCon.Conexion)
 				{
-					var output = conexion.Query($"SELECT nombre FROM usuario;").ToList();
-
-					var lista = new List<string>();
-
-					foreach (IDictionary<string, object> row in output) //Convierte el objeto Usuario a string para luego a;adirlo a una lista de strings.
-					{
-						foreach (var pair in row)
-						{
-							lista.Add(pair.Value.ToString());
-						}
-					}
-					return lista;
+					var output = conexion.Query<string>($"SELECT nombre_usuario FROM usuario;").ToList();
+					return output;
 				}
 			}
 			else return null;

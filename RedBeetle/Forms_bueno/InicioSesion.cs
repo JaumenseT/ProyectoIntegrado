@@ -14,39 +14,38 @@ namespace RedBeetle
 {
     public partial class InicioSesion : Form
     {
-		private static bool error = false;
+		private static bool error = false; //atributo que decidira si se hace el login o no, indicando si hay algun error en los metodos Login() y btn_Entrar()
 
         public InicioSesion()
         {
             InitializeComponent();
         }
 
+		/// <summary>
+		/// Metodo privado de la clase para validar si hay campos vacios
+		/// </summary>
+		/// <returns>Devuelve un boolean indicando si ha habido errores</returns>
 		private bool ValidarInicioSesion()
 		{
-			bool correcto = false;
+			bool error = false;
 			string mensaje = "";
 
 			if (txtNombreUsuario.Text == "")
 			{
-				correcto = true;
+				error = true;
 				mensaje += "El nombre de usuario no puede estar vacío. \n";
 			}
 			if (txtContrasenya.Text == "")
 			{
-				correcto = true;
+				error = true;
 				mensaje += "La contraseña no puede estar vacía. \n";
 			}
-			/*if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text))
-			{
-				error = true;
-				mensaje += "El usuario no existe. \n";
-			}*/
 			if(mensaje != ""){
 
 				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 			
-			return correcto;
+			return error;
 		}
 
 		private void lblCerrar_Click(object sender, EventArgs e)
@@ -54,6 +53,11 @@ namespace RedBeetle
 			Application.Exit();
 		}
 
+		/// <summary>
+		/// Abre el form Registro
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void llbRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			Registrarse formRegistro = new Registrarse(this);
@@ -61,32 +65,24 @@ namespace RedBeetle
 			this.Hide();
 		}
 
-        public void Login() {
-            if (!AccesoDatos.ComprobarUsuario(txtNombreUsuario.Text, txtContrasenya.Text)) {
-                MessageBox.Show("Datos incorrectos!");
-            } else {
-                MessageBox.Show("Usuario y contraseña correctos!");
-                Home r1 = new Home(this);
-                r1.Show();
-                this.Hide();
-            }
-        }
-
-		public void Login2()
+		/// <summary>
+		/// Metodo que validara si las credenciales de inicio de sesion son correctas
+		/// </summary>
+		public void Login()
 		{
 			if (!ValidarInicioSesion())
 			{ //Si no hay ningun campo vacio
 
-                Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text);
+                Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu
 
-				if (usu == null)
+				if (usu == null) //Si el metodo no ha devuelto nada es que no existe dicho usuario
 				{
-					error = true;
+					error = true; //Seteamos el error a true
 					MessageBox.Show("Este usuario no existe en la base de datos.");
 				}
 				else
 				{
-					if (usu.Contrasenya != txtContrasenya.Text)
+					if (usu.Contrasenya != txtContrasenya.Text) //Si el usuario devuelto no tiene la misma pass que la escrita en el txt, seteamos el error a true.
 					{
 						MessageBox.Show("La contraseña introducida es incorrecta.");
 						error = true;
@@ -95,19 +91,19 @@ namespace RedBeetle
 			}
 			else
 			{
-				error = true;
+				error = true; //Si hay algun campo vacio, seteamos error a true
 			}
 		}
 
         private void btnEntrar_Click(object sender, EventArgs e) {
-            Login2();
-			if (!error)
+            Login(); //Llamamos al metodo Login para hacer la validacion
+			if (!error) //Si no hay errores pasas al siguiente form
 			{
 				Home r1 = new Home(this);
 				r1.Show();
 				Hide();
 			}
-			else
+			else //Si no, si hay algun error, solo seteas el error global instanciado al principio de la clase a false para que cuando vuelvas a intentarlo no tengas ningun error de primeras.
 			{
 				error = false;
 			}
@@ -119,7 +115,7 @@ namespace RedBeetle
 
 		private void InicioSesion_Load(object sender, EventArgs e)
 		{
-			ActiveControl = picLogo;
+			ActiveControl = picLogo; //Estetica
 		}
 	}
 }

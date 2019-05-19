@@ -32,7 +32,7 @@ namespace RedBeetle.Forms
             var usu = AccesoDatos.DevolverUsuario(caller.ObtenerNombreUsuario());
 			lblUsuario.Text = usu.Nombre_usuario;
 
-			var nombres = AccesoDatos.DevolverNombres();
+			var nombres = AccesoDatos.DevolverNombreUsuario();
 			var lista = new AutoCompleteStringCollection();
 
 			foreach(string elem in nombres)
