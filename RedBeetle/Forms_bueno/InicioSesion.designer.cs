@@ -62,6 +62,7 @@
 			this.txtNombreUsuario.Name = "txtNombreUsuario";
 			this.txtNombreUsuario.Size = new System.Drawing.Size(217, 29);
 			this.txtNombreUsuario.TabIndex = 1;
+			this.txtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// txtContrasenya
 			// 
@@ -72,6 +73,7 @@
 			this.txtContrasenya.Size = new System.Drawing.Size(217, 29);
 			this.txtContrasenya.TabIndex = 2;
 			this.txtContrasenya.UseSystemPasswordChar = true;
+			this.txtContrasenya.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
 			// 
 			// btnEntrar
 			// 

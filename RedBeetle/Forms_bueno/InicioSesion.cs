@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input; //Necesario para los eventos de key input
 using RedBeetle.Clases;
 using RedBeetle.Forms;
 
@@ -20,6 +21,19 @@ namespace RedBeetle
         {
             InitializeComponent();
         }
+
+		/// <summary>
+		/// Metodo privado de clase que al apretar cualquier boton comprobara si es el enter para asi darle directamente al boton entrar. Comodidad
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void CheckEnter(object sender, KeyPressEventArgs e)
+		{
+			if(e.KeyChar == (char)13) //Si el numero de tecla corresponde al 13, que es el enter, el btnEntrar se apretara automaticamente.
+			{
+				btnEntrar.PerformClick();
+			}
+		}
 
 		/// <summary>
 		/// Metodo privado de la clase para validar si hay campos vacios
