@@ -83,6 +83,20 @@ namespace RedBeetle
 			else return null;
 		}
 
+		public static List<byte[]> DevolverImagenes(string nomUsu)
+		{
+			var dbCon = DBConnection.Instancia();
+			if (dbCon.Conectado())
+			{
+				using (IDbConnection conexion = dbCon.Conexion)
+				{
+					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario = '{ nomUsu }';").ToList();
+					return output;
+				}
+			}
+			else return null;
+		}
+
 		public static void AgregarUsuario(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.

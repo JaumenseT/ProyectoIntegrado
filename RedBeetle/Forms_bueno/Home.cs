@@ -53,6 +53,13 @@ namespace RedBeetle.Forms
 				dgvListaSeguidos.Rows.Add(elem);
 			}
 			dgvListaSeguidos.ClearSelection();
+
+			//Rellenar picturebox
+			var imagenesByte = AccesoDatos.DevolverImagenes(nombreUsuario);
+			var imagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+
+			pic1.BackgroundImage = imagenes[0];
+			pic2.BackgroundImage = imagenes[1];
 		}
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()
@@ -89,12 +96,12 @@ namespace RedBeetle.Forms
 		//Inacabado
 		private void PicLogo_MouseEnter(object sender, EventArgs e)
 		{
-			picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
+			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
 		}
 
 		private void PicLogo_MouseLeave(object sender, EventArgs e)
 		{
-			picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
+			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
 		}
 
 		private void PicLikes_Click(object sender, EventArgs e)

@@ -5,13 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using RedBeetle.Clases;
+using System.IO;
 
 namespace RedBeetle.Clases {
     public class Imagen {
+
         private string descripcion;
         Image newImage = null;
         byte[] imageBytes = null;
         int id_usuario;
+
         public string Descripcion { get { return descripcion; } }
         public int IdUsuario { get { return id_usuario; } }
         public Image NewImage { get { return newImage; } }
@@ -50,11 +53,11 @@ namespace RedBeetle.Clases {
             stream.Close();
 
             return avatar;
-        }
-
+        }*/
+		/*
         //Para recoger la imagen de mysql y mostrarla en un picturebox.
         byte[] avatarByte = cargarAvatardesdeMYSQL();
-        Imagen.Image = byteArrayToImage(avatarByte);
+        Imagen image = byteArrayToImage(avatarByte);
         private byte[] cargarAvatardesdeMYSQL()
         {
             Query.Connection = ConexionBBDD.obtenerConexion();
@@ -66,12 +69,27 @@ namespace RedBeetle.Clases {
                 return avatarByte;
             }
             return null;
-        }
-        public Image byteArrayToImage(byte[] byteAvatar)
-        {
-            MemoryStream ms = new MemoryStream(byteAvatar);
-            Image devolverImagen = Image.FromStream(ms);
-            return devolverImagen;
         }*/
+		/// <summary>
+		/// Convierte el array de bytes donde estan las imagenes a avatares usables para la picturebox
+		/// </summary>
+		/// <param name="byteAvatar"></param>
+		/// <returns>Array de imagenes para la picturebox</returns>
+        public static List<Image> ConvertirArrayAImagen(List<byte[]> byteAvatar)
+        {
+			// MemoryStream ms = new MemoryStream(byteAvatar);
+			// Image devolverImagen = Image.FromStream(ms);
+			// return devolverImagen;
+
+			var listaImagenes = new List<Image>();
+
+			for (int i = 0; i < byteAvatar.Count; i++)
+			{
+				var ms = new MemoryStream(byteAvatar[i]);
+				Image imagen = Image.FromStream(ms);
+				listaImagenes.Add(imagen);
+			}
+			return listaImagenes;
+        }
     }
 }
