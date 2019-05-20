@@ -32,5 +32,15 @@ namespace RedBeetle.Forms_bueno
         private void Usuario_Load(object sender, EventArgs e) {
             txtNombre.Text = AccesoDatos.DevolverUsuario(nombreUsuario).Nombre_usuario;
         }
+
+        private void lblCerrar_Click_1(object sender, EventArgs e) {
+            this.Close();
+            caller.Show();
+        }
+
+        private void picInicio_Click(object sender, EventArgs e) {
+            this.Close();
+            caller.Show();
+        }
     }
 }

@@ -39,5 +39,15 @@ namespace RedBeetle.Forms_bueno {
             Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
             AccesoDatos.AgregarImagen(new Imagen(txtDescripcion.Text, imagen, usu.Id_Usuario));
         }
+
+        private void ptbInicio_Click(object sender, EventArgs e) {
+            caller.Show();
+            this.Close();
+        }
+
+        private void lblCerrar_Click(object sender, EventArgs e) {
+            this.Close();
+            caller.Show();
+        }
     }
 }

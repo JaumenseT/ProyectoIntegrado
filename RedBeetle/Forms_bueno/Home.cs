@@ -66,18 +66,8 @@ namespace RedBeetle.Forms
             p1.Show();
         }
 
-        private void ptbCamara_Click(object sender, EventArgs e) {
-            AgregarImagen agregar = new AgregarImagen(nombreUsuario,this);
-            this.Hide();
-            agregar.Show();
-        }
-
         public string ObtenerNombreUsuario() {
             return lblUsuario.Text;
-        }
-
-        private void ptbLike_Click(object sender, EventArgs e) {
-
         }
 
         private void lblUsuario_Click(object sender, EventArgs e) {
@@ -116,7 +106,7 @@ namespace RedBeetle.Forms
 		{
 			var login = new InicioSesion();
 			login.Show();
-			Close();
+			this.Hide();
 		}
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
@@ -129,18 +119,11 @@ namespace RedBeetle.Forms
 			lblCerrar.BackColor = Color.White;
 		}
 
-		/*private void PicPerfil_Click(object sender, EventArgs e)
-		{
-			var p = new Perfil(nombreUsuario);
-			p.Show();
-			Close();
-		}*/
-
 		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var a = new AgregarImagen(nombreUsuario, caller);
+			var a = new AgregarImagen(nombreUsuario, this);
 			a.Show();
-			Close();
+			this.Hide();
 		}
 	}
 }
