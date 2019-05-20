@@ -403,6 +403,8 @@
 			this.lblCerrar.TabIndex = 11;
 			this.lblCerrar.Text = "x";
 			this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click_1);
+			this.lblCerrar.MouseEnter += new System.EventHandler(this.lblCerrar_MouseEnter);
+			this.lblCerrar.MouseLeave += new System.EventHandler(this.lblCerrar_MouseLeave);
 			// 
 			// picInicio
 			// 

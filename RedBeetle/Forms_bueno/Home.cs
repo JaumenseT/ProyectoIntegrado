@@ -111,12 +111,12 @@ namespace RedBeetle.Forms
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
 		{
-			lblCerrar.BackColor = Color.FromArgb(247, 247, 247);
+			lblCerrar.ForeColor = Color.FromArgb(247, 247, 247);
 		}
 
 		private void LblCerrar_MouseLeave(object sender, EventArgs e)
 		{
-			lblCerrar.BackColor = Color.White;
+			lblCerrar.ForeColor = Color.White;
 		}
 
 		private void PicSubir_Click(object sender, EventArgs e)

@@ -49,5 +49,15 @@ namespace RedBeetle.Forms_bueno {
             this.Close();
             caller.Show();
         }
-    }
+
+		private void lblCerrar_MouseEnter(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.FromArgb(247, 247, 247);
+		}
+
+		private void lblCerrar_MouseLeave(object sender, EventArgs e)
+		{
+			lblCerrar.ForeColor = Color.White;
+		}
+	}
 }
