@@ -178,6 +178,7 @@
             // 
             this.picSubir.BackColor = System.Drawing.Color.Transparent;
             this.picSubir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubir.BackgroundImage")));
+            this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSubir.Location = new System.Drawing.Point(1224, 27);
             this.picSubir.Margin = new System.Windows.Forms.Padding(4);
             this.picSubir.Name = "picSubir";
@@ -189,6 +190,7 @@
             // 
             this.picLikes.BackColor = System.Drawing.Color.Transparent;
             this.picLikes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLikes.BackgroundImage")));
+            this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLikes.Location = new System.Drawing.Point(1021, 27);
             this.picLikes.Margin = new System.Windows.Forms.Padding(4);
             this.picLikes.Name = "picLikes";
@@ -258,6 +260,7 @@
             this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInicio.TabIndex = 0;
             this.picInicio.TabStop = false;
+            this.picInicio.Click += new System.EventHandler(this.picInicio_Click);
             // 
             // btnGuardar
             // 
