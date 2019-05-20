@@ -24,7 +24,7 @@ namespace RedBeetle.Forms_bueno {
             InitializeComponent();
         }
 
-        private void btnSubirFoto_Click(object sender, EventArgs e) {
+        private void btnSeleccionarFoto_Click(object sender, EventArgs e) {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)| All Files(*.*)|*.*|";
 

@@ -89,12 +89,12 @@ namespace RedBeetle.Forms
 		//Inacabado
 		private void PicLogo_MouseEnter(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
+			picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
 		}
 
 		private void PicLogo_MouseLeave(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
+			picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
 		}
 
 		private void PicLikes_Click(object sender, EventArgs e)
