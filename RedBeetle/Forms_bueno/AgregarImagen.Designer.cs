@@ -24,12 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarImagen));
-			this.btnSeleccionar = new System.Windows.Forms.Button();
 			this.pbFoto = new System.Windows.Forms.PictureBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.txtDescripcion = new System.Windows.Forms.TextBox();
-			this.btnSubirFoto = new System.Windows.Forms.Button();
-			this.btnPrendas = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.picPerfil = new System.Windows.Forms.PictureBox();
 			this.picSubir = new System.Windows.Forms.PictureBox();
@@ -39,6 +34,36 @@
 			this.pictureBox11 = new System.Windows.Forms.PictureBox();
 			this.lblCerrar = new System.Windows.Forms.Label();
 			this.picInicio = new System.Windows.Forms.PictureBox();
+			this.btnSeleccionar = new System.Windows.Forms.Button();
+			this.lblModificarPerfil = new System.Windows.Forms.Label();
+			this.pictureBox13 = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.pictureBox4 = new System.Windows.Forms.PictureBox();
+			this.pictureBox8 = new System.Windows.Forms.PictureBox();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.pictureBox6 = new System.Windows.Forms.PictureBox();
+			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.txtLinkTorso = new RedBeetle.ExTextBox();
+			this.pictureBox7 = new System.Windows.Forms.PictureBox();
+			this.pictureBox9 = new System.Windows.Forms.PictureBox();
+			this.pictureBox10 = new System.Windows.Forms.PictureBox();
+			this.pictureBox12 = new System.Windows.Forms.PictureBox();
+			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+			this.txtLinkPierna = new RedBeetle.ExTextBox();
+			this.pictureBox22 = new System.Windows.Forms.PictureBox();
+			this.pictureBox23 = new System.Windows.Forms.PictureBox();
+			this.pictureBox24 = new System.Windows.Forms.PictureBox();
+			this.pictureBox25 = new System.Windows.Forms.PictureBox();
+			this.txtDescripcion = new RedBeetle.ExTextBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.pictureBox14 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
@@ -47,83 +72,35 @@
 			((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// btnSeleccionar
-			// 
-			this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-			this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSeleccionar.Location = new System.Drawing.Point(646, 483);
-			this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.btnSeleccionar.Name = "btnSeleccionar";
-			this.btnSeleccionar.Size = new System.Drawing.Size(124, 44);
-			this.btnSeleccionar.TabIndex = 17;
-			this.btnSeleccionar.Text = "Seleccionar Foto";
-			this.btnSeleccionar.UseVisualStyleBackColor = false;
-			this.btnSeleccionar.Click += new System.EventHandler(this.btnSubirFoto_Click);
 			// 
 			// pbFoto
 			// 
-			this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.pbFoto.Location = new System.Drawing.Point(496, 130);
-			this.pbFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pbFoto.BackColor = System.Drawing.Color.Transparent;
+			this.pbFoto.Location = new System.Drawing.Point(45, 155);
+			this.pbFoto.Margin = new System.Windows.Forms.Padding(2);
 			this.pbFoto.Name = "pbFoto";
-			this.pbFoto.Size = new System.Drawing.Size(404, 334);
+			this.pbFoto.Size = new System.Drawing.Size(355, 355);
 			this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pbFoto.TabIndex = 18;
 			this.pbFoto.TabStop = false;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(44, 130);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(132, 26);
-			this.label1.TabIndex = 19;
-			this.label1.Text = "Descripción:";
-			// 
-			// txtDescripcion
-			// 
-			this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDescripcion.Location = new System.Drawing.Point(49, 174);
-			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.txtDescripcion.Multiline = true;
-			this.txtDescripcion.Name = "txtDescripcion";
-			this.txtDescripcion.Size = new System.Drawing.Size(372, 154);
-			this.txtDescripcion.TabIndex = 21;
-			// 
-			// btnSubirFoto
-			// 
-			this.btnSubirFoto.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.btnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-			this.btnSubirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSubirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSubirFoto.Location = new System.Drawing.Point(49, 494);
-			this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.btnSubirFoto.Name = "btnSubirFoto";
-			this.btnSubirFoto.Size = new System.Drawing.Size(106, 44);
-			this.btnSubirFoto.TabIndex = 22;
-			this.btnSubirFoto.Text = "Subir Foto";
-			this.btnSubirFoto.UseVisualStyleBackColor = false;
-			this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
-			// 
-			// btnPrendas
-			// 
-			this.btnPrendas.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.btnPrendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-			this.btnPrendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnPrendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPrendas.Location = new System.Drawing.Point(314, 494);
-			this.btnPrendas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.btnPrendas.Name = "btnPrendas";
-			this.btnPrendas.Size = new System.Drawing.Size(106, 44);
-			this.btnPrendas.TabIndex = 23;
-			this.btnPrendas.Text = "Subir Prenda";
-			this.btnPrendas.UseVisualStyleBackColor = false;
 			// 
 			// panel2
 			// 
@@ -228,21 +205,337 @@
 			this.picInicio.TabIndex = 0;
 			this.picInicio.TabStop = false;
 			// 
+			// btnSeleccionar
+			// 
+			this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+			this.btnSeleccionar.Location = new System.Drawing.Point(93, 533);
+			this.btnSeleccionar.Name = "btnSeleccionar";
+			this.btnSeleccionar.Size = new System.Drawing.Size(269, 45);
+			this.btnSeleccionar.TabIndex = 42;
+			this.btnSeleccionar.Text = "Seleccionar foto";
+			this.btnSeleccionar.UseVisualStyleBackColor = false;
+			// 
+			// lblModificarPerfil
+			// 
+			this.lblModificarPerfil.AutoSize = true;
+			this.lblModificarPerfil.BackColor = System.Drawing.Color.Transparent;
+			this.lblModificarPerfil.Font = new System.Drawing.Font("Century Gothic", 20F);
+			this.lblModificarPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.lblModificarPerfil.Location = new System.Drawing.Point(16, 110);
+			this.lblModificarPerfil.Name = "lblModificarPerfil";
+			this.lblModificarPerfil.Size = new System.Drawing.Size(137, 33);
+			this.lblModificarPerfil.TabIndex = 90;
+			this.lblModificarPerfil.Text = "Subir foto";
+			// 
+			// pictureBox13
+			// 
+			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox13.Location = new System.Drawing.Point(45, 151);
+			this.pictureBox13.Name = "pictureBox13";
+			this.pictureBox13.Size = new System.Drawing.Size(355, 5);
+			this.pictureBox13.TabIndex = 91;
+			this.pictureBox13.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox1.Location = new System.Drawing.Point(45, 509);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(355, 5);
+			this.pictureBox1.TabIndex = 92;
+			this.pictureBox1.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox2.Location = new System.Drawing.Point(399, 151);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(5, 363);
+			this.pictureBox2.TabIndex = 93;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox3.Location = new System.Drawing.Point(41, 151);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(5, 363);
+			this.pictureBox3.TabIndex = 94;
+			this.pictureBox3.TabStop = false;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 20F);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.label1.Location = new System.Drawing.Point(455, 110);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(169, 33);
+			this.label1.TabIndex = 95;
+			this.label1.Text = "Descripción";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 20F);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.label2.Location = new System.Drawing.Point(455, 327);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(73, 33);
+			this.label2.TabIndex = 96;
+			this.label2.Text = "Links";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.label3.Location = new System.Drawing.Point(497, 155);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(195, 22);
+			this.label3.TabIndex = 97;
+			this.label3.Text = "¿Por qué este estilo?";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.BackColor = System.Drawing.Color.Transparent;
+			this.label4.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.label4.Location = new System.Drawing.Point(497, 373);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(60, 22);
+			this.label4.TabIndex = 98;
+			this.label4.Text = "Torso:";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.BackColor = System.Drawing.Color.Transparent;
+			this.label5.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.label5.Location = new System.Drawing.Point(497, 451);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(72, 22);
+			this.label5.TabIndex = 99;
+			this.label5.Text = "Pierna:";
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox4.Location = new System.Drawing.Point(527, 431);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(394, 5);
+			this.pictureBox4.TabIndex = 105;
+			this.pictureBox4.TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox8.Location = new System.Drawing.Point(527, 401);
+			this.pictureBox8.Name = "pictureBox8";
+			this.pictureBox8.Size = new System.Drawing.Size(3, 35);
+			this.pictureBox8.TabIndex = 103;
+			this.pictureBox8.TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.Location = new System.Drawing.Point(527, 399);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(394, 5);
+			this.pictureBox5.TabIndex = 104;
+			this.pictureBox5.TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this.pictureBox6.Location = new System.Drawing.Point(920, 397);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(8, 39);
+			this.pictureBox6.TabIndex = 102;
+			this.pictureBox6.TabStop = false;
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.AutoSize = true;
+			this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel1.Location = new System.Drawing.Point(526, 435);
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new System.Drawing.Size(0, 15);
+			this.linkLabel1.TabIndex = 101;
+			// 
+			// txtLinkTorso
+			// 
+			this.txtLinkTorso.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLinkTorso.Hint = "Link...";
+			this.txtLinkTorso.Location = new System.Drawing.Point(529, 403);
+			this.txtLinkTorso.Name = "txtLinkTorso";
+			this.txtLinkTorso.Size = new System.Drawing.Size(392, 29);
+			this.txtLinkTorso.TabIndex = 100;
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox7.Location = new System.Drawing.Point(527, 509);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(394, 5);
+			this.pictureBox7.TabIndex = 111;
+			this.pictureBox7.TabStop = false;
+			// 
+			// pictureBox9
+			// 
+			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox9.Location = new System.Drawing.Point(527, 479);
+			this.pictureBox9.Name = "pictureBox9";
+			this.pictureBox9.Size = new System.Drawing.Size(3, 35);
+			this.pictureBox9.TabIndex = 109;
+			this.pictureBox9.TabStop = false;
+			// 
+			// pictureBox10
+			// 
+			this.pictureBox10.Location = new System.Drawing.Point(527, 477);
+			this.pictureBox10.Name = "pictureBox10";
+			this.pictureBox10.Size = new System.Drawing.Size(394, 5);
+			this.pictureBox10.TabIndex = 110;
+			this.pictureBox10.TabStop = false;
+			// 
+			// pictureBox12
+			// 
+			this.pictureBox12.Location = new System.Drawing.Point(920, 475);
+			this.pictureBox12.Name = "pictureBox12";
+			this.pictureBox12.Size = new System.Drawing.Size(8, 39);
+			this.pictureBox12.TabIndex = 108;
+			this.pictureBox12.TabStop = false;
+			// 
+			// linkLabel2
+			// 
+			this.linkLabel2.AutoSize = true;
+			this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel2.Location = new System.Drawing.Point(526, 512);
+			this.linkLabel2.Name = "linkLabel2";
+			this.linkLabel2.Size = new System.Drawing.Size(0, 15);
+			this.linkLabel2.TabIndex = 107;
+			// 
+			// txtLinkPierna
+			// 
+			this.txtLinkPierna.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLinkPierna.Hint = "Link...";
+			this.txtLinkPierna.Location = new System.Drawing.Point(529, 481);
+			this.txtLinkPierna.Name = "txtLinkPierna";
+			this.txtLinkPierna.Size = new System.Drawing.Size(392, 29);
+			this.txtLinkPierna.TabIndex = 106;
+			// 
+			// pictureBox22
+			// 
+			this.pictureBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox22.Location = new System.Drawing.Point(527, 281);
+			this.pictureBox22.Name = "pictureBox22";
+			this.pictureBox22.Size = new System.Drawing.Size(394, 5);
+			this.pictureBox22.TabIndex = 116;
+			this.pictureBox22.TabStop = false;
+			// 
+			// pictureBox23
+			// 
+			this.pictureBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox23.Location = new System.Drawing.Point(527, 187);
+			this.pictureBox23.Name = "pictureBox23";
+			this.pictureBox23.Size = new System.Drawing.Size(3, 99);
+			this.pictureBox23.TabIndex = 114;
+			this.pictureBox23.TabStop = false;
+			// 
+			// pictureBox24
+			// 
+			this.pictureBox24.Location = new System.Drawing.Point(527, 185);
+			this.pictureBox24.Name = "pictureBox24";
+			this.pictureBox24.Size = new System.Drawing.Size(401, 5);
+			this.pictureBox24.TabIndex = 115;
+			this.pictureBox24.TabStop = false;
+			// 
+			// pictureBox25
+			// 
+			this.pictureBox25.Location = new System.Drawing.Point(920, 183);
+			this.pictureBox25.Name = "pictureBox25";
+			this.pictureBox25.Size = new System.Drawing.Size(8, 103);
+			this.pictureBox25.TabIndex = 113;
+			this.pictureBox25.TabStop = false;
+			// 
+			// txtDescripcion
+			// 
+			this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDescripcion.Hint = "Explícanos tu estilo...";
+			this.txtDescripcion.Location = new System.Drawing.Point(529, 189);
+			this.txtDescripcion.Multiline = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.Size = new System.Drawing.Size(392, 93);
+			this.txtDescripcion.TabIndex = 112;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.White;
+			this.button1.Location = new System.Drawing.Point(766, 533);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(162, 45);
+			this.button1.TabIndex = 117;
+			this.button1.Text = "Subir";
+			this.button1.UseVisualStyleBackColor = false;
+			// 
+			// pictureBox14
+			// 
+			this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox14.Location = new System.Drawing.Point(436, 314);
+			this.pictureBox14.Name = "pictureBox14";
+			this.pictureBox14.Size = new System.Drawing.Size(551, 5);
+			this.pictureBox14.TabIndex = 118;
+			this.pictureBox14.TabStop = false;
+			// 
 			// AgregarImagen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(1024, 600);
-			this.Controls.Add(this.panel2);
-			this.Controls.Add(this.btnPrendas);
-			this.Controls.Add(this.btnSubirFoto);
+			this.Controls.Add(this.pictureBox14);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.pictureBox22);
+			this.Controls.Add(this.pictureBox23);
+			this.Controls.Add(this.pictureBox24);
+			this.Controls.Add(this.pictureBox25);
 			this.Controls.Add(this.txtDescripcion);
+			this.Controls.Add(this.pictureBox7);
+			this.Controls.Add(this.pictureBox9);
+			this.Controls.Add(this.pictureBox10);
+			this.Controls.Add(this.pictureBox12);
+			this.Controls.Add(this.linkLabel2);
+			this.Controls.Add(this.txtLinkPierna);
+			this.Controls.Add(this.pictureBox4);
+			this.Controls.Add(this.pictureBox8);
+			this.Controls.Add(this.pictureBox5);
+			this.Controls.Add(this.pictureBox6);
+			this.Controls.Add(this.linkLabel1);
+			this.Controls.Add(this.txtLinkTorso);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.pbFoto);
+			this.Controls.Add(this.pictureBox3);
+			this.Controls.Add(this.pictureBox2);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pictureBox13);
+			this.Controls.Add(this.lblModificarPerfil);
 			this.Controls.Add(this.btnSeleccionar);
+			this.Controls.Add(this.panel2);
+			this.Controls.Add(this.pbFoto);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "AgregarImagen";
 			this.Text = "AgregarImagen";
 			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
@@ -254,18 +547,30 @@
 			((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.PictureBox pbFoto;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Button btnSubirFoto;
-        private System.Windows.Forms.Button btnPrendas;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.PictureBox picPerfil;
 		private System.Windows.Forms.PictureBox picSubir;
@@ -275,5 +580,35 @@
 		private System.Windows.Forms.PictureBox pictureBox11;
 		private System.Windows.Forms.Label lblCerrar;
 		private System.Windows.Forms.PictureBox picInicio;
+		private System.Windows.Forms.Button btnSeleccionar;
+		private System.Windows.Forms.Label lblModificarPerfil;
+		private System.Windows.Forms.PictureBox pictureBox13;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.PictureBox pictureBox8;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private ExTextBox txtLinkTorso;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox9;
+		private System.Windows.Forms.PictureBox pictureBox10;
+		private System.Windows.Forms.PictureBox pictureBox12;
+		private System.Windows.Forms.LinkLabel linkLabel2;
+		private ExTextBox txtLinkPierna;
+		private System.Windows.Forms.PictureBox pictureBox22;
+		private System.Windows.Forms.PictureBox pictureBox23;
+		private System.Windows.Forms.PictureBox pictureBox24;
+		private System.Windows.Forms.PictureBox pictureBox25;
+		private ExTextBox txtDescripcion;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.PictureBox pictureBox14;
 	}
 }
