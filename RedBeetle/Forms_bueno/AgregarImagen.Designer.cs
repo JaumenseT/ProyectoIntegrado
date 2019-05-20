@@ -23,315 +23,257 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarImagen));
-            this.ptbInicio = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblCerrar = new System.Windows.Forms.Label();
-            this.ptbLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscador = new System.Windows.Forms.TextBox();
-            this.ptbCamara = new System.Windows.Forms.PictureBox();
-            this.ptbLike = new System.Windows.Forms.PictureBox();
-            this.ptbPerfil = new System.Windows.Forms.PictureBox();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnSubirFoto = new System.Windows.Forms.Button();
-            this.btnPrendas = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbInicio)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCamara)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLike)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // ptbInicio
-            // 
-            this.ptbInicio.Image = ((System.Drawing.Image)(resources.GetObject("ptbInicio.Image")));
-            this.ptbInicio.Location = new System.Drawing.Point(11, 21);
-            this.ptbInicio.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbInicio.Name = "ptbInicio";
-            this.ptbInicio.Size = new System.Drawing.Size(441, 71);
-            this.ptbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbInicio.TabIndex = 0;
-            this.ptbInicio.TabStop = false;
-            this.ptbInicio.Click += new System.EventHandler(this.ptbInicio_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblCerrar);
-            this.panel2.Controls.Add(this.ptbLupa);
-            this.panel2.Controls.Add(this.txtBuscador);
-            this.panel2.Controls.Add(this.ptbCamara);
-            this.panel2.Controls.Add(this.ptbLike);
-            this.panel2.Controls.Add(this.ptbPerfil);
-            this.panel2.Controls.Add(this.ptbInicio);
-            this.panel2.Location = new System.Drawing.Point(-4, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1348, 138);
-            this.panel2.TabIndex = 16;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(3, 138);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox3.Location = new System.Drawing.Point(1343, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(3, 138);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1348, 2);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 135);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1348, 2);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblCerrar
-            // 
-            this.lblCerrar.AutoSize = true;
-            this.lblCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCerrar.Font = new System.Drawing.Font("Century Gothic", 30F);
-            this.lblCerrar.ForeColor = System.Drawing.Color.Black;
-            this.lblCerrar.Location = new System.Drawing.Point(1285, -12);
-            this.lblCerrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCerrar.Name = "lblCerrar";
-            this.lblCerrar.Size = new System.Drawing.Size(51, 61);
-            this.lblCerrar.TabIndex = 11;
-            this.lblCerrar.Text = "x";
-            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
-            // 
-            // ptbLupa
-            // 
-            this.ptbLupa.BackColor = System.Drawing.Color.White;
-            this.ptbLupa.Image = ((System.Drawing.Image)(resources.GetObject("ptbLupa.Image")));
-            this.ptbLupa.Location = new System.Drawing.Point(500, 39);
-            this.ptbLupa.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbLupa.Name = "ptbLupa";
-            this.ptbLupa.Size = new System.Drawing.Size(63, 41);
-            this.ptbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLupa.TabIndex = 5;
-            this.ptbLupa.TabStop = false;
-            // 
-            // txtBuscador
-            // 
-            this.txtBuscador.Location = new System.Drawing.Point(500, 39);
-            this.txtBuscador.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscador.Multiline = true;
-            this.txtBuscador.Name = "txtBuscador";
-            this.txtBuscador.Size = new System.Drawing.Size(357, 40);
-            this.txtBuscador.TabIndex = 4;
-            this.txtBuscador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ptbCamara
-            // 
-            this.ptbCamara.BackColor = System.Drawing.Color.Red;
-            this.ptbCamara.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbCamara.Image = ((System.Drawing.Image)(resources.GetObject("ptbCamara.Image")));
-            this.ptbCamara.Location = new System.Drawing.Point(1168, 39);
-            this.ptbCamara.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbCamara.Name = "ptbCamara";
-            this.ptbCamara.Size = new System.Drawing.Size(89, 60);
-            this.ptbCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbCamara.TabIndex = 3;
-            this.ptbCamara.TabStop = false;
-            // 
-            // ptbLike
-            // 
-            this.ptbLike.BackColor = System.Drawing.Color.Red;
-            this.ptbLike.Image = ((System.Drawing.Image)(resources.GetObject("ptbLike.Image")));
-            this.ptbLike.Location = new System.Drawing.Point(957, 39);
-            this.ptbLike.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbLike.Name = "ptbLike";
-            this.ptbLike.Size = new System.Drawing.Size(88, 60);
-            this.ptbLike.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLike.TabIndex = 2;
-            this.ptbLike.TabStop = false;
-            // 
-            // ptbPerfil
-            // 
-            this.ptbPerfil.BackColor = System.Drawing.Color.Red;
-            this.ptbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("ptbPerfil.Image")));
-            this.ptbPerfil.Location = new System.Drawing.Point(1069, 39);
-            this.ptbPerfil.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbPerfil.Name = "ptbPerfil";
-            this.ptbPerfil.Size = new System.Drawing.Size(88, 60);
-            this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbPerfil.TabIndex = 1;
-            this.ptbPerfil.TabStop = false;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(861, 594);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(165, 54);
-            this.btnSeleccionar.TabIndex = 17;
-            this.btnSeleccionar.Text = "Seleccionar Foto";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSubirFoto_Click);
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pbFoto.Location = new System.Drawing.Point(661, 160);
-            this.pbFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(539, 411);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 18;
-            this.pbFoto.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 32);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Descripción:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(65, 214);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(495, 189);
-            this.txtDescripcion.TabIndex = 21;
-            // 
-            // btnSubirFoto
-            // 
-            this.btnSubirFoto.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnSubirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubirFoto.Location = new System.Drawing.Point(65, 608);
-            this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.Size = new System.Drawing.Size(141, 54);
-            this.btnSubirFoto.TabIndex = 22;
-            this.btnSubirFoto.Text = "Subir Foto";
-            this.btnSubirFoto.UseVisualStyleBackColor = false;
-            this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
-            // 
-            // btnPrendas
-            // 
-            this.btnPrendas.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnPrendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnPrendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrendas.Location = new System.Drawing.Point(419, 608);
-            this.btnPrendas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPrendas.Name = "btnPrendas";
-            this.btnPrendas.Size = new System.Drawing.Size(141, 54);
-            this.btnPrendas.TabIndex = 23;
-            this.btnPrendas.Text = "Subir Prenda";
-            this.btnPrendas.UseVisualStyleBackColor = false;
-            // 
-            // AgregarImagen
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1365, 738);
-            this.Controls.Add(this.btnPrendas);
-            this.Controls.Add(this.btnSubirFoto);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbFoto);
-            this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "AgregarImagen";
-            this.Text = "AgregarImagen";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbInicio)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLupa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCamara)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLike)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarImagen));
+			this.btnSeleccionar = new System.Windows.Forms.Button();
+			this.pbFoto = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtDescripcion = new System.Windows.Forms.TextBox();
+			this.btnSubirFoto = new System.Windows.Forms.Button();
+			this.btnPrendas = new System.Windows.Forms.Button();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.picPerfil = new System.Windows.Forms.PictureBox();
+			this.picSubir = new System.Windows.Forms.PictureBox();
+			this.picLikes = new System.Windows.Forms.PictureBox();
+			this.picLupa = new System.Windows.Forms.PictureBox();
+			this.txtBuscar = new RedBeetle.ExTextBox();
+			this.pictureBox11 = new System.Windows.Forms.PictureBox();
+			this.lblCerrar = new System.Windows.Forms.Label();
+			this.picInicio = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// btnSeleccionar
+			// 
+			this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+			this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSeleccionar.Location = new System.Drawing.Point(646, 483);
+			this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSeleccionar.Name = "btnSeleccionar";
+			this.btnSeleccionar.Size = new System.Drawing.Size(124, 44);
+			this.btnSeleccionar.TabIndex = 17;
+			this.btnSeleccionar.Text = "Seleccionar Foto";
+			this.btnSeleccionar.UseVisualStyleBackColor = false;
+			this.btnSeleccionar.Click += new System.EventHandler(this.btnSubirFoto_Click);
+			// 
+			// pbFoto
+			// 
+			this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.pbFoto.Location = new System.Drawing.Point(496, 130);
+			this.pbFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pbFoto.Name = "pbFoto";
+			this.pbFoto.Size = new System.Drawing.Size(404, 334);
+			this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pbFoto.TabIndex = 18;
+			this.pbFoto.TabStop = false;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(44, 130);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(132, 26);
+			this.label1.TabIndex = 19;
+			this.label1.Text = "Descripción:";
+			// 
+			// txtDescripcion
+			// 
+			this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDescripcion.Location = new System.Drawing.Point(49, 174);
+			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtDescripcion.Multiline = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.Size = new System.Drawing.Size(372, 154);
+			this.txtDescripcion.TabIndex = 21;
+			// 
+			// btnSubirFoto
+			// 
+			this.btnSubirFoto.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.btnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+			this.btnSubirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSubirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSubirFoto.Location = new System.Drawing.Point(49, 494);
+			this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSubirFoto.Name = "btnSubirFoto";
+			this.btnSubirFoto.Size = new System.Drawing.Size(106, 44);
+			this.btnSubirFoto.TabIndex = 22;
+			this.btnSubirFoto.Text = "Subir Foto";
+			this.btnSubirFoto.UseVisualStyleBackColor = false;
+			this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
+			// 
+			// btnPrendas
+			// 
+			this.btnPrendas.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.btnPrendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+			this.btnPrendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPrendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnPrendas.Location = new System.Drawing.Point(314, 494);
+			this.btnPrendas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnPrendas.Name = "btnPrendas";
+			this.btnPrendas.Size = new System.Drawing.Size(106, 44);
+			this.btnPrendas.TabIndex = 23;
+			this.btnPrendas.Text = "Subir Prenda";
+			this.btnPrendas.UseVisualStyleBackColor = false;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = System.Drawing.Color.Red;
+			this.panel2.Controls.Add(this.picPerfil);
+			this.panel2.Controls.Add(this.picSubir);
+			this.panel2.Controls.Add(this.picLikes);
+			this.panel2.Controls.Add(this.picLupa);
+			this.panel2.Controls.Add(this.txtBuscar);
+			this.panel2.Controls.Add(this.pictureBox11);
+			this.panel2.Controls.Add(this.lblCerrar);
+			this.panel2.Controls.Add(this.picInicio);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(1024, 89);
+			this.panel2.TabIndex = 41;
+			// 
+			// picPerfil
+			// 
+			this.picPerfil.BackColor = System.Drawing.Color.Transparent;
+			this.picPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPerfil.BackgroundImage")));
+			this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.picPerfil.Location = new System.Drawing.Point(837, 14);
+			this.picPerfil.Name = "picPerfil";
+			this.picPerfil.Size = new System.Drawing.Size(60, 60);
+			this.picPerfil.TabIndex = 27;
+			this.picPerfil.TabStop = false;
+			// 
+			// picSubir
+			// 
+			this.picSubir.BackColor = System.Drawing.Color.Transparent;
+			this.picSubir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubir.BackgroundImage")));
+			this.picSubir.Location = new System.Drawing.Point(918, 22);
+			this.picSubir.Name = "picSubir";
+			this.picSubir.Size = new System.Drawing.Size(50, 50);
+			this.picSubir.TabIndex = 26;
+			this.picSubir.TabStop = false;
+			// 
+			// picLikes
+			// 
+			this.picLikes.BackColor = System.Drawing.Color.Transparent;
+			this.picLikes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLikes.BackgroundImage")));
+			this.picLikes.Location = new System.Drawing.Point(766, 22);
+			this.picLikes.Name = "picLikes";
+			this.picLikes.Size = new System.Drawing.Size(50, 50);
+			this.picLikes.TabIndex = 25;
+			this.picLikes.TabStop = false;
+			// 
+			// picLupa
+			// 
+			this.picLupa.BackColor = System.Drawing.Color.White;
+			this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
+			this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.picLupa.Location = new System.Drawing.Point(384, 35);
+			this.picLupa.Name = "picLupa";
+			this.picLupa.Size = new System.Drawing.Size(29, 29);
+			this.picLupa.TabIndex = 24;
+			this.picLupa.TabStop = false;
+			// 
+			// txtBuscar
+			// 
+			this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBuscar.Hint = "     Buscar usuario...";
+			this.txtBuscar.Location = new System.Drawing.Point(383, 34);
+			this.txtBuscar.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+			this.txtBuscar.Name = "txtBuscar";
+			this.txtBuscar.Size = new System.Drawing.Size(269, 31);
+			this.txtBuscar.TabIndex = 23;
+			// 
+			// pictureBox11
+			// 
+			this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.pictureBox11.Location = new System.Drawing.Point(-1, 110);
+			this.pictureBox11.Name = "pictureBox11";
+			this.pictureBox11.Size = new System.Drawing.Size(1021, 2);
+			this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox11.TabIndex = 20;
+			this.pictureBox11.TabStop = false;
+			// 
+			// lblCerrar
+			// 
+			this.lblCerrar.AutoSize = true;
+			this.lblCerrar.BackColor = System.Drawing.Color.Transparent;
+			this.lblCerrar.Font = new System.Drawing.Font("Century Gothic", 30F);
+			this.lblCerrar.ForeColor = System.Drawing.Color.White;
+			this.lblCerrar.Location = new System.Drawing.Point(984, -5);
+			this.lblCerrar.Name = "lblCerrar";
+			this.lblCerrar.Size = new System.Drawing.Size(41, 49);
+			this.lblCerrar.TabIndex = 11;
+			this.lblCerrar.Text = "x";
+			// 
+			// picInicio
+			// 
+			this.picInicio.Image = ((System.Drawing.Image)(resources.GetObject("picInicio.Image")));
+			this.picInicio.Location = new System.Drawing.Point(22, 22);
+			this.picInicio.Name = "picInicio";
+			this.picInicio.Size = new System.Drawing.Size(216, 44);
+			this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picInicio.TabIndex = 0;
+			this.picInicio.TabStop = false;
+			// 
+			// AgregarImagen
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.ClientSize = new System.Drawing.Size(1024, 600);
+			this.Controls.Add(this.panel2);
+			this.Controls.Add(this.btnPrendas);
+			this.Controls.Add(this.btnSubirFoto);
+			this.Controls.Add(this.txtDescripcion);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.pbFoto);
+			this.Controls.Add(this.btnSeleccionar);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Name = "AgregarImagen";
+			this.Text = "AgregarImagen";
+			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox ptbInicio;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblCerrar;
-        private System.Windows.Forms.PictureBox ptbLupa;
-        private System.Windows.Forms.TextBox txtBuscador;
-        private System.Windows.Forms.PictureBox ptbCamara;
-        private System.Windows.Forms.PictureBox ptbLike;
-        private System.Windows.Forms.PictureBox ptbPerfil;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnSubirFoto;
         private System.Windows.Forms.Button btnPrendas;
-    }
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.PictureBox picPerfil;
+		private System.Windows.Forms.PictureBox picSubir;
+		private System.Windows.Forms.PictureBox picLikes;
+		private System.Windows.Forms.PictureBox picLupa;
+		private ExTextBox txtBuscar;
+		private System.Windows.Forms.PictureBox pictureBox11;
+		private System.Windows.Forms.Label lblCerrar;
+		private System.Windows.Forms.PictureBox picInicio;
+	}
 }

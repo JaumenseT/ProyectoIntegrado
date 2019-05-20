@@ -42,5 +42,12 @@ namespace RedBeetle.Forms_bueno
             this.Close();
             caller.Show();
         }
-    }
+
+		private void btnModificar_Click(object sender, EventArgs e)
+		{
+			var m = new Modificar_Usuario();
+			m.Show();
+			Close();
+		}
+	}
 }
