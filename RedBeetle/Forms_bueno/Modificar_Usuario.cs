@@ -97,6 +97,11 @@ namespace RedBeetle.Forms_bueno
             AccesoDatos.ModificarUsuario(txtNombreUsuario.Text, txtNombre.Text, txtBiografia.Text, txtPaginaWeb.Text, usu.Id_Usuario);
         }
 
+        private void picInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			var perfil = new Perfil(callerHome);
