@@ -10,14 +10,22 @@ namespace RedBeetle.Clases {
     public class Imagen {
         private string descripcion;
         Image newImage = null;
+        byte[] imageBytes = null;
         int id_usuario;
         public string Descripcion { get { return descripcion; } }
         public int IdUsuario { get { return id_usuario; } }
         public Image NewImage { get { return newImage; } }
+        public byte[] ImageBytes { get { return imageBytes; } }
 
         public Imagen(string descripcion, Image image, int id_usuario) {
             this.descripcion = descripcion;
             newImage = image;
+            this.id_usuario = id_usuario;
+        }
+
+        public Imagen(string descripcion, byte[] imageBytes, int id_usuario) {
+            this.descripcion = descripcion;
+            this.imageBytes = imageBytes;
             this.id_usuario = id_usuario;
         }
 

@@ -14,11 +14,13 @@ namespace RedBeetle.Forms
 {
     public partial class Home : Form
     {
+        Form caller;
 		string nombreUsuario;
 		List<string> usuarios = new List<string>();
 
-        public Home(string nomUsu)
+        public Home(string nomUsu, Form caller)
         {
+            this.caller = caller;
             InitializeComponent();
 			nombreUsuario = nomUsu;
         }
@@ -60,12 +62,12 @@ namespace RedBeetle.Forms
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
             this.Hide();
-            Perfil p1 = new Perfil(nombreUsuario);
+            Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
         }
 
         private void ptbCamara_Click(object sender, EventArgs e) {
-            AgregarImagen agregar = new AgregarImagen(nombreUsuario);
+            AgregarImagen agregar = new AgregarImagen(nombreUsuario,this);
             this.Hide();
             agregar.Show();
         }
@@ -80,7 +82,7 @@ namespace RedBeetle.Forms
 
         private void lblUsuario_Click(object sender, EventArgs e) {
             this.Hide();
-            Perfil p1 = new Perfil(nombreUsuario);
+            Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
         }
 
@@ -89,18 +91,10 @@ namespace RedBeetle.Forms
 			picLupa.Hide();
 		}
 
-		private void TxtBuscar_Leave(object sender, EventArgs e)
-		{
-			txtBuscar.Hint = "     Buscar usuario...";
-			picLupa.Show();
-		}
-
-		private void PicLogo_Click(object sender, EventArgs e)
-		{
-			var home = new Home(nombreUsuario);
-			home.Show();
-			Close();
-		}
+        private void TxtBuscar_Leave(object sender, EventArgs e) {
+            txtBuscar.Hint = "     Buscar usuario...";
+            picLupa.Show();
+        }
 
 		//Inacabado
 		private void PicLogo_MouseEnter(object sender, EventArgs e)
@@ -135,16 +129,16 @@ namespace RedBeetle.Forms
 			lblCerrar.BackColor = Color.White;
 		}
 
-		private void PicPerfil_Click(object sender, EventArgs e)
+		/*private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			var p = new Perfil(nombreUsuario);
 			p.Show();
 			Close();
-		}
+		}*/
 
 		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var a = new AgregarImagen(nombreUsuario);
+			var a = new AgregarImagen(nombreUsuario, caller);
 			a.Show();
 			Close();
 		}

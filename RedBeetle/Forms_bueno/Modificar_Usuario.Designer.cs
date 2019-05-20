@@ -168,7 +168,6 @@
 			this.picPerfil.Size = new System.Drawing.Size(60, 60);
 			this.picPerfil.TabIndex = 27;
 			this.picPerfil.TabStop = false;
-			this.picPerfil.Click += new System.EventHandler(this.PicPerfil_Click);
 			// 
 			// picSubir
 			// 
@@ -179,7 +178,6 @@
 			this.picSubir.Size = new System.Drawing.Size(50, 50);
 			this.picSubir.TabIndex = 26;
 			this.picSubir.TabStop = false;
-			this.picSubir.Click += new System.EventHandler(this.PicSubir_Click);
 			// 
 			// picLikes
 			// 
@@ -249,7 +247,6 @@
 			this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picInicio.TabIndex = 0;
 			this.picInicio.TabStop = false;
-			this.picInicio.Click += new System.EventHandler(this.PicInicio_Click);
 			// 
 			// btnGuardar
 			// 

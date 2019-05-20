@@ -14,15 +14,13 @@ using RedBeetle.Clases;
 namespace RedBeetle.Forms_bueno {
     public partial class AgregarImagen : Form {
 
-		Perfil p1;
+		Form caller;
 		string nombreUsuario;
-        public AgregarImagen(string nomUsu) {
+        byte[] imagen = null;
+
+        public AgregarImagen(string nomUsu, Form caller) {
+            this.caller = caller;
             nombreUsuario = nomUsu;
-            InitializeComponent();
-        }
-    
-        public AgregarImagen(Perfil caller) {
-            p1 = caller;
             InitializeComponent();
         }
 
@@ -33,7 +31,13 @@ namespace RedBeetle.Forms_bueno {
             if (dialog.ShowDialog() == DialogResult.OK) {
                 string picPath = dialog.FileName.ToString();
                 pbFoto.ImageLocation = picPath;
+                imagen = System.IO.File.ReadAllBytes(picPath);
             }
+        }
+
+        private void btnSubirFoto_Click_1(object sender, EventArgs e) {
+            Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+            AccesoDatos.AgregarImagen(new Imagen(txtDescripcion.Text, imagen, usu.Id_Usuario));
         }
     }
 }

@@ -59,7 +59,7 @@
             // 
             this.ptbInicio.Image = ((System.Drawing.Image)(resources.GetObject("ptbInicio.Image")));
             this.ptbInicio.Location = new System.Drawing.Point(11, 21);
-            this.ptbInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbInicio.Margin = new System.Windows.Forms.Padding(4);
             this.ptbInicio.Name = "ptbInicio";
             this.ptbInicio.Size = new System.Drawing.Size(441, 71);
             this.ptbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,7 +81,7 @@
             this.panel2.Controls.Add(this.ptbPerfil);
             this.panel2.Controls.Add(this.ptbInicio);
             this.panel2.Location = new System.Drawing.Point(-4, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1348, 138);
             this.panel2.TabIndex = 16;
@@ -90,7 +90,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox4.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(3, 138);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox3.Location = new System.Drawing.Point(1343, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(3, 138);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1348, 2);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +123,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 135);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1348, 2);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +148,7 @@
             this.ptbLupa.BackColor = System.Drawing.Color.White;
             this.ptbLupa.Image = ((System.Drawing.Image)(resources.GetObject("ptbLupa.Image")));
             this.ptbLupa.Location = new System.Drawing.Point(500, 39);
-            this.ptbLupa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbLupa.Margin = new System.Windows.Forms.Padding(4);
             this.ptbLupa.Name = "ptbLupa";
             this.ptbLupa.Size = new System.Drawing.Size(63, 41);
             this.ptbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +158,7 @@
             // txtBuscador
             // 
             this.txtBuscador.Location = new System.Drawing.Point(500, 39);
-            this.txtBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscador.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscador.Multiline = true;
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.Size = new System.Drawing.Size(357, 40);
@@ -171,7 +171,7 @@
             this.ptbCamara.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbCamara.Image = ((System.Drawing.Image)(resources.GetObject("ptbCamara.Image")));
             this.ptbCamara.Location = new System.Drawing.Point(1168, 39);
-            this.ptbCamara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbCamara.Margin = new System.Windows.Forms.Padding(4);
             this.ptbCamara.Name = "ptbCamara";
             this.ptbCamara.Size = new System.Drawing.Size(89, 60);
             this.ptbCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,7 +183,7 @@
             this.ptbLike.BackColor = System.Drawing.Color.Red;
             this.ptbLike.Image = ((System.Drawing.Image)(resources.GetObject("ptbLike.Image")));
             this.ptbLike.Location = new System.Drawing.Point(957, 39);
-            this.ptbLike.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbLike.Margin = new System.Windows.Forms.Padding(4);
             this.ptbLike.Name = "ptbLike";
             this.ptbLike.Size = new System.Drawing.Size(88, 60);
             this.ptbLike.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +195,7 @@
             this.ptbPerfil.BackColor = System.Drawing.Color.Red;
             this.ptbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("ptbPerfil.Image")));
             this.ptbPerfil.Location = new System.Drawing.Point(1069, 39);
-            this.ptbPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.ptbPerfil.Name = "ptbPerfil";
             this.ptbPerfil.Size = new System.Drawing.Size(88, 60);
             this.ptbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,6 +260,7 @@
             this.btnSubirFoto.TabIndex = 22;
             this.btnSubirFoto.Text = "Subir Foto";
             this.btnSubirFoto.UseVisualStyleBackColor = false;
+            this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
             // 
             // btnPrendas
             // 

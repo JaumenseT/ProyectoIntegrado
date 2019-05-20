@@ -125,7 +125,7 @@ namespace RedBeetle
             Login(); //Llamamos al metodo Login para hacer la validacion
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
-				Home r1 = new Home(txtContrasenya.Text);
+				Home r1 = new Home(txtNombreUsuario.Text, this);
 				r1.Show();
 				Hide();
 			}

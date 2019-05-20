@@ -15,9 +15,11 @@ namespace RedBeetle.Forms_bueno
 {
     public partial class Perfil : Form
     {
+        Form caller;
 		string nombreUsuario;
-        public Perfil(string nomUsu)
+        public Perfil(string nomUsu, Form caller)
         {
+            this.caller = caller;
             nombreUsuario = nomUsu;
             InitializeComponent();
         }

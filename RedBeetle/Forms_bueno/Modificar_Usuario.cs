@@ -35,27 +35,27 @@ namespace RedBeetle.Forms_bueno
 			lblCerrar.BackColor = Color.FromArgb(247, 247, 247);
 		}
 
-		private void PicInicio_Click(object sender, EventArgs e)
+		/*private void PicInicio_Click(object sender, EventArgs e)
 		{
 			var home = new Home(callerLogin);
 			home.Show();
 			Close();
-		}
+		}*/
 
 		private void PicLikes_Click(object sender, EventArgs e)
 		{
 
 		}
 
-		private void PicPerfil_Click(object sender, EventArgs e)
+		/*private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			var perfil = new Perfil(callerHome);
 
-		}
+		}*/
 
-		private void PicSubir_Click(object sender, EventArgs e)
+		/*private void PicSubir_Click(object sender, EventArgs e)
 		{
 			var f = new AgregarImagen(callerHome);
-		}
+		}*/
 	}
 }

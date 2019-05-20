@@ -128,7 +128,7 @@ namespace RedBeetle
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
                     //Insertamos en la tabla de empleado el nif nombreapellido y clave
-                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, id_usuario) VALUES ('{imagen.Descripcion}', '{ imagen.NewImage }', '{ imagen.IdUsuario }');");
+                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, id_usuario) VALUES (@descripcion, @img, @id);", new { descripcion = imagen.Descripcion, img = imagen.ImageBytes, id = imagen.IdUsuario });
                 }
             }
         }
