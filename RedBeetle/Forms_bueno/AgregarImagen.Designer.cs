@@ -65,6 +65,7 @@
             this.ptbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbInicio.TabIndex = 0;
             this.ptbInicio.TabStop = false;
+            this.ptbInicio.Click += new System.EventHandler(this.ptbInicio_Click);
             // 
             // panel2
             // 
@@ -142,6 +143,7 @@
             this.lblCerrar.Size = new System.Drawing.Size(51, 61);
             this.lblCerrar.TabIndex = 11;
             this.lblCerrar.Text = "x";
+            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
             // 
             // ptbLupa
             // 
@@ -240,6 +242,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(65, 214);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
