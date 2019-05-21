@@ -83,6 +83,11 @@ namespace RedBeetle
 			else return null;
 		}
 
+		/// <summary>
+		/// Metodo que devuelve un array de bytes con todas las imagenes del usuario suministrado por parametro
+		/// </summary>
+		/// <param name="nomUsu"></param>
+		/// <returns></returns>
 		public static List<byte[]> DevolverImagenes(string nomUsu)
 		{
 			var dbCon = DBConnection.Instancia();

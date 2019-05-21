@@ -79,17 +79,13 @@ namespace RedBeetle.Forms
 		}
 
         private void ptbPerfil_Click(object sender, EventArgs e) {
-            this.Hide();
+            Hide();
             Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
         }
 
-        public string ObtenerNombreUsuario() {
-            return lblUsuario.Text;
-        }
-
         private void lblUsuario_Click(object sender, EventArgs e) {
-            this.Hide();
+            Hide();
             Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
         }
@@ -155,5 +151,39 @@ namespace RedBeetle.Forms
             Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
         }
-    }
+
+		private void EjecutarBusqueda()
+		{
+			var listaUsuarios = AccesoDatos.DevolverNombresUsuario();
+			var esta = false;
+
+			foreach (string elem in listaUsuarios)
+			{
+				if (txtBuscar.Text == elem)
+				{
+					esta = true;
+				}
+			}
+
+			if (txtBuscar.Text == "")
+			{
+				//Si intentas buscar con el campo vacio no haces nada
+			}
+			else if (esta) //Si el nombre de usuario suministrado por el txtbox existe en la base de datos, procedes
+			{   //Si es el enter hace la busqueda
+				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller);
+				perfilUsuario.Show();
+				//Hide();
+			}
+		}
+
+		private void BtnBuscar_Click(object sender, EventArgs e)
+		{
+			using( var pEspera = new PantallaEspera(EjecutarBusqueda))
+			{
+				pEspera.ShowDialog(this);
+			}
+			Hide();
+		}
+	}
 }

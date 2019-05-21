@@ -22,7 +22,7 @@ namespace RedBeetle
         public InicioSesion()
         {
             InitializeComponent();
-            Control.CheckForIllegalCrossThreadCalls = false;
+            //Control.CheckForIllegalCrossThreadCalls = false;
         }
 
 		/// <summary>
@@ -44,28 +44,28 @@ namespace RedBeetle
 		/// Metodo privado de la clase para validar si hay campos vacios y para comprobar que no se sobrepasen longitud de caracteres o haya caracteres especiales
 		/// </summary>
 		/// <returns>Devuelve un boolean indicando si ha habido errores</returns>
-		private bool ValidarInicioSesion()
+		private bool ValidarInicioSesion(string nomUsu, string pass)
 		{
 			bool correcto = true;
 			string mensaje = "";
 
-			if (txtNombreUsuario.Text == "")
+			if (nomUsu == "")
 			{
 				correcto = false;
 				mensaje += "El nombre de usuario no puede estar vacío. \n";
 			}
-			if (txtContrasenya.Text == "")
+			if (nomUsu == "")
 			{
 				correcto = false;
 				mensaje += "La contraseña no puede estar vacía. \n";
 			}
-			if(txtNombreUsuario.TextLength > 25)
+			if(nomUsu.Length > 25)
 			{
 				correcto = false;
 				mensaje += "El nombre de usuario no puede tener mas de 25 caracteres.";
 			}
 			var regex = new Regex("^[a-zA-Z0-9_]*$"); //A esto se le llama Regular Expresion(RegEx) y sirve para evitar caracteres especiales.
-			if (!regex.IsMatch(txtNombreUsuario.Text) || !regex.IsMatch(txtContrasenya.Text)) //IsMatch determina si coinciden los caracteres del string con los seteados en el var
+			if (!regex.IsMatch(nomUsu) || !regex.IsMatch(pass)) //IsMatch determina si coinciden los caracteres del string con los seteados en el var
 			{
 				correcto = false;
 				mensaje += "No se pueden usar caracteres especiales.";
@@ -100,7 +100,7 @@ namespace RedBeetle
 		/// </summary>
 		public void Login()
 		{
-			if (ValidarInicioSesion())
+			if (ValidarInicioSesion(txtNombreUsuario.Text, txtContrasenya.Text))
 			{ //Si no hay ningun campo vacio
 
 				Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu

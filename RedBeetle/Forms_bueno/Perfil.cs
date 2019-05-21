@@ -34,12 +34,12 @@ namespace RedBeetle.Forms_bueno
         }
 
         private void lblCerrar_Click_1(object sender, EventArgs e) {
-            this.Close();
+            Close();
             caller.Show();
         }
 
         private void picInicio_Click(object sender, EventArgs e) {
-            this.Close();
+            Close();
             caller.Show();
         }
 
