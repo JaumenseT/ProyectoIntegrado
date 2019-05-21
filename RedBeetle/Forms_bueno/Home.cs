@@ -57,9 +57,20 @@ namespace RedBeetle.Forms
 			//Rellenar picturebox
 			var imagenesByte = AccesoDatos.DevolverImagenes(nombreUsuario);
 			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+            
+            if (listaImagenes.Count > 0) {
+                for (int i = 0; i < listaImagenes.Count; i++) {
+                    try
+                    {
+                        pic1.BackgroundImage = listaImagenes[i];
+                        pic2.BackgroundImage = listaImagenes[i+1];
+                    }
+                    catch {
 
-			pic1.BackgroundImage = listaImagenes[0];
-			pic2.BackgroundImage = listaImagenes[1];
+                    }
+                }
+            }
+
 		}
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()

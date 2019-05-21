@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvListaSeguidos = new System.Windows.Forms.DataGridView();
+            this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picLogoBeetle = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
@@ -44,12 +45,11 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.picLikes = new System.Windows.Forms.PictureBox();
             this.lblCerrar = new System.Windows.Forms.Label();
-            this.txtBuscar = new RedBeetle.ExTextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscar = new RedBeetle.ExTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -71,37 +71,37 @@
             this.dgvListaSeguidos.AllowUserToDeleteRows = false;
             this.dgvListaSeguidos.AllowUserToResizeColumns = false;
             this.dgvListaSeguidos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListaSeguidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaSeguidos.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaSeguidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListaSeguidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListaSeguidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListaSeguidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaSeguidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_usuario});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.GhostWhite;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.GhostWhite;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListaSeguidos.EnableHeadersVisualStyles = false;
             this.dgvListaSeguidos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvListaSeguidos.Location = new System.Drawing.Point(981, 228);
-            this.dgvListaSeguidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListaSeguidos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListaSeguidos.MultiSelect = false;
             this.dgvListaSeguidos.Name = "dgvListaSeguidos";
             this.dgvListaSeguidos.ReadOnly = true;
@@ -110,13 +110,22 @@
             this.dgvListaSeguidos.Size = new System.Drawing.Size(360, 496);
             this.dgvListaSeguidos.TabIndex = 10;
             // 
+            // nombre_usuario
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombre_usuario.HeaderText = "Following";
+            this.nombre_usuario.Name = "nombre_usuario";
+            this.nombre_usuario.ReadOnly = true;
+            this.nombre_usuario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // picLogoBeetle
             // 
             this.picLogoBeetle.BackColor = System.Drawing.Color.Transparent;
             this.picLogoBeetle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogoBeetle.BackgroundImage")));
             this.picLogoBeetle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLogoBeetle.Location = new System.Drawing.Point(16, 678);
-            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4);
             this.picLogoBeetle.Name = "picLogoBeetle";
             this.picLogoBeetle.Size = new System.Drawing.Size(55, 46);
             this.picLogoBeetle.TabIndex = 5;
@@ -125,9 +134,9 @@
             // pic1
             // 
             this.pic1.BackColor = System.Drawing.Color.Transparent;
-            this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic1.Location = new System.Drawing.Point(80, 255);
-            this.pic1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic1.Margin = new System.Windows.Forms.Padding(4);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(400, 369);
             this.pic1.TabIndex = 7;
@@ -136,9 +145,9 @@
             // pic2
             // 
             this.pic2.BackColor = System.Drawing.Color.Transparent;
-            this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic2.Location = new System.Drawing.Point(544, 255);
-            this.pic2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic2.Margin = new System.Windows.Forms.Padding(4);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(400, 369);
             this.pic2.TabIndex = 8;
@@ -156,7 +165,7 @@
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1365, 110);
             this.panel2.TabIndex = 15;
@@ -168,7 +177,7 @@
             this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPerfil.Location = new System.Drawing.Point(1115, 19);
-            this.picPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picPerfil.Name = "picPerfil";
             this.picPerfil.Size = new System.Drawing.Size(80, 74);
             this.picPerfil.TabIndex = 16;
@@ -182,7 +191,7 @@
             this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSubir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSubir.Location = new System.Drawing.Point(1224, 27);
-            this.picSubir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSubir.Margin = new System.Windows.Forms.Padding(4);
             this.picSubir.Name = "picSubir";
             this.picSubir.Size = new System.Drawing.Size(67, 62);
             this.picSubir.TabIndex = 15;
@@ -195,7 +204,7 @@
             this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
             this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLupa.Location = new System.Drawing.Point(512, 43);
-            this.picLupa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
             this.picLupa.Name = "picLupa";
             this.picLupa.Size = new System.Drawing.Size(39, 36);
             this.picLupa.TabIndex = 13;
@@ -208,7 +217,7 @@
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogo.Location = new System.Drawing.Point(29, 27);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(288, 54);
             this.picLogo.TabIndex = 12;
@@ -223,7 +232,7 @@
             this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLikes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLikes.Location = new System.Drawing.Point(1021, 27);
-            this.picLikes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLikes.Margin = new System.Windows.Forms.Padding(4);
             this.picLikes.Name = "picLikes";
             this.picLikes.Size = new System.Drawing.Size(67, 62);
             this.picLikes.TabIndex = 14;
@@ -247,25 +256,11 @@
             this.lblCerrar.MouseEnter += new System.EventHandler(this.LblCerrar_MouseEnter);
             this.lblCerrar.MouseLeave += new System.EventHandler(this.LblCerrar_MouseLeave);
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Hint = "     Buscar usuario...";
-            this.txtBuscar.Location = new System.Drawing.Point(511, 42);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
-            this.txtBuscar.TabIndex = 4;
-            this.txtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
-            this.txtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
-            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox6.Location = new System.Drawing.Point(-1, 138);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(3, 554);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,7 +274,7 @@
             this.picUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUsuario.Location = new System.Drawing.Point(981, 122);
-            this.picUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(107, 98);
             this.picUsuario.TabIndex = 31;
@@ -304,20 +299,25 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.pictureBox4.Location = new System.Drawing.Point(1089, 214);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(236, 6);
             this.pictureBox4.TabIndex = 38;
             this.pictureBox4.TabStop = false;
             // 
-            // nombre_usuario
+            // txtBuscar
             // 
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle35;
-            this.nombre_usuario.HeaderText = "Following";
-            this.nombre_usuario.Name = "nombre_usuario";
-            this.nombre_usuario.ReadOnly = true;
-            this.nombre_usuario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Hint = "     Buscar usuario...";
+            this.txtBuscar.Location = new System.Drawing.Point(511, 42);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
+            this.txtBuscar.TabIndex = 4;
+            this.txtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
+            this.txtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
             // 
             // Home
             // 
@@ -335,7 +335,7 @@
             this.Controls.Add(this.picLogoBeetle);
             this.Controls.Add(this.dgvListaSeguidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
