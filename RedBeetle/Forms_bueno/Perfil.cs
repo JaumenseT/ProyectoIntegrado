@@ -71,5 +71,20 @@ namespace RedBeetle.Forms_bueno
             a.Show();
             this.Hide();
         }
-    }
+
+		private void ptbAjustes_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ptbFavoritos_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox15_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
