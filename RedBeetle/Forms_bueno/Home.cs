@@ -56,10 +56,10 @@ namespace RedBeetle.Forms
 
 			//Rellenar picturebox
 			var imagenesByte = AccesoDatos.DevolverImagenes(nombreUsuario);
-			var imagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
 
-			pic1.BackgroundImage = imagenes[0];
-			pic2.BackgroundImage = imagenes[1];
+			pic1.BackgroundImage = listaImagenes[0];
+			pic2.BackgroundImage = listaImagenes[1];
 		}
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()
@@ -132,5 +132,17 @@ namespace RedBeetle.Forms
 			a.Show();
 			this.Hide();
 		}
-	}
+
+        private void lblUsuario_Click_1(object sender, EventArgs e) {
+            this.Hide();
+            Perfil p1 = new Perfil(nombreUsuario, this);
+            p1.Show();
+        }
+
+        private void picUsuario_Click(object sender, EventArgs e) {
+            this.Hide();
+            Perfil p1 = new Perfil(nombreUsuario, this);
+            p1.Show();
+        }
+    }
 }

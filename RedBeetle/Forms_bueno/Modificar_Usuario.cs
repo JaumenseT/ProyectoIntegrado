@@ -14,20 +14,20 @@ namespace RedBeetle.Forms_bueno
 {
     public partial class Modificar_Usuario : Form
     {
-		Home callerHome;
-		InicioSesion callerLogin;
+		Form caller;
         string nombreUsuario; //instanciamos un atributo nombreUsuario para cargar desde inicio sesión y determinar que usuario esta logueado.
 
-        public Modificar_Usuario(string nombreUsuario)
+        public Modificar_Usuario(string nombreUsuario, Form caller)
         {
+            this.caller = caller;
             InitializeComponent();
-
             this.nombreUsuario = nombreUsuario; //pasamos este atributo por el constructor del form.
         }
 
         private void lblCerrar_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            caller.Show();
         }
 
 		private void LblCerrar_MouseLeave(object sender, EventArgs e)
@@ -95,6 +95,8 @@ namespace RedBeetle.Forms_bueno
         {
             Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
             AccesoDatos.ModificarUsuario(txtNombreUsuario.Text, txtNombre.Text, txtBiografia.Text, txtPaginaWeb.Text, usu.Id_Usuario);
+            this.Close();
+            caller.Show();
         }
 
         private void picInicio_Click(object sender, EventArgs e)

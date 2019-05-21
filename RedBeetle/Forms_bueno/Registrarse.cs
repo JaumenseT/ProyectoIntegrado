@@ -117,15 +117,11 @@ namespace RedBeetle
 
 		private void lblCerrar_Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+            this.Close();
+			caller.Show();
 		}
 
-		/// <summary>
-		/// Registra un nuevo usuario en la base de datos
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void btnRegistrarse_Click(object sender, EventArgs e)
+		/*private void EjecutarRegistro()
 		{
 			var mensaje = "";
 			if (ValidarDatos()) //Este if esta vacio para que se llame al metodo ValidarDatos y si el error es true te muestre el MessageBox
@@ -137,23 +133,68 @@ namespace RedBeetle
 				var nomUsu = AccesoDatos.DevolverUsuario(txtUsuario.Text); ///Llamamos al metodo que devuelve un usuario
 				var correo = AccesoDatos.ExisteCorreo(txtCorreo.Text);
 
-				if(nomUsu != null) //Si devuelve alguno es que ya existe un usuario con ese nombre de usuario
+				if (nomUsu != null) //Si devuelve alguno es que ya existe un usuario con ese nombre de usuario
 				{
 					mensaje += "Ese nombre de usuario ya está en uso, por favor utilice otro. \n";
 				}
-				if(correo) //Si el correo escrito ya existe se agrega este mensaje
+				if (correo) //Si el correo escrito ya existe se agrega este mensaje
 				{
-                    mensaje += "Este correo electrónico ya está registrado, por favor use otro.";
+					mensaje += "Este correo electrónico ya está registrado, por favor use otro.";
 				}
-				if(mensaje != "") //Si el mensaje no esta vacio salta el MessageBox
+				if (mensaje != "") //Si el mensaje no esta vacio salta el MessageBox
 				{
 					MessageBox.Show(mensaje, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 				else //Si el mensaje esta vacio entonces no hay ningun error por lo que procedemos con el registro
 				{
 					var usuario = new Usuario(txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text); //Por ahora solo le pasamos los datos necesarios, y en modificar perfil
-					//haremos un update con la biografia y la pagina web
+																													 //haremos un update con la biografia y la pagina 
+					AccesoDatos.AgregarUsuario(usuario);
+					var formInicio = new InicioSesion();
+					formInicio.Show();
 
+					Close();
+				}
+			}
+		}*/
+
+		/// <summary>
+		/// Registra un nuevo usuario en la base de datos
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void btnRegistrarse_Click(object sender, EventArgs e)
+		{
+			/*using (var pEspera = new PantallaEspera(EjecutarRegistro))
+			{
+				pEspera.ShowDialog(this);
+			}*/
+			var mensaje = "";
+			if (ValidarDatos()) //Este if esta vacio para que se llame al metodo ValidarDatos y si el error es true te muestre el MessageBox
+			{
+				//ValidarDatos automaticamente te muestra un message box por lo que aqui no hay que hacer nada.
+			}
+			else
+			{
+				var nomUsu = AccesoDatos.DevolverUsuario(txtUsuario.Text); ///Llamamos al metodo que devuelve un usuario
+				var correo = AccesoDatos.ExisteCorreo(txtCorreo.Text);
+
+				if (nomUsu != null) //Si devuelve alguno es que ya existe un usuario con ese nombre de usuario
+				{
+					mensaje += "Ese nombre de usuario ya está en uso, por favor utilice otro. \n";
+				}
+				if (correo) //Si el correo escrito ya existe se agrega este mensaje
+				{
+					mensaje += "Este correo electrónico ya está registrado, por favor use otro.";
+				}
+				if (mensaje != "") //Si el mensaje no esta vacio salta el MessageBox
+				{
+					MessageBox.Show(mensaje, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				}
+				else //Si el mensaje esta vacio entonces no hay ningun error por lo que procedemos con el registro
+				{
+					var usuario = new Usuario(txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text); //Por ahora solo le pasamos los datos necesarios, y en modificar perfil
+																													 //haremos un update con la biografia y la pagina 
 					AccesoDatos.AgregarUsuario(usuario);
 					var formInicio = new InicioSesion();
 					formInicio.Show();

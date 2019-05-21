@@ -11,6 +11,7 @@ using System.Windows.Input; //Necesario para los eventos de key input
 using RedBeetle.Clases;
 using RedBeetle.Forms;
 using System.Text.RegularExpressions; //Para poder usar Regex
+using RedBeetle.Forms_bueno;
 
 namespace RedBeetle
 {
@@ -21,6 +22,7 @@ namespace RedBeetle
         public InicioSesion()
         {
             InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
         }
 
 		/// <summary>
@@ -28,6 +30,8 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
+        ///
+
 		private void CheckEnter(object sender, KeyPressEventArgs e)
 		{
 			if(e.KeyChar == (char)13) //Si el numero de tecla corresponde al 13, que es el enter, el btnEntrar se apretara automaticamente.
@@ -42,35 +46,35 @@ namespace RedBeetle
 		/// <returns>Devuelve un boolean indicando si ha habido errores</returns>
 		private bool ValidarInicioSesion()
 		{
-			bool error = false;
+			bool correcto = true;
 			string mensaje = "";
 
 			if (txtNombreUsuario.Text == "")
 			{
-				error = true;
+				correcto = false;
 				mensaje += "El nombre de usuario no puede estar vacío. \n";
 			}
 			if (txtContrasenya.Text == "")
 			{
-				error = true;
+				correcto = false;
 				mensaje += "La contraseña no puede estar vacía. \n";
 			}
 			if(txtNombreUsuario.TextLength > 25)
 			{
-				error = true;
+				correcto = false;
 				mensaje += "El nombre de usuario no puede tener mas de 25 caracteres.";
 			}
 			var regex = new Regex("^[a-zA-Z0-9_]*$"); //A esto se le llama Regular Expresion(RegEx) y sirve para evitar caracteres especiales.
 			if (!regex.IsMatch(txtNombreUsuario.Text) || !regex.IsMatch(txtContrasenya.Text)) //IsMatch determina si coinciden los caracteres del string con los seteados en el var
 			{
-				error = true;
+				correcto = false;
 				mensaje += "No se pueden usar caracteres especiales.";
 			}
 			if(mensaje != ""){
 
 				MessageBox.Show(mensaje, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
-			return error;
+			return correcto;
 		}
 
 
@@ -96,10 +100,10 @@ namespace RedBeetle
 		/// </summary>
 		public void Login()
 		{
-			if (!ValidarInicioSesion())
+			if (ValidarInicioSesion())
 			{ //Si no hay ningun campo vacio
 
-                Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu
+				Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu
 
 				if (usu == null) //Si el metodo no ha devuelto nada es que no existe dicho usuario
 				{
@@ -122,11 +126,15 @@ namespace RedBeetle
 		}
 
         private void btnEntrar_Click(object sender, EventArgs e) {
-            Login(); //Llamamos al metodo Login para hacer la validacion
+            //Login();
+            using (var pEspera = new PantallaEspera(Login))
+			{
+				pEspera.ShowDialog(this);
+			}
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
-				Home r1 = new Home(txtNombreUsuario.Text, this);
-				r1.Show();
+                Home r1 = new Home(txtNombreUsuario.Text, this);
+                r1.Show();
 				Hide();
 			}
 			else //Si no, si hay algun error, solo seteas el error global instanciado al principio de la clase a false para que cuando vuelvas a intentarlo no tengas ningun error de primeras.

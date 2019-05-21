@@ -45,9 +45,9 @@ namespace RedBeetle.Forms_bueno
 
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
-			var m = new Modificar_Usuario(nombreUsuario);
+			var m = new Modificar_Usuario(nombreUsuario, this);
 			m.Show();
-			Close();
+			this.Hide();
 		}
 
 		private void lblCerrar_MouseEnter(object sender, EventArgs e)
@@ -59,5 +59,17 @@ namespace RedBeetle.Forms_bueno
 		{
 			lblCerrar.ForeColor = Color.White;
 		}
-	}
+
+        private void ptbCamara2_Click(object sender, EventArgs e) {
+            var a = new AgregarImagen(nombreUsuario, this);
+            a.Show();
+            this.Hide();
+        }
+
+        private void picSubir_Click(object sender, EventArgs e) {
+            var a = new AgregarImagen(nombreUsuario, this);
+            a.Show();
+            this.Hide();
+        }
+    }
 }
