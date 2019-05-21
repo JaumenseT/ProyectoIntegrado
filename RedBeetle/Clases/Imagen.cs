@@ -10,11 +10,13 @@ using System.IO;
 namespace RedBeetle.Clases {
     public class Imagen {
 
+        private int id_imagen;
         private string descripcion;
         Image newImage = null;
         byte[] imageBytes = null;
         int id_usuario;
 
+        public int Id_Imagen { get { return id_imagen; } }
         public string Descripcion { get { return descripcion; } }
         public int IdUsuario { get { return id_usuario; } }
         public Image NewImage { get { return newImage; } }
