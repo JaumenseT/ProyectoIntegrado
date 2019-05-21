@@ -142,42 +142,12 @@ namespace RedBeetle
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
                     //Insertamos en la tabla de empleado el nif nombreapellido y clave
-                    conexion.Execute($"INSERT INTO imagen (descripcion, imagen, id_usuario) VALUES (@descripcion, @img, @id);", new { descripcion = imagen.Descripcion, img = imagen.ImageBytes, id = imagen.IdUsuario });
+                    conexion.Execute($"INSERT INTO imagen (descripcion, imagenes, id_usuario) VALUES (@descripcion, @img, @id);", new { descripcion = imagen.Descripcion, img = imagen.ImageBytes, id = imagen.IdUsuario });
                 }
             }
         }
-/*
-		public static List<Usuario> BuscarNombreUsuario(string usu) //Comprueba si existe un usuario con x nombre de usuario
-		{
-			var dbCon = DBConnection.Instancia();
-			if (dbCon.Conectado())
-			{
-				using (IDbConnection conexion = dbCon.Conexion)
-				{
-					var output = conexion.Query<Usuario>($"SELECT * FROM usuario WHERE nombre_usuario = '{ usu }';").ToList();
-					return output;
-				}
-			}
-            else return null;
-		}
 
-		public static List<Usuario> BuscarCorreo(string correo)
-		{
-			var dbCon = DBConnection.Instancia();
-			if (dbCon.Conectado())
-			{
-				using (IDbConnection conexion = dbCon.Conexion)
-				{
-					var output = conexion.Query<Usuario>($"SELECT COUNT(*) FROM usuario WHERE correo = '{ correo }';").ToList();
-					return output;
-				}
-			}
-			else return null;
-		}*/
-
-			/*
-        public static bool ComprobarUsuario(string nombreUsuario, string contrasenya)
-        {
+        public static void AgregarPrenda(Prenda prenda) {
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
             if (dbCon.Conectado()) //Abrimos la conexión con la base de datos
             {
@@ -185,15 +155,28 @@ namespace RedBeetle
                 //y a parte, debido a que Dapper se ha creado especificamente para consultas SQL, nos ahorraremos MUCHO codigo.
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
-                    var output = conexion.Query<Usuario>($"SELECT nombre_usuario, contrasenya FROM usuario WHERE nombre_usuario = '{ nombreUsuario}' AND contrasenya= '{contrasenya}'").ToList();
-                    if (output.Count != 0) {
-                        return true;
-                    }
+                    //Insertamos en la tabla de empleado el nif nombreapellido y clave
+                    conexion.Execute($"INSERT INTO prenda (nombre, link, id_imagen, id_categoria) VALUES (@nombre, @link, @id_imagen, id_categoria);", new { nombre = prenda.Nombre, link = prenda.Link, id_imagen = prenda.Image.Id_Imagen, prenda.C.Nombre });
                 }
             }
-            return false;
         }
 
-		*/
+        public static Categoria DevolverCategoria(string nombreCategoria) {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
+                using (IDbConnection conexion = dbCon.Conexion) {
+                    var output = conexion.Query<Categoria>($"SELECT * FROM categoria WHERE nombre = @nombre;", new { nombre = nombreCategoria }).ToList();
+                    if (output.Count != 0) {
+                        Categoria c = output[0];
+                        return c;
+
+                    } else return null;
+
+                }
+            } else return null;
+        }
+		
+
+	
     }
 }

@@ -29,8 +29,6 @@
             this.picPerfil = new System.Windows.Forms.PictureBox();
             this.picSubir = new System.Windows.Forms.PictureBox();
             this.picLikes = new System.Windows.Forms.PictureBox();
-            this.picLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new RedBeetle.ExTextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lblCerrar = new System.Windows.Forms.Label();
             this.picInicio = new System.Windows.Forms.PictureBox();
@@ -70,11 +68,6 @@
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.txtNameBottom = new RedBeetle.ExTextBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.exTextBox3 = new RedBeetle.ExTextBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
@@ -100,12 +93,13 @@
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
             this.txtLinkShoes = new RedBeetle.ExTextBox();
+            this.picLupa = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new RedBeetle.ExTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -129,10 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -153,6 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFoto
@@ -169,16 +160,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.Controls.Add(this.pictureBox19);
-            this.panel2.Controls.Add(this.pictureBox20);
-            this.panel2.Controls.Add(this.pictureBox21);
-            this.panel2.Controls.Add(this.pictureBox26);
-            this.panel2.Controls.Add(this.exTextBox3);
+            this.panel2.Controls.Add(this.picLupa);
+            this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.picPerfil);
             this.panel2.Controls.Add(this.picSubir);
             this.panel2.Controls.Add(this.picLikes);
-            this.panel2.Controls.Add(this.picLupa);
-            this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.lblCerrar);
             this.panel2.Controls.Add(this.picInicio);
@@ -227,30 +213,6 @@
             this.picLikes.Size = new System.Drawing.Size(67, 62);
             this.picLikes.TabIndex = 25;
             this.picLikes.TabStop = false;
-            // 
-            // picLupa
-            // 
-            this.picLupa.BackColor = System.Drawing.Color.White;
-            this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
-            this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picLupa.Location = new System.Drawing.Point(512, 43);
-            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
-            this.picLupa.Name = "picLupa";
-            this.picLupa.Size = new System.Drawing.Size(39, 36);
-            this.picLupa.TabIndex = 24;
-            this.picLupa.TabStop = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Hint = "     Buscar usuario...";
-            this.txtBuscar.Location = new System.Drawing.Point(511, 42);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
-            this.txtBuscar.TabIndex = 23;
             // 
             // pictureBox11
             // 
@@ -576,7 +538,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.label7.Location = new System.Drawing.Point(650, 619);
+            this.label7.Location = new System.Drawing.Point(650, 622);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 30);
@@ -678,54 +640,6 @@
             this.txtNameBottom.Name = "txtNameBottom";
             this.txtNameBottom.Size = new System.Drawing.Size(251, 34);
             this.txtNameBottom.TabIndex = 134;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.pictureBox19.Location = new System.Drawing.Point(552, 72);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(251, 6);
-            this.pictureBox19.TabIndex = 110;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.pictureBox20.Location = new System.Drawing.Point(552, 33);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(4, 43);
-            this.pictureBox20.TabIndex = 108;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Location = new System.Drawing.Point(552, 33);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(251, 10);
-            this.pictureBox21.TabIndex = 109;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Location = new System.Drawing.Point(802, 31);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(11, 48);
-            this.pictureBox26.TabIndex = 107;
-            this.pictureBox26.TabStop = false;
-            // 
-            // exTextBox3
-            // 
-            this.exTextBox3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exTextBox3.Hint = "Link...";
-            this.exTextBox3.Location = new System.Drawing.Point(552, 38);
-            this.exTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.exTextBox3.Name = "exTextBox3";
-            this.exTextBox3.Size = new System.Drawing.Size(251, 34);
-            this.exTextBox3.TabIndex = 106;
             // 
             // pictureBox27
             // 
@@ -967,6 +881,30 @@
             this.txtLinkShoes.Size = new System.Drawing.Size(251, 34);
             this.txtLinkShoes.TabIndex = 159;
             // 
+            // picLupa
+            // 
+            this.picLupa.BackColor = System.Drawing.Color.White;
+            this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
+            this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picLupa.Location = new System.Drawing.Point(505, 38);
+            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
+            this.picLupa.Name = "picLupa";
+            this.picLupa.Size = new System.Drawing.Size(39, 36);
+            this.picLupa.TabIndex = 29;
+            this.picLupa.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Hint = "     Buscar usuario...";
+            this.txtBuscar.Location = new System.Drawing.Point(504, 37);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
+            this.txtBuscar.TabIndex = 28;
+            // 
             // AgregarImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1039,6 +977,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AgregarImagen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarImagen";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -1046,7 +985,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -1070,10 +1008,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
@@ -1094,6 +1028,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1105,8 +1040,6 @@
 		private System.Windows.Forms.PictureBox picPerfil;
 		private System.Windows.Forms.PictureBox picSubir;
 		private System.Windows.Forms.PictureBox picLikes;
-		private System.Windows.Forms.PictureBox picLupa;
-		private ExTextBox txtBuscar;
 		private System.Windows.Forms.PictureBox pictureBox11;
 		private System.Windows.Forms.Label lblCerrar;
 		private System.Windows.Forms.PictureBox picInicio;
@@ -1146,11 +1079,6 @@
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
         private ExTextBox txtNameBottom;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox26;
-        private ExTextBox exTextBox3;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
@@ -1176,5 +1104,7 @@
         private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox46;
         private ExTextBox txtLinkShoes;
+        private System.Windows.Forms.PictureBox picLupa;
+        private ExTextBox txtBuscar;
     }
 }
