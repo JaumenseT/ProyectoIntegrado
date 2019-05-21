@@ -94,6 +94,12 @@
     <Compile Include="Forms_bueno\Modificar_Usuario.Designer.cs">
       <DependentUpon>Modificar_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_bueno\PantallaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_bueno\PantallaEspera.Designer.cs">
+      <DependentUpon>PantallaEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_bueno\Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_bueno\Modificar_Usuario.resx">
       <DependentUpon>Modificar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_bueno\PantallaEspera.resx">
+      <DependentUpon>PantallaEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_bueno\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
@@ -152,8 +161,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\pantallaCarga.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
