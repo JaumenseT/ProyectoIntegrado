@@ -35,9 +35,17 @@ namespace RedBeetle.Forms_bueno {
             }
         }
 
-        private void btnSubirFoto_Click_1(object sender, EventArgs e) {
+        private void SubirFoto() {
             Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
             AccesoDatos.AgregarImagen(new Imagen(txtDescripcion.Text, imagen, usu.Id_Usuario));
+            this.Close();
+            caller.Show();
+        }
+
+        private void btnSubirFoto_Click_1(object sender, EventArgs e) {
+            using (var pEspera = new PantallaEspera(SubirFoto)) {
+                pEspera.ShowDialog(this);
+            }
         }
 
         private void ptbInicio_Click(object sender, EventArgs e) {
