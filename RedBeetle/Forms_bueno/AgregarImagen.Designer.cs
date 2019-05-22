@@ -211,6 +211,7 @@
             this.picPerfil.Size = new System.Drawing.Size(80, 74);
             this.picPerfil.TabIndex = 27;
             this.picPerfil.TabStop = false;
+            this.picPerfil.Click += new System.EventHandler(this.picPerfil_Click);
             // 
             // picSubir
             // 
@@ -979,7 +980,6 @@
             this.Name = "AgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarImagen";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarImagen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

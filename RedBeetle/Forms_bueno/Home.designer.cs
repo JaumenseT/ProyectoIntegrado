@@ -51,6 +51,8 @@
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -102,7 +104,7 @@
             this.dgvListaSeguidos.EnableHeadersVisualStyles = false;
             this.dgvListaSeguidos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvListaSeguidos.Location = new System.Drawing.Point(981, 228);
-            this.dgvListaSeguidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListaSeguidos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListaSeguidos.MultiSelect = false;
             this.dgvListaSeguidos.Name = "dgvListaSeguidos";
             this.dgvListaSeguidos.ReadOnly = true;
@@ -126,7 +128,7 @@
             this.picLogoBeetle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogoBeetle.BackgroundImage")));
             this.picLogoBeetle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLogoBeetle.Location = new System.Drawing.Point(16, 678);
-            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoBeetle.Margin = new System.Windows.Forms.Padding(4);
             this.picLogoBeetle.Name = "picLogoBeetle";
             this.picLogoBeetle.Size = new System.Drawing.Size(55, 46);
             this.picLogoBeetle.TabIndex = 5;
@@ -137,7 +139,7 @@
             this.pic1.BackColor = System.Drawing.Color.Transparent;
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic1.Location = new System.Drawing.Point(80, 255);
-            this.pic1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic1.Margin = new System.Windows.Forms.Padding(4);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(400, 369);
             this.pic1.TabIndex = 7;
@@ -148,7 +150,7 @@
             this.pic2.BackColor = System.Drawing.Color.Transparent;
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic2.Location = new System.Drawing.Point(544, 255);
-            this.pic2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic2.Margin = new System.Windows.Forms.Padding(4);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(400, 369);
             this.pic2.TabIndex = 8;
@@ -167,7 +169,7 @@
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1365, 110);
             this.panel2.TabIndex = 15;
@@ -180,7 +182,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(784, 30);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 58);
             this.btnBuscar.TabIndex = 100;
@@ -195,7 +197,7 @@
             this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPerfil.Location = new System.Drawing.Point(1115, 18);
-            this.picPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picPerfil.Name = "picPerfil";
             this.picPerfil.Size = new System.Drawing.Size(80, 74);
             this.picPerfil.TabIndex = 16;
@@ -209,7 +211,7 @@
             this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSubir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSubir.Location = new System.Drawing.Point(1224, 27);
-            this.picSubir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSubir.Margin = new System.Windows.Forms.Padding(4);
             this.picSubir.Name = "picSubir";
             this.picSubir.Size = new System.Drawing.Size(67, 62);
             this.picSubir.TabIndex = 15;
@@ -222,7 +224,7 @@
             this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
             this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picLupa.Location = new System.Drawing.Point(387, 43);
-            this.picLupa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
             this.picLupa.Name = "picLupa";
             this.picLupa.Size = new System.Drawing.Size(39, 36);
             this.picLupa.TabIndex = 13;
@@ -234,13 +236,12 @@
             this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Location = new System.Drawing.Point(29, 27);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Location = new System.Drawing.Point(16, 27);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(288, 54);
             this.picLogo.TabIndex = 12;
             this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.PicLogo_Click);
             this.picLogo.MouseEnter += new System.EventHandler(this.PicLogo_MouseEnter);
             this.picLogo.MouseLeave += new System.EventHandler(this.PicLogo_MouseLeave);
             // 
@@ -251,7 +252,7 @@
             this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLikes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLikes.Location = new System.Drawing.Point(1021, 27);
-            this.picLikes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLikes.Margin = new System.Windows.Forms.Padding(4);
             this.picLikes.Name = "picLikes";
             this.picLikes.Size = new System.Drawing.Size(67, 62);
             this.picLikes.TabIndex = 14;
@@ -293,7 +294,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox6.Location = new System.Drawing.Point(-1, 138);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(3, 554);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -303,11 +304,10 @@
             // picUsuario
             // 
             this.picUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.picUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUsuario.BackgroundImage")));
             this.picUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUsuario.Location = new System.Drawing.Point(981, 122);
-            this.picUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(107, 98);
             this.picUsuario.TabIndex = 31;
@@ -332,11 +332,29 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.pictureBox4.Location = new System.Drawing.Point(1089, 214);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(236, 6);
             this.pictureBox4.TabIndex = 38;
             this.pictureBox4.TabStop = false;
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(900, 632);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.TabIndex = 39;
+            this.btnSiguiente.Text = "button1";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(80, 632);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 40;
+            this.btnAtras.Text = "button2";
+            this.btnAtras.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -344,6 +362,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1365, 738);
+            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.picUsuario);
             this.Controls.Add(this.lblUsuario);
@@ -354,11 +374,10 @@
             this.Controls.Add(this.picLogoBeetle);
             this.Controls.Add(this.dgvListaSeguidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).EndInit();
@@ -398,5 +417,7 @@
 		private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_usuario;
 		private System.Windows.Forms.Button btnBuscar;
-	}
+        private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button btnAtras;
+    }
 }

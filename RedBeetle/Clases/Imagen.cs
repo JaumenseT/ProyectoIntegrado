@@ -91,5 +91,15 @@ namespace RedBeetle.Clases {
 			}
 			return listaImagenes;
         }
+
+        /*public static Image ConvertirImagen(byte[] byteAvatar) {
+            // MemoryStream ms = new MemoryStream(byteAvatar);
+            // Image devolverImagen = Image.FromStream(ms);
+            // return devolverImagen;
+
+            MemoryStream ms = new MemoryStream(byteAvatar);
+            Image imagen = Image.FromStream(ms);
+            return imagen;
+        }*/
     }
 }

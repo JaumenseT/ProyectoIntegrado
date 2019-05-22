@@ -14,14 +14,15 @@ namespace RedBeetle.Forms_bueno
 {
     public partial class Modificar_Usuario : Form
     {
-		Form caller;
-        string nombreUsuario; //instanciamos un atributo nombreUsuario para cargar desde inicio sesión y determinar que usuario esta logueado.
+        byte[] imagen = null;
+        Form caller;
+        Usuario user; //instanciamos un atributo nombreUsuario para cargar desde inicio sesión y determinar que usuario esta logueado.
 
-        public Modificar_Usuario(string nombreUsuario, Form caller)
+        public Modificar_Usuario(Form caller)
         {
             this.caller = caller;
             InitializeComponent();
-            this.nombreUsuario = nombreUsuario; //pasamos este atributo por el constructor del form.
+            user = Aplicacion.User;
         }
 
 		/// <summary>
@@ -41,13 +42,12 @@ namespace RedBeetle.Forms_bueno
 			}
 			txtBuscar.AutoCompleteCustomSource = lista;
 
-			Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
-			txtNombreUsuario.Text = usu.Nombre_usuario;
-			txtNombre.Text = usu.Nombre;
-			txtContrasenya.Text = usu.Contrasenya;
-			txtCorreo.Text = usu.Correo;
-			txtPaginaWeb.Text = usu.Pagina_web;
-			txtBiografia.Text = usu.Biografia;
+			txtNombreUsuario.Text = user.Nombre_usuario;
+			txtNombre.Text = user.Nombre;
+			txtContrasenya.Text = user.Contrasenya;
+			txtCorreo.Text = user.Correo;
+			txtPaginaWeb.Text = user.Pagina_web;
+			txtBiografia.Text = user.Biografia;
 			txtContrasenya.PasswordChar = '*';
 		}
 
@@ -104,8 +104,7 @@ namespace RedBeetle.Forms_bueno
         /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
-            AccesoDatos.ModificarUsuario(txtNombreUsuario.Text, txtNombre.Text, txtBiografia.Text, txtPaginaWeb.Text, usu.Id_Usuario);
+            AccesoDatos.ModificarUsuario(txtNombreUsuario.Text, txtNombre.Text, txtBiografia.Text, txtPaginaWeb.Text, user.Id_Usuario, imagen);
             this.Close();
             caller.Show();
         }
@@ -125,5 +124,16 @@ namespace RedBeetle.Forms_bueno
 		{
 
 		}
-	}
+
+        private void btnCambiarFoto_Click(object sender, EventArgs e) {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)| All Files(*.*)|*.*|";
+
+            if (dialog.ShowDialog() == DialogResult.OK) {
+                string picPath = dialog.FileName.ToString();
+                pbFoto.ImageLocation = picPath;
+                imagen = System.IO.File.ReadAllBytes(picPath);
+            }
+        }
+    }
 }

@@ -15,22 +15,23 @@ namespace RedBeetle.Forms
     public partial class Home : Form
     {
         Form caller;
-		string nombreUsuario;
+	    Usuario user;
 		List<string> usuarios = new List<string>();
+		//List<byte[]> imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
+		//List<Image> listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
 
-        public Home(string nomUsu, Form caller)
+		public Home(Form caller)
         {
             this.caller = caller;
             InitializeComponent();
-			nombreUsuario = nomUsu;
+			user = Aplicacion.User;
         }
 
 		private void Home_Load(object sender, EventArgs e) {
-            var usu = AccesoDatos.DevolverUsuario(nombreUsuario);
-			lblUsuario.Text = usu.Nombre_usuario;
-
-			//Para que conforme vayas buscando te salgan resultados en el textbox
-			var nombres = AccesoDatos.DevolverNombresUsuario(); 
+			lblUsuario.Text = user.Nombre_usuario;
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            //Para que conforme vayas buscando te salgan resultados en el textbox
+            var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
 
 			foreach(string elem in nombres)
@@ -56,7 +57,7 @@ namespace RedBeetle.Forms
 			dgvListaSeguidos.ClearSelection();
 
 			//Rellenar picturebox
-			var imagenesByte = AccesoDatos.DevolverImagenes(nombreUsuario);
+			var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
 			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
             
             if (listaImagenes.Count > 0) {
@@ -79,6 +80,7 @@ namespace RedBeetle.Forms
             }
 
 		}
+
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()
 		{
@@ -87,17 +89,34 @@ namespace RedBeetle.Forms
 
 		private void CrearFormPerfil()
 		{
-			Perfil p1 = new Perfil(nombreUsuario, this);
+			Perfil p1 = new Perfil(this);
 			p1.Show();
 		}
+		///Funcion para la pantalla de carga
+		private void CrearFormSubirImagen()
+		{
+			var a = new AgregarImagen(this);
+			a.Show();
+		}
+		
+		private void PicSubir_Click(object sender, EventArgs e)
+		{
+			/*using (var pEspera = new PantallaEspera(CrearFormSubirImagen))
+			{
+				pEspera.ShowDialog(this);
+			}*/
+			var a = new AgregarImagen(this);
+			a.Show();
+			Hide();
+		}
 
-        private void ptbPerfil_Click(object sender, EventArgs e)
+		private void ptbPerfil_Click(object sender, EventArgs e)
 		{
 			/*using (var pEspera = new PantallaEspera(CrearFormPerfil))
 			{
 				pEspera.ShowDialog(this);
 			}*/
-            Perfil p1 = new Perfil(nombreUsuario, this);
+            Perfil p1 = new Perfil(this);
 			p1.Show();
 			Hide();
         }
@@ -105,7 +124,7 @@ namespace RedBeetle.Forms
         private void lblUsuario_Click(object sender, EventArgs e)
 		{
             Hide();
-            Perfil p1 = new Perfil(nombreUsuario, this);
+            Perfil p1 = new Perfil(this);
             p1.Show();
         }
 
@@ -139,6 +158,7 @@ namespace RedBeetle.Forms
 		private void lblCerrar_Click_1(object sender, EventArgs e)
 		{
 			this.Close();
+            caller.Show();
 		}
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
@@ -151,33 +171,18 @@ namespace RedBeetle.Forms
 			lblCerrar.ForeColor = Color.White;
 		}
 
-		private void CrearFormSubirImagen()
-		{
-			var a = new AgregarImagen(nombreUsuario, this);
-			a.Show();
-		}
-
-		private void PicSubir_Click(object sender, EventArgs e)
-		{
-			/*using (var pEspera = new PantallaEspera(CrearFormSubirImagen))
-			{
-				pEspera.ShowDialog(this);
-			}*/
-			var a = new AgregarImagen(nombreUsuario, this);
-			a.Show();
-			Hide();
-		}
+		
 
         private void lblUsuario_Click_1(object sender, EventArgs e) {
-            this.Hide();
-            Perfil p1 = new Perfil(nombreUsuario, this);
+            Perfil p1 = new Perfil(this.caller);
             p1.Show();
+            this.Hide();
         }
 
         private void picUsuario_Click(object sender, EventArgs e) {
-            this.Hide();
-            Perfil p1 = new Perfil(nombreUsuario, this);
+            Perfil p1 = new Perfil(this.caller);
             p1.Show();
+            this.Hide();
         }
 
 		private void EjecutarBusqueda()
@@ -214,13 +219,34 @@ namespace RedBeetle.Forms
 			if (txtBuscar.Text != "" && txtBuscar.Hint == "") Hide();
 		}
 
-		private void PicLogo_Click(object sender, EventArgs e)
+        /*private void btnSiguiente_Click(object sender, EventArgs e) 
 		{
+			if (listaImagenes.Count > 0)
+			{
+				var longitud = listaImagenes.Count;
 
-		}
+				if (longitud > 0)
+				{
+					pic2.BackgroundImage = pic1.BackGroundImage;
+					pic1.BackGroundImage = longitud - 2;
+					longitud--;
+				}
+			}
+		}*/
 
-        private void Home_FormClosed(object sender, FormClosedEventArgs e) {
-            caller.Show();
-        }
+        /*private void btnAtras_Click(object sender, EventArgs e) 
+		{ 
+			if (l.Count > 0)
+			{
+				var longitud = imagenes.Count;
+
+				if (longitud > 0)
+				{
+					pic2.BackgroundImage = pic1.BackgroundImage;
+					pic1.BackgroundImage = imagenes[longitud - 2];
+					longitud--;
+				}
+			}
+		}*/
     }
 }

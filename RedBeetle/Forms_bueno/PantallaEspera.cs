@@ -17,6 +17,8 @@ namespace RedBeetle.Forms_bueno
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
+            //Task.Run(Proceso).Wait();
+            //this.Close();
 			Task.Factory.StartNew(Proceso).ContinueWith(t => { this.Close(); }, TaskScheduler.FromCurrentSynchronizationContext());
 		}
 	}

@@ -15,12 +15,12 @@ namespace RedBeetle.Forms_bueno {
     public partial class AgregarImagen : Form {
 
 		Form caller;
-		string nombreUsuario;
+        Usuario user;
         byte[] imagen = null;
 
-        public AgregarImagen(string nomUsu, Form caller) {
+        public AgregarImagen(Form caller) {
             this.caller = caller;
-            nombreUsuario = nomUsu;
+            user = Aplicacion.User;
             InitializeComponent();
         }
 
@@ -35,9 +35,8 @@ namespace RedBeetle.Forms_bueno {
             }
         }
 
-        private void SubirFoto() {
-            Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
-            AccesoDatos.AgregarImagen(new Imagen(txtDescripcion.Text, imagen, usu.Id_Usuario));
+        private void SubirFoto() {  
+            AccesoDatos.AgregarImagen(new Imagen(txtDescripcion.Text, imagen, user.Id_Usuario));
             int img = AccesoDatos.DevolverUltimoInsert();
             Categoria top = AccesoDatos.DevolverCategoria("Top");
             Categoria bottom = AccesoDatos.DevolverCategoria("Bottom");
@@ -62,11 +61,12 @@ namespace RedBeetle.Forms_bueno {
         }
 
         private void ptbInicio_Click(object sender, EventArgs e) {
+            caller.Show();
             this.Close();
-            caller.Close();
         }
 
         private void lblCerrar_Click(object sender, EventArgs e) {
+            caller.Show();
             this.Close();
         }
 
@@ -80,8 +80,8 @@ namespace RedBeetle.Forms_bueno {
 			lblCerrar.ForeColor = Color.White;
 		}
 
-        private void AgregarImagen_FormClosed(object sender, FormClosedEventArgs e) {
-            caller.Show();
+        private void picPerfil_Click(object sender, EventArgs e) {
+            Perfil p1 = new Perfil(this.caller);
         }
     }
 }

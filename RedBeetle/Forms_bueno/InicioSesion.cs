@@ -22,7 +22,6 @@ namespace RedBeetle
         public InicioSesion()
         {
             InitializeComponent();
-            //Control.CheckForIllegalCrossThreadCalls = false;
         }
 
 		private void InicioSesion_Load(object sender, EventArgs e)
@@ -108,16 +107,16 @@ namespace RedBeetle
 			if (ValidarInicioSesion(txtNombreUsuario.Text, txtContrasenya.Text))
 			{ //Si no hay ningun campo vacio
 
-				Usuario usu = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu
+				Aplicacion.User = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text); //Recojemos toda la informacion de un usuario y la metemos en usu
 
-				if (usu == null) //Si el metodo no ha devuelto nada es que no existe dicho usuario
+				if (Aplicacion.User == null) //Si el metodo no ha devuelto nada es que no existe dicho usuario
 				{
 					error = true; //Seteamos el error a true
 					MessageBox.Show("Este usuario no existe en la base de datos.");
 				}
 				else
 				{
-					if (usu.Contrasenya != txtContrasenya.Text) //Si el usuario devuelto no tiene la misma pass que la escrita en el txt, seteamos el error a true.
+					if (Aplicacion.User.Contrasenya != txtContrasenya.Text) //Si el usuario devuelto no tiene la misma pass que la escrita en el txt, seteamos el error a true.
 					{
 						MessageBox.Show("La contraseña introducida es incorrecta.");
 						error = true;
@@ -154,7 +153,7 @@ namespace RedBeetle
 			
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
-                Home r1 = new Home(txtNombreUsuario.Text, this);
+                Home r1 = new Home(this);
                 r1.Show();
 				Hide();
 				//if (FormAbierto()) pantallaEspera.Dispose();

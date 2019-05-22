@@ -95,13 +95,13 @@ namespace RedBeetle.Forms_bueno
 		private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			Close();
-			Perfil p1 = new Perfil(nombreUsuario, this);
+			Perfil p1 = new Perfil(this);
 			p1.Show();
 		}
 
 		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var a = new AgregarImagen(nombreUsuario, this);
+			var a = new AgregarImagen(this);
 			a.Show();
 			Close();
 		}
