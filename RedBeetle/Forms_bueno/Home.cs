@@ -29,7 +29,7 @@ namespace RedBeetle.Forms
 
 		private void Home_Load(object sender, EventArgs e) {
 			lblUsuario.Text = user.Nombre_usuario;
-            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            //picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
             //Para que conforme vayas buscando te salgan resultados en el textbox
             var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
