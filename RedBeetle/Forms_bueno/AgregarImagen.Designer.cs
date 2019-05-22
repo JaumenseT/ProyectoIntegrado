@@ -26,6 +26,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarImagen));
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picLupa = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new RedBeetle.ExTextBox();
             this.picPerfil = new System.Windows.Forms.PictureBox();
             this.picSubir = new System.Windows.Forms.PictureBox();
             this.picLikes = new System.Windows.Forms.PictureBox();
@@ -41,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTop = new System.Windows.Forms.Label();
+            this.lblBottom = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -56,8 +58,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblAccesories = new System.Windows.Forms.Label();
+            this.lblShoes = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -93,10 +95,9 @@
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
             this.txtLinkShoes = new RedBeetle.ExTextBox();
-            this.picLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new RedBeetle.ExTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
@@ -143,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFoto
@@ -174,6 +174,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1365, 110);
             this.panel2.TabIndex = 41;
+            // 
+            // picLupa
+            // 
+            this.picLupa.BackColor = System.Drawing.Color.White;
+            this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
+            this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picLupa.Location = new System.Drawing.Point(505, 38);
+            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
+            this.picLupa.Name = "picLupa";
+            this.picLupa.Size = new System.Drawing.Size(39, 36);
+            this.picLupa.TabIndex = 29;
+            this.picLupa.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Hint = "     Buscar usuario...";
+            this.txtBuscar.Location = new System.Drawing.Point(504, 37);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
+            this.txtBuscar.TabIndex = 28;
             // 
             // picPerfil
             // 
@@ -361,31 +385,31 @@
             this.label3.TabIndex = 97;
             this.label3.Text = "Why this style?";
             // 
-            // label4
+            // lblTop
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.label4.Location = new System.Drawing.Point(676, 444);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 30);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "Top:";
+            this.lblTop.AutoSize = true;
+            this.lblTop.BackColor = System.Drawing.Color.Transparent;
+            this.lblTop.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lblTop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.lblTop.Location = new System.Drawing.Point(676, 444);
+            this.lblTop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTop.Name = "lblTop";
+            this.lblTop.Size = new System.Drawing.Size(56, 30);
+            this.lblTop.TabIndex = 98;
+            this.lblTop.Text = "Top";
             // 
-            // label5
+            // lblBottom
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.label5.Location = new System.Drawing.Point(633, 498);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 30);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "Bottom:";
+            this.lblBottom.AutoSize = true;
+            this.lblBottom.BackColor = System.Drawing.Color.Transparent;
+            this.lblBottom.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lblBottom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.lblBottom.Location = new System.Drawing.Point(633, 498);
+            this.lblBottom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBottom.Name = "lblBottom";
+            this.lblBottom.Size = new System.Drawing.Size(99, 30);
+            this.lblBottom.TabIndex = 99;
+            this.lblBottom.Text = "Bottom";
             // 
             // pictureBox4
             // 
@@ -519,31 +543,31 @@
             this.linkLabel3.Size = new System.Drawing.Size(0, 18);
             this.linkLabel3.TabIndex = 122;
             // 
-            // label6
+            // lblAccesories
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.label6.Location = new System.Drawing.Point(589, 559);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 30);
-            this.label6.TabIndex = 119;
-            this.label6.Text = "Accesories:";
+            this.lblAccesories.AutoSize = true;
+            this.lblAccesories.BackColor = System.Drawing.Color.Transparent;
+            this.lblAccesories.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lblAccesories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.lblAccesories.Location = new System.Drawing.Point(589, 559);
+            this.lblAccesories.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAccesories.Name = "lblAccesories";
+            this.lblAccesories.Size = new System.Drawing.Size(143, 30);
+            this.lblAccesories.TabIndex = 119;
+            this.lblAccesories.Text = "Accesories";
             // 
-            // label7
+            // lblShoes
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.label7.Location = new System.Drawing.Point(650, 622);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 30);
-            this.label7.TabIndex = 128;
-            this.label7.Text = "Shoes:";
+            this.lblShoes.AutoSize = true;
+            this.lblShoes.BackColor = System.Drawing.Color.Transparent;
+            this.lblShoes.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lblShoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.lblShoes.Location = new System.Drawing.Point(650, 622);
+            this.lblShoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShoes.Name = "lblShoes";
+            this.lblShoes.Size = new System.Drawing.Size(82, 30);
+            this.lblShoes.TabIndex = 128;
+            this.lblShoes.Text = "Shoes";
             // 
             // pictureBox7
             // 
@@ -586,7 +610,7 @@
             // txtNameTop
             // 
             this.txtNameTop.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameTop.Hint = "Link...";
+            this.txtNameTop.Hint = "Name...";
             this.txtNameTop.Location = new System.Drawing.Point(747, 444);
             this.txtNameTop.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameTop.Name = "txtNameTop";
@@ -634,7 +658,7 @@
             // txtNameBottom
             // 
             this.txtNameBottom.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameBottom.Hint = "Link...";
+            this.txtNameBottom.Hint = "Name...";
             this.txtNameBottom.Location = new System.Drawing.Point(747, 497);
             this.txtNameBottom.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameBottom.Name = "txtNameBottom";
@@ -730,7 +754,7 @@
             // txtNameAccesories
             // 
             this.txtNameAccesories.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameAccesories.Hint = "Link...";
+            this.txtNameAccesories.Hint = "Name...";
             this.txtNameAccesories.Location = new System.Drawing.Point(747, 555);
             this.txtNameAccesories.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameAccesories.Name = "txtNameAccesories";
@@ -826,7 +850,7 @@
             // txtNameShoes
             // 
             this.txtNameShoes.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameShoes.Hint = "Link...";
+            this.txtNameShoes.Hint = "Name...";
             this.txtNameShoes.Location = new System.Drawing.Point(747, 618);
             this.txtNameShoes.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameShoes.Name = "txtNameShoes";
@@ -881,30 +905,6 @@
             this.txtLinkShoes.Size = new System.Drawing.Size(251, 34);
             this.txtLinkShoes.TabIndex = 159;
             // 
-            // picLupa
-            // 
-            this.picLupa.BackColor = System.Drawing.Color.White;
-            this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
-            this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picLupa.Location = new System.Drawing.Point(505, 38);
-            this.picLupa.Margin = new System.Windows.Forms.Padding(4);
-            this.picLupa.Name = "picLupa";
-            this.picLupa.Size = new System.Drawing.Size(39, 36);
-            this.picLupa.TabIndex = 29;
-            this.picLupa.TabStop = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Hint = "     Buscar usuario...";
-            this.txtBuscar.Location = new System.Drawing.Point(504, 37);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
-            this.txtBuscar.TabIndex = 28;
-            // 
             // AgregarImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -946,9 +946,9 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.txtNameTop);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblShoes);
             this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblAccesories);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox22);
@@ -961,8 +961,8 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtLinkTop);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblBottom);
+            this.Controls.Add(this.lblTop);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -979,9 +979,11 @@
             this.Name = "AgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarImagen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarImagen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
@@ -1028,7 +1030,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1052,8 +1053,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label lblTop;
+		private System.Windows.Forms.Label lblBottom;
 		private System.Windows.Forms.PictureBox pictureBox4;
 		private System.Windows.Forms.PictureBox pictureBox8;
 		private System.Windows.Forms.PictureBox pictureBox5;
@@ -1067,8 +1068,8 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAccesories;
+        private System.Windows.Forms.Label lblShoes;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;

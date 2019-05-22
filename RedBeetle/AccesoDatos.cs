@@ -161,7 +161,7 @@ namespace RedBeetle
                 using (IDbConnection conexion = dbCon.Conexion) //ESTO ES DAPPER
                 {
                     //Insertamos en la tabla de empleado el nif nombreapellido y clave
-                    conexion.Execute($"INSERT INTO prenda (nombre, link, id_imagen, id_categoria) VALUES (@nombre, @link, @id_imagen, id_categoria);", new { nombre = prenda.Nombre, link = prenda.Link, id_imagen = prenda.Image.Id_Imagen, prenda.C.Nombre });
+                    conexion.Execute($"INSERT INTO prenda (nombre, link, id_imagen, id_categoria) VALUES (@nombre, @link, @id_imagen, @id_categoria);", new { nombre = prenda.Nombre, link = prenda.Link, id_imagen = prenda.Id_Imagen, id_categoria = prenda.C.Id_Categoria });
                 }
             }
         }
@@ -170,7 +170,7 @@ namespace RedBeetle
             var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
             if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
                 using (IDbConnection conexion = dbCon.Conexion) {
-                    var output = conexion.Query<Categoria>($"SELECT * FROM categoria WHERE nombre = @nombre;", new { nombre = nombreCategoria }).ToList();
+                    var output = conexion.Query<Categoria>($"SELECT nombre, id_categoria FROM categoria WHERE nombre = @nombre;", new { nombre = nombreCategoria }).ToList();
                     if (output.Count != 0) {
                         Categoria c = output[0];
                         return c;
@@ -180,8 +180,18 @@ namespace RedBeetle
                 }
             } else return null;
         }
-		
 
-	
+        public static int DevolverUltimoInsert() {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
+                using (IDbConnection conexion = dbCon.Conexion) {
+                    var output = conexion.Query<int>($"SELECT LAST_INSERT_ID()").ToList();
+                    if (output.Count != 0) {
+                        int Ultimaimagen = output[0];
+                        return Ultimaimagen;
+                    } else return 0;
+                }
+            } else return 0;
+        }
     }
 }

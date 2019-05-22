@@ -138,9 +138,7 @@ namespace RedBeetle.Forms
 
 		private void lblCerrar_Click_1(object sender, EventArgs e)
 		{
-			var login = new InicioSesion();
-			login.Show();
-			this.Hide();
+			this.Close();
 		}
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
@@ -220,5 +218,9 @@ namespace RedBeetle.Forms
 		{
 
 		}
-	}
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e) {
+            caller.Show();
+        }
+    }
 }
