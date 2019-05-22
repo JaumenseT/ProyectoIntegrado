@@ -19,21 +19,26 @@ namespace RedBeetle.Forms
 		List<string> usuarios = new List<string>();
         List<byte[]> imagenesByte = null;
         List<Image> listaImagenes = null;
+		int longitudAtras = 0;
+		int longitudSiguiente = 0;
 
 
         public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
         {
             this.caller = caller;
-            this.imagenesByte = imagenesByte;
+
+            this.imagenesByte = imagenByte;
             this.listaImagenes = listaImagenes;
+			//longitudAtras = listaImagenes.Count;
+
             InitializeComponent();
-			user = Aplicacion.User;
-            
+			user = Aplicacion.User;   
         }
 
 		private void Home_Load(object sender, EventArgs e) {
 			lblUsuario.Text = user.Nombre_usuario;
             picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+
             //Para que conforme vayas buscando te salgan resultados en el textbox
             var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
@@ -61,8 +66,6 @@ namespace RedBeetle.Forms
 			dgvListaSeguidos.ClearSelection();
 
 			//Rellenar picturebox
-			
-            
             if (listaImagenes.Count > 0) {
                 for (int i = 0; i < listaImagenes.Count; i++) {
                     try
@@ -88,18 +91,6 @@ namespace RedBeetle.Forms
 		private void RellenarSeguidos()
 		{
 			usuarios = AccesoDatos.DevolverNombresUsuario();
-		}
-
-		private void CrearFormPerfil()
-		{
-			Perfil p1 = new Perfil(this);
-			p1.Show();
-		}
-		///Funcion para la pantalla de carga
-		private void CrearFormSubirImagen()
-		{
-			var a = new AgregarImagen(this);
-			a.Show();
 		}
 		
 		private void PicSubir_Click(object sender, EventArgs e)
@@ -221,35 +212,33 @@ namespace RedBeetle.Forms
 			}*/
 			if (txtBuscar.Text != "" && txtBuscar.Hint == "") Hide();
 		}
-
-        /*private void btnSiguiente_Click(object sender, EventArgs e) 
+		
+		private void BtnAtras_Click_1(object sender, EventArgs e)
 		{
 			if (listaImagenes.Count > 0)
 			{
-				var longitud = listaImagenes.Count;
-
-				if (longitud > 0)
-				{
-					pic2.BackgroundImage = pic1.BackGroundImage;
-					pic1.BackGroundImage = longitud - 2;
-					longitud--;
-				}
-			}
-		}*/
-
-        /*private void btnAtras_Click(object sender, EventArgs e) 
-		{ 
-			if (l.Count > 0)
-			{
-				var longitud = imagenes.Count;
-
-				if (longitud > 0)
+				if (longitudAtras > 0)
 				{
 					pic2.BackgroundImage = pic1.BackgroundImage;
-					pic1.BackgroundImage = imagenes[longitud - 2];
-					longitud--;
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					longitudAtras--;
+					longitudSiguiente--;
 				}
 			}
-		}*/
-    }
+		}
+
+		private void BtnSiguiente_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 0)
+			{
+				if (longitudSiguiente < listaImagenes.Count - 2)
+				{
+					pic1.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = listaImagenes[longitudSiguiente + 2];
+					longitudSiguiente++;
+					longitudAtras++;
+				}
+			}
+		}
+	}
 }

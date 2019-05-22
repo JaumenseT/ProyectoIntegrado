@@ -37,7 +37,6 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		///
 		private void CheckEnter(object sender, KeyPressEventArgs e)
 		{
 			if(e.KeyChar == (char)13) //Si el numero de tecla corresponde al 13, que es el enter, el btnEntrar se apretara automaticamente.
@@ -136,23 +135,8 @@ namespace RedBeetle
            
         }
 
-		private bool FormAbierto()
+        private void btnEntrar_Click(object sender, EventArgs e)
 		{
-			bool a = false;
-
-			//Compruebas si el form esta abierto.
-			Form fc = Application.OpenForms["Home"];
-			if (fc == null) a = false;
-			else a = true;
-
-			return a;
-		}
-
-        private void btnEntrar_Click(object sender, EventArgs e) {
-			/*var pantallaEspera = new PantallaEspera2();
-			pantallaEspera.Show();*/
-
-			//Login();
 			using (var pEspera = new PantallaEspera(Login))
 			{
 				pEspera.ShowDialog(this);
@@ -163,18 +147,12 @@ namespace RedBeetle
                 Home r1 = new Home(this, imagenesByte, listaImagenes);
                 r1.Show();
 				Hide();
-				//if (FormAbierto()) pantallaEspera.Dispose();
 			}
 			else //Si no, si hay algun error, solo seteas el error global instanciado al principio de la clase a false para que cuando vuelvas a intentarlo no tengas ningun error de primeras.
 			{
 				error = false;
 			}
 		}
-        
-        public string ObtenerNombreUsuario() {
-			var nomUsu = txtContrasenya.Text;
-			return nomUsu;
-        }
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
 		{
