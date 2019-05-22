@@ -25,13 +25,18 @@ namespace RedBeetle
             //Control.CheckForIllegalCrossThreadCalls = false;
         }
 
+		private void InicioSesion_Load(object sender, EventArgs e)
+		{
+			ActiveControl = picLogo; //Estetica
+			txtContrasenya.PasswordChar = '*';
+		}
+
 		/// <summary>
 		/// Metodo privado de clase que al apretar cualquier boton comprobara si es el enter para asi darle directamente al boton entrar. Comodidad
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-        ///
-
+		///
 		private void CheckEnter(object sender, KeyPressEventArgs e)
 		{
 			if(e.KeyChar == (char)13) //Si el numero de tecla corresponde al 13, que es el enter, el btnEntrar se apretara automaticamente.
@@ -125,17 +130,34 @@ namespace RedBeetle
 			}
 		}
 
+		private bool FormAbierto()
+		{
+			bool a = false;
+
+			//Compruebas si el form esta abierto.
+			Form fc = Application.OpenForms["Home"];
+			if (fc == null) a = false;
+			else a = true;
+
+			return a;
+		}
+
         private void btnEntrar_Click(object sender, EventArgs e) {
-            //Login();
-            using (var pEspera = new PantallaEspera(Login))
+			/*var pantallaEspera = new PantallaEspera2();
+			pantallaEspera.Show();*/
+
+			//Login();
+			using (var pEspera = new PantallaEspera(Login))
 			{
 				pEspera.ShowDialog(this);
 			}
+			
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
                 Home r1 = new Home(txtNombreUsuario.Text, this);
                 r1.Show();
 				Hide();
+				//if (FormAbierto()) pantallaEspera.Dispose();
 			}
 			else //Si no, si hay algun error, solo seteas el error global instanciado al principio de la clase a false para que cuando vuelvas a intentarlo no tengas ningun error de primeras.
 			{
@@ -148,11 +170,6 @@ namespace RedBeetle
 			return nomUsu;
         }
 
-		private void InicioSesion_Load(object sender, EventArgs e)
-		{
-			ActiveControl = picLogo; //Estetica
-		}
-
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
 		{
 			lblCerrar.ForeColor = Color.FromArgb(216, 21, 25);
@@ -161,6 +178,18 @@ namespace RedBeetle
 		private void LblCerrar_MouseLeave(object sender, EventArgs e)
 		{
 			lblCerrar.ForeColor = Color.FromArgb(251, 26, 30);
+		}
+
+		private void ChkMostrarPass_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkMostrarPass.Checked)
+			{
+				txtContrasenya.PasswordChar = '\0';
+			}
+			else
+			{
+				txtContrasenya.PasswordChar = '*';
+			}
 		}
 	}
 }

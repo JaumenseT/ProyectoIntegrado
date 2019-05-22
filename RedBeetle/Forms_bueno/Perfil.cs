@@ -24,14 +24,53 @@ namespace RedBeetle.Forms_bueno
             InitializeComponent();
         }
 
-        private void lblCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void Perfil_Load(object sender, EventArgs e) {
+            lblNombreUsuario.Text = AccesoDatos.DevolverUsuario(nombreUsuario).Nombre_usuario;
 
-        private void Usuario_Load(object sender, EventArgs e) {
-            lblNombre.Text = AccesoDatos.DevolverUsuario(nombreUsuario).Nombre_usuario;
-        }
+			//Rellenar picturebox
+			var imagenesByte = AccesoDatos.DevolverImagenes(nombreUsuario);
+			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+
+			if (listaImagenes.Count > 0)
+			{
+				for (int i = 0; i < listaImagenes.Count; i++)
+				{
+					try
+					{
+						if (pic1.BackgroundImage == null)
+						{
+							pic1.BackgroundImage = listaImagenes[i];
+						}
+						if (pic2.BackgroundImage == null)
+						{
+							pic2.BackgroundImage = listaImagenes[i + 1];
+						}
+						if (pic3.BackgroundImage == null)
+						{
+							pic3.BackgroundImage = listaImagenes[i + 2];
+						}
+						if (pic4.BackgroundImage == null)
+						{
+							pic4.BackgroundImage = listaImagenes[i + 3];
+						}
+						if (pic5.BackgroundImage == null)
+						{
+							pic5.BackgroundImage = listaImagenes[i + 4];
+						}
+					}
+					catch
+					{
+
+					}
+				}
+			}
+			//Rellenar los datos
+			var usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+			lblNombreUsuario.Text = usu.Nombre_usuario;
+			txtDescripcion.Text = usu.Biografia;
+			txtDescripcion.ForeColor = Color.FromArgb(64, 64, 64);
+			txtDescripcion.BackColor = Color.White;
+		}
 
         private void lblCerrar_Click_1(object sender, EventArgs e) {
             Close();
@@ -52,7 +91,7 @@ namespace RedBeetle.Forms_bueno
 
 		private void lblCerrar_MouseEnter(object sender, EventArgs e)
 		{
-			lblCerrar.ForeColor = Color.FromArgb(247, 247, 247);
+			lblCerrar.ForeColor = Color.Silver;
 		}
 
 		private void lblCerrar_MouseLeave(object sender, EventArgs e)
@@ -66,23 +105,20 @@ namespace RedBeetle.Forms_bueno
             this.Hide();
         }
 
-        private void picSubir_Click(object sender, EventArgs e) {
-            var a = new AgregarImagen(nombreUsuario, this);
-            a.Show();
-            this.Hide();
-        }
-
-		private void ptbAjustes_Click(object sender, EventArgs e)
+		private void IrAgregar()
 		{
-
+			var a = new AgregarImagen(nombreUsuario, this);
+			a.Show();
 		}
 
-		private void ptbFavoritos_Click(object sender, EventArgs e)
+        private void picSubir_Click(object sender, EventArgs e)
 		{
-
+			var a = new AgregarImagen(nombreUsuario, this);
+			a.Show();
+			Hide();
 		}
 
-		private void pictureBox15_Click(object sender, EventArgs e)
+		private void PicPerfil_Click(object sender, EventArgs e)
 		{
 
 		}

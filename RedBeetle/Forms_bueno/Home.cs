@@ -29,7 +29,8 @@ namespace RedBeetle.Forms
             var usu = AccesoDatos.DevolverUsuario(nombreUsuario);
 			lblUsuario.Text = usu.Nombre_usuario;
 
-			var nombres = AccesoDatos.DevolverNombresUsuario(); //Para que conforme vayas buscando te salgan resultados en el textbox
+			//Para que conforme vayas buscando te salgan resultados en el textbox
+			var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
 
 			foreach(string elem in nombres)
@@ -62,8 +63,14 @@ namespace RedBeetle.Forms
                 for (int i = 0; i < listaImagenes.Count; i++) {
                     try
                     {
-                        pic1.BackgroundImage = listaImagenes[i];
-                        pic2.BackgroundImage = listaImagenes[i+1];
+						if(pic1.BackgroundImage == null)
+						{
+							pic1.BackgroundImage = listaImagenes[i];
+						}
+						if (pic2.BackgroundImage == null)
+						{
+							pic2.BackgroundImage = listaImagenes[i+1];
+						}
                     }
                     catch {
 
@@ -78,13 +85,25 @@ namespace RedBeetle.Forms
 			usuarios = AccesoDatos.DevolverNombresUsuario();
 		}
 
-        private void ptbPerfil_Click(object sender, EventArgs e) {
-            Hide();
+		private void CrearFormPerfil()
+		{
+			Perfil p1 = new Perfil(nombreUsuario, this);
+			p1.Show();
+		}
+
+        private void ptbPerfil_Click(object sender, EventArgs e)
+		{
+			/*using (var pEspera = new PantallaEspera(CrearFormPerfil))
+			{
+				pEspera.ShowDialog(this);
+			}*/
             Perfil p1 = new Perfil(nombreUsuario, this);
-            p1.Show();
+			p1.Show();
+			Hide();
         }
 
-        private void lblUsuario_Click(object sender, EventArgs e) {
+        private void lblUsuario_Click(object sender, EventArgs e)
+		{
             Hide();
             Perfil p1 = new Perfil(nombreUsuario, this);
             p1.Show();
@@ -95,9 +114,10 @@ namespace RedBeetle.Forms
 			picLupa.Hide();
 		}
 
-        private void TxtBuscar_Leave(object sender, EventArgs e) {
+        private void TxtBuscar_Leave(object sender, EventArgs e)
+		{
             txtBuscar.Hint = "     Buscar usuario...";
-            picLupa.Show();
+			if(txtBuscar.Text == "") picLupa.Show();
         }
 
 		//Inacabado
@@ -125,7 +145,7 @@ namespace RedBeetle.Forms
 
 		private void LblCerrar_MouseEnter(object sender, EventArgs e)
 		{
-			lblCerrar.ForeColor = Color.FromArgb(247, 247, 247);
+			lblCerrar.ForeColor = Color.Silver;
 		}
 
 		private void LblCerrar_MouseLeave(object sender, EventArgs e)
@@ -133,11 +153,21 @@ namespace RedBeetle.Forms
 			lblCerrar.ForeColor = Color.White;
 		}
 
-		private void PicSubir_Click(object sender, EventArgs e)
+		private void CrearFormSubirImagen()
 		{
 			var a = new AgregarImagen(nombreUsuario, this);
 			a.Show();
-			this.Hide();
+		}
+
+		private void PicSubir_Click(object sender, EventArgs e)
+		{
+			/*using (var pEspera = new PantallaEspera(CrearFormSubirImagen))
+			{
+				pEspera.ShowDialog(this);
+			}*/
+			var a = new AgregarImagen(nombreUsuario, this);
+			a.Show();
+			Hide();
 		}
 
         private void lblUsuario_Click_1(object sender, EventArgs e) {
@@ -173,17 +203,22 @@ namespace RedBeetle.Forms
 			{   //Si es el enter hace la busqueda
 				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller);
 				perfilUsuario.Show();
-				//Hide();
 			}
 		}
 
 		private void BtnBuscar_Click(object sender, EventArgs e)
 		{
-			using( var pEspera = new PantallaEspera(EjecutarBusqueda))
+			EjecutarBusqueda();
+			/*using( var pEspera = new PantallaEspera(EjecutarBusqueda))
 			{
 				pEspera.ShowDialog(this);
-			}
-			Hide();
+			}*/
+			if (txtBuscar.Text != "" && txtBuscar.Hint == "") Hide();
+		}
+
+		private void PicLogo_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

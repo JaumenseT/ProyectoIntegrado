@@ -24,7 +24,34 @@ namespace RedBeetle.Forms_bueno
             this.nombreUsuario = nombreUsuario; //pasamos este atributo por el constructor del form.
         }
 
-        private void lblCerrar_Click_1(object sender, EventArgs e)
+		/// <summary>
+		/// Al iniciar este formulario cargamos toda la información en los textbox con la información del usuario en cuestión.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Modificar_Usuario_Load(object sender, EventArgs e)
+		{
+			//Para que conforme vayas buscando te salgan resultados en el textbox
+			var nombres = AccesoDatos.DevolverNombresUsuario();
+			var lista = new AutoCompleteStringCollection();
+
+			foreach (string elem in nombres)
+			{
+				lista.Add(elem);
+			}
+			txtBuscar.AutoCompleteCustomSource = lista;
+
+			Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+			txtNombreUsuario.Text = usu.Nombre_usuario;
+			txtNombre.Text = usu.Nombre;
+			txtContrasenya.Text = usu.Contrasenya;
+			txtCorreo.Text = usu.Correo;
+			txtPaginaWeb.Text = usu.Pagina_web;
+			txtBiografia.Text = usu.Biografia;
+			txtContrasenya.PasswordChar = '*';
+		}
+
+		private void lblCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
             caller.Show();
@@ -53,23 +80,6 @@ namespace RedBeetle.Forms_bueno
 		}
 
         /// <summary>
-        /// Al iniciar este formulario cargamos toda la información en los textbox con la información del usuario en cuestión.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Modificar_Usuario_Load(object sender, EventArgs e)
-        {
-            Usuario usu = AccesoDatos.DevolverUsuario(nombreUsuario);
-            txtNombreUsuario.Text = usu.Nombre_usuario;
-            txtNombre.Text = usu.Nombre;
-            txtContrasenya.Text = usu.Contrasenya;
-            txtCorreo.Text = usu.Correo;
-            txtPaginaWeb.Text = usu.Pagina_web;
-            txtBiografia.Text = usu.Biografia;
-            txtContrasenya.PasswordChar = '*';
-        }
-
-        /// <summary>
         /// //En caso de que el textbox este seleccionado, mostrará la contraseña, en caso contrario permanecerá oculta.
         /// </summary>
         /// <param name="sender"></param>
@@ -80,7 +90,8 @@ namespace RedBeetle.Forms_bueno
             {
                 txtContrasenya.PasswordChar = '\0';
             }
-            else {
+            else
+			{
                 txtContrasenya.PasswordChar = '*';
             }
         }
@@ -101,18 +112,18 @@ namespace RedBeetle.Forms_bueno
 
         private void picInicio_Click(object sender, EventArgs e)
         {
+			caller.Show();
+			Close();
+		}
 
-        }
-
-        /*private void PicPerfil_Click(object sender, EventArgs e)
+		private void PicPerfil_Click(object sender, EventArgs e)
 		{
-			var perfil = new Perfil(callerHome);
 
-		}*/
+		}
 
-        /*private void PicSubir_Click(object sender, EventArgs e)
+		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var f = new AgregarImagen(callerHome);
-		}*/
-    }
+
+		}
+	}
 }

@@ -33,8 +33,6 @@
 			this.picPerfil = new System.Windows.Forms.PictureBox();
 			this.picSubir = new System.Windows.Forms.PictureBox();
 			this.picLikes = new System.Windows.Forms.PictureBox();
-			this.picLupa = new System.Windows.Forms.PictureBox();
-			this.txtBuscar = new RedBeetle.ExTextBox();
 			this.pictureBox11 = new System.Windows.Forms.PictureBox();
 			this.lblCerrar = new System.Windows.Forms.Label();
 			this.picInicio = new System.Windows.Forms.PictureBox();
@@ -73,7 +71,6 @@
 			this.pictureBox23 = new System.Windows.Forms.PictureBox();
 			this.pictureBox24 = new System.Windows.Forms.PictureBox();
 			this.pictureBox25 = new System.Windows.Forms.PictureBox();
-			this.txtDescripcion = new RedBeetle.ExTextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.lblFollowing = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -87,11 +84,14 @@
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.picLogoBeetle = new System.Windows.Forms.PictureBox();
 			this.picUsuario = new System.Windows.Forms.PictureBox();
+			this.lblNombreUsuario = new System.Windows.Forms.Label();
+			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+			this.pictureBox4 = new System.Windows.Forms.PictureBox();
+			this.txtDescripcion = new RedBeetle.ExTextBox();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -133,6 +133,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -141,8 +142,6 @@
 			this.panel2.Controls.Add(this.picPerfil);
 			this.panel2.Controls.Add(this.picSubir);
 			this.panel2.Controls.Add(this.picLikes);
-			this.panel2.Controls.Add(this.picLupa);
-			this.panel2.Controls.Add(this.txtBuscar);
 			this.panel2.Controls.Add(this.pictureBox11);
 			this.panel2.Controls.Add(this.lblCerrar);
 			this.panel2.Controls.Add(this.picInicio);
@@ -163,6 +162,7 @@
 			this.picPerfil.Size = new System.Drawing.Size(60, 60);
 			this.picPerfil.TabIndex = 27;
 			this.picPerfil.TabStop = false;
+			this.picPerfil.Click += new System.EventHandler(this.PicPerfil_Click);
 			// 
 			// picSubir
 			// 
@@ -175,6 +175,7 @@
 			this.picSubir.Size = new System.Drawing.Size(50, 50);
 			this.picSubir.TabIndex = 26;
 			this.picSubir.TabStop = false;
+			this.picSubir.Click += new System.EventHandler(this.PicSubir_Click);
 			// 
 			// picLikes
 			// 
@@ -187,30 +188,6 @@
 			this.picLikes.Size = new System.Drawing.Size(50, 50);
 			this.picLikes.TabIndex = 25;
 			this.picLikes.TabStop = false;
-			// 
-			// picLupa
-			// 
-			this.picLupa.BackColor = System.Drawing.Color.White;
-			this.picLupa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLupa.BackgroundImage")));
-			this.picLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.picLupa.Location = new System.Drawing.Point(384, 35);
-			this.picLupa.Name = "picLupa";
-			this.picLupa.Size = new System.Drawing.Size(29, 29);
-			this.picLupa.TabIndex = 24;
-			this.picLupa.TabStop = false;
-			// 
-			// txtBuscar
-			// 
-			this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBuscar.Hint = "     Search user...";
-			this.txtBuscar.Location = new System.Drawing.Point(383, 34);
-			this.txtBuscar.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
-			this.txtBuscar.Name = "txtBuscar";
-			this.txtBuscar.Size = new System.Drawing.Size(269, 31);
-			this.txtBuscar.TabIndex = 23;
-			this.txtBuscar.Text = "s";
 			// 
 			// pictureBox11
 			// 
@@ -247,6 +224,7 @@
 			this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picInicio.TabIndex = 0;
 			this.picInicio.TabStop = false;
+			this.picInicio.Click += new System.EventHandler(this.PicInicio_Click);
 			// 
 			// pictureBox34
 			// 
@@ -564,16 +542,6 @@
 			this.pictureBox25.TabIndex = 165;
 			this.pictureBox25.TabStop = false;
 			// 
-			// txtDescripcion
-			// 
-			this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDescripcion.Hint = "This user has no description :(";
-			this.txtDescripcion.Location = new System.Drawing.Point(505, 240);
-			this.txtDescripcion.Multiline = true;
-			this.txtDescripcion.Name = "txtDescripcion";
-			this.txtDescripcion.Size = new System.Drawing.Size(420, 117);
-			this.txtDescripcion.TabIndex = 164;
-			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
@@ -675,7 +643,7 @@
 			this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
 			this.pictureBox13.Location = new System.Drawing.Point(358, 149);
 			this.pictureBox13.Name = "pictureBox13";
-			this.pictureBox13.Size = new System.Drawing.Size(223, 5);
+			this.pictureBox13.Size = new System.Drawing.Size(574, 5);
 			this.pictureBox13.TabIndex = 155;
 			this.pictureBox13.TabStop = false;
 			// 
@@ -718,12 +686,58 @@
 			this.picUsuario.TabIndex = 151;
 			this.picUsuario.TabStop = false;
 			// 
+			// lblNombreUsuario
+			// 
+			this.lblNombreUsuario.AutoSize = true;
+			this.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent;
+			this.lblNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lblNombreUsuario.Location = new System.Drawing.Point(688, 124);
+			this.lblNombreUsuario.Name = "lblNombreUsuario";
+			this.lblNombreUsuario.Size = new System.Drawing.Size(160, 22);
+			this.lblNombreUsuario.TabIndex = 204;
+			this.lblNombreUsuario.Text = "This is your name";
+			// 
+			// linkLabel2
+			// 
+			this.linkLabel2.AutoSize = true;
+			this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel2.Location = new System.Drawing.Point(617, 153);
+			this.linkLabel2.Name = "linkLabel2";
+			this.linkLabel2.Size = new System.Drawing.Size(0, 15);
+			this.linkLabel2.TabIndex = 201;
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox4.Location = new System.Drawing.Point(584, 135);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(50, 3);
+			this.pictureBox4.TabIndex = 205;
+			this.pictureBox4.TabStop = false;
+			// 
+			// txtDescripcion
+			// 
+			this.txtDescripcion.Enabled = false;
+			this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDescripcion.Hint = "This user has no description :(";
+			this.txtDescripcion.HintColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtDescripcion.Location = new System.Drawing.Point(505, 240);
+			this.txtDescripcion.Multiline = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.ReadOnly = true;
+			this.txtDescripcion.Size = new System.Drawing.Size(420, 117);
+			this.txtDescripcion.TabIndex = 164;
+			// 
 			// PerfilUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1024, 600);
+			this.Controls.Add(this.pictureBox4);
+			this.Controls.Add(this.lblNombreUsuario);
+			this.Controls.Add(this.linkLabel2);
 			this.Controls.Add(this.pictureBox34);
 			this.Controls.Add(this.pictureBox35);
 			this.Controls.Add(this.pictureBox36);
@@ -784,7 +798,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
@@ -826,6 +839,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -837,8 +851,6 @@
 		private System.Windows.Forms.PictureBox picPerfil;
 		private System.Windows.Forms.PictureBox picSubir;
 		private System.Windows.Forms.PictureBox picLikes;
-		private System.Windows.Forms.PictureBox picLupa;
-		private ExTextBox txtBuscar;
 		private System.Windows.Forms.PictureBox pictureBox11;
 		private System.Windows.Forms.Label lblCerrar;
 		private System.Windows.Forms.PictureBox picInicio;
@@ -891,5 +903,8 @@
 		private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.PictureBox picLogoBeetle;
 		private System.Windows.Forms.PictureBox picUsuario;
+		private System.Windows.Forms.Label lblNombreUsuario;
+		private System.Windows.Forms.LinkLabel linkLabel2;
+		private System.Windows.Forms.PictureBox pictureBox4;
 	}
 }

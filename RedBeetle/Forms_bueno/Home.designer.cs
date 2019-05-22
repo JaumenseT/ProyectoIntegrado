@@ -39,6 +39,7 @@
 			this.pic1 = new System.Windows.Forms.PictureBox();
 			this.pic2 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.btnBuscar = new System.Windows.Forms.Button();
 			this.picPerfil = new System.Windows.Forms.PictureBox();
 			this.picSubir = new System.Windows.Forms.PictureBox();
 			this.picLupa = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
 			this.picUsuario = new System.Windows.Forms.PictureBox();
 			this.lblUsuario = new System.Windows.Forms.Label();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
-			this.btnBuscar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -167,6 +167,21 @@
 			this.panel2.Size = new System.Drawing.Size(1024, 89);
 			this.panel2.TabIndex = 15;
 			// 
+			// btnBuscar
+			// 
+			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 16F);
+			this.btnBuscar.ForeColor = System.Drawing.Color.White;
+			this.btnBuscar.Location = new System.Drawing.Point(588, 24);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.Size = new System.Drawing.Size(120, 47);
+			this.btnBuscar.TabIndex = 100;
+			this.btnBuscar.Text = "Search";
+			this.btnBuscar.UseVisualStyleBackColor = false;
+			this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+			// 
 			// picPerfil
 			// 
 			this.picPerfil.BackColor = System.Drawing.Color.Transparent;
@@ -215,6 +230,7 @@
 			this.picLogo.Size = new System.Drawing.Size(216, 44);
 			this.picLogo.TabIndex = 12;
 			this.picLogo.TabStop = false;
+			this.picLogo.Click += new System.EventHandler(this.PicLogo_Click);
 			this.picLogo.MouseEnter += new System.EventHandler(this.PicLogo_MouseEnter);
 			this.picLogo.MouseLeave += new System.EventHandler(this.PicLogo_MouseLeave);
 			// 
@@ -305,21 +321,6 @@
 			this.pictureBox4.Size = new System.Drawing.Size(177, 5);
 			this.pictureBox4.TabIndex = 38;
 			this.pictureBox4.TabStop = false;
-			// 
-			// btnBuscar
-			// 
-			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 16F);
-			this.btnBuscar.ForeColor = System.Drawing.Color.White;
-			this.btnBuscar.Location = new System.Drawing.Point(588, 24);
-			this.btnBuscar.Name = "btnBuscar";
-			this.btnBuscar.Size = new System.Drawing.Size(120, 47);
-			this.btnBuscar.TabIndex = 100;
-			this.btnBuscar.Text = "Search";
-			this.btnBuscar.UseVisualStyleBackColor = false;
-			this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
 			// 
 			// Home
 			// 
