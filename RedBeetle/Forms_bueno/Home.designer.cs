@@ -310,6 +310,7 @@
             this.picUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(107, 98);
+            this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUsuario.TabIndex = 31;
             this.picUsuario.TabStop = false;
             this.picUsuario.Click += new System.EventHandler(this.picUsuario_Click);

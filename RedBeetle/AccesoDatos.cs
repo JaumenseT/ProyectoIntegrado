@@ -133,7 +133,7 @@ namespace RedBeetle
             var dbCon = DBConnection.Instancia();
             if (dbCon.Conectado()) {
                 using (IDbConnection conexion = dbCon.Conexion) { //Modificamos todos los campos, para ello, los textbox correspondientes deben autorrellenarse, y solo se modificarán en los que el usuario realize cambios.
-                    conexion.Execute($"UPDATE usuario set nombre_usuario = '{ nomUsu }', nombre = '{ nombre }', biografia = '{ bio }', pagina_web = '{ pagWeb }', foto_perfil = '{imagen}' WHERE id_usuario = '{ id }'");
+                    conexion.Execute($"UPDATE usuario set nombre_usuario = '{ nomUsu }', nombre = '{ nombre }', biografia = '{ bio }', pagina_web = '{ pagWeb }', foto_perfil = @foto_perfil WHERE id_usuario = '{ id }'", new { foto_perfil = imagen });
                 }
             }
         }

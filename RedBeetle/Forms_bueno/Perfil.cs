@@ -26,6 +26,7 @@ namespace RedBeetle.Forms_bueno
 
         private void Perfil_Load(object sender, EventArgs e) {
             lblNombreUsuario.Text = user.Nombre_usuario;
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
 
 			//Rellenar picturebox
 			var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);

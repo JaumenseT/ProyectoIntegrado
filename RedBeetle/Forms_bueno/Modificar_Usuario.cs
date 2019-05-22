@@ -32,6 +32,9 @@ namespace RedBeetle.Forms_bueno
 		/// <param name="e"></param>
 		private void Modificar_Usuario_Load(object sender, EventArgs e)
 		{
+            pbFoto.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            imagen = user.Foto_Perfil;
+
 			//Para que conforme vayas buscando te salgan resultados en el textbox
 			var nombres = AccesoDatos.DevolverNombresUsuario();
 			var lista = new AutoCompleteStringCollection();

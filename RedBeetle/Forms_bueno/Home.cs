@@ -17,19 +17,23 @@ namespace RedBeetle.Forms
         Form caller;
 	    Usuario user;
 		List<string> usuarios = new List<string>();
-		//List<byte[]> imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
-		//List<Image> listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+        List<byte[]> imagenesByte = null;
+        List<Image> listaImagenes = null;
 
-		public Home(Form caller)
+
+        public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
         {
             this.caller = caller;
+            this.imagenesByte = imagenesByte;
+            this.listaImagenes = listaImagenes;
             InitializeComponent();
 			user = Aplicacion.User;
+            
         }
 
 		private void Home_Load(object sender, EventArgs e) {
 			lblUsuario.Text = user.Nombre_usuario;
-            //picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
             //Para que conforme vayas buscando te salgan resultados en el textbox
             var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
@@ -57,8 +61,7 @@ namespace RedBeetle.Forms
 			dgvListaSeguidos.ClearSelection();
 
 			//Rellenar picturebox
-			var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
-			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+			
             
             if (listaImagenes.Count > 0) {
                 for (int i = 0; i < listaImagenes.Count; i++) {
