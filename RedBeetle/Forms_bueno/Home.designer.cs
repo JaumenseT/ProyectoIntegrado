@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
 			this.dgvListaSeguidos = new System.Windows.Forms.DataGridView();
 			this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +53,14 @@
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.btnAtras = new System.Windows.Forms.Button();
 			this.btnSiguiente = new System.Windows.Forms.Button();
+			this.pictureBox19 = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.pictureBox21 = new System.Windows.Forms.PictureBox();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.pictureBox7 = new System.Windows.Forms.PictureBox();
+			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -66,6 +74,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dgvListaSeguidos
@@ -74,33 +90,33 @@
 			this.dgvListaSeguidos.AllowUserToDeleteRows = false;
 			this.dgvListaSeguidos.AllowUserToResizeColumns = false;
 			this.dgvListaSeguidos.AllowUserToResizeRows = false;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-			this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+			this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvListaSeguidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvListaSeguidos.BackgroundColor = System.Drawing.Color.White;
 			this.dgvListaSeguidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvListaSeguidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgvListaSeguidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvListaSeguidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvListaSeguidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_usuario});
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.GhostWhite;
-			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.GhostWhite;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle8;
 			this.dgvListaSeguidos.EnableHeadersVisualStyles = false;
 			this.dgvListaSeguidos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dgvListaSeguidos.Location = new System.Drawing.Point(736, 185);
@@ -114,8 +130,8 @@
 			// 
 			// nombre_usuario
 			// 
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle7;
 			this.nombre_usuario.HeaderText = "Following";
 			this.nombre_usuario.Name = "nombre_usuario";
 			this.nombre_usuario.ReadOnly = true;
@@ -330,7 +346,7 @@
 			this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 16F);
 			this.btnAtras.ForeColor = System.Drawing.Color.White;
-			this.btnAtras.Location = new System.Drawing.Point(143, 514);
+			this.btnAtras.Location = new System.Drawing.Point(143, 520);
 			this.btnAtras.Name = "btnAtras";
 			this.btnAtras.Size = new System.Drawing.Size(120, 47);
 			this.btnAtras.TabIndex = 101;
@@ -345,7 +361,7 @@
 			this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 16F);
 			this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-			this.btnSiguiente.Location = new System.Drawing.Point(501, 513);
+			this.btnSiguiente.Location = new System.Drawing.Point(501, 519);
 			this.btnSiguiente.Name = "btnSiguiente";
 			this.btnSiguiente.Size = new System.Drawing.Size(120, 47);
 			this.btnSiguiente.TabIndex = 102;
@@ -353,12 +369,92 @@
 			this.btnSiguiente.UseVisualStyleBackColor = false;
 			this.btnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
 			// 
+			// pictureBox19
+			// 
+			this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox19.Location = new System.Drawing.Point(60, 203);
+			this.pictureBox19.Name = "pictureBox19";
+			this.pictureBox19.Size = new System.Drawing.Size(300, 5);
+			this.pictureBox19.TabIndex = 188;
+			this.pictureBox19.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox1.Location = new System.Drawing.Point(408, 203);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(300, 5);
+			this.pictureBox1.TabIndex = 189;
+			this.pictureBox1.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox2.Location = new System.Drawing.Point(408, 506);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(300, 5);
+			this.pictureBox2.TabIndex = 190;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox3.Location = new System.Drawing.Point(60, 506);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(300, 5);
+			this.pictureBox3.TabIndex = 191;
+			this.pictureBox3.TabStop = false;
+			// 
+			// pictureBox21
+			// 
+			this.pictureBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox21.Location = new System.Drawing.Point(56, 203);
+			this.pictureBox21.Name = "pictureBox21";
+			this.pictureBox21.Size = new System.Drawing.Size(5, 308);
+			this.pictureBox21.TabIndex = 192;
+			this.pictureBox21.TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox5.Location = new System.Drawing.Point(404, 203);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(5, 308);
+			this.pictureBox5.TabIndex = 193;
+			this.pictureBox5.TabStop = false;
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox7.Location = new System.Drawing.Point(359, 203);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(5, 308);
+			this.pictureBox7.TabIndex = 194;
+			this.pictureBox7.TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+			this.pictureBox8.Location = new System.Drawing.Point(707, 203);
+			this.pictureBox8.Name = "pictureBox8";
+			this.pictureBox8.Size = new System.Drawing.Size(5, 308);
+			this.pictureBox8.TabIndex = 195;
+			this.pictureBox8.TabStop = false;
+			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1024, 600);
+			this.Controls.Add(this.pictureBox8);
+			this.Controls.Add(this.pictureBox7);
+			this.Controls.Add(this.pictureBox5);
+			this.Controls.Add(this.pictureBox21);
+			this.Controls.Add(this.pictureBox3);
+			this.Controls.Add(this.pictureBox2);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pictureBox19);
 			this.Controls.Add(this.btnSiguiente);
 			this.Controls.Add(this.btnAtras);
 			this.Controls.Add(this.pictureBox4);
@@ -389,6 +485,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -415,5 +519,13 @@
 		private System.Windows.Forms.Button btnBuscar;
 		private System.Windows.Forms.Button btnAtras;
 		private System.Windows.Forms.Button btnSiguiente;
+		private System.Windows.Forms.PictureBox pictureBox19;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.PictureBox pictureBox21;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox8;
 	}
 }

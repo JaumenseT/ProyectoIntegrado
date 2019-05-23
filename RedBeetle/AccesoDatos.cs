@@ -114,7 +114,7 @@ namespace RedBeetle
 			{
 				using (IDbConnection conexion = dbCon.Conexion)
 				{
-					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario != '{ nomUsu }';").ToList();
+					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario != '{ nomUsu }' ORDER BY RAND();").ToList();
 					return output;
 				}
 			}

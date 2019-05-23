@@ -129,7 +129,7 @@ namespace RedBeetle
 				error = true; //Si hay algun campo vacio, seteamos error a true
 			}
             if (!error) {
-                imagenesByte = AccesoDatos.DevolverImagenes(Aplicacion.User.Nombre_usuario);
+                imagenesByte = AccesoDatos.DevolverTodasImagenes(Aplicacion.User.Nombre_usuario);
                 listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
             }
            

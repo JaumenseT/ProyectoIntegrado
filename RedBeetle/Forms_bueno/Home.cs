@@ -22,7 +22,6 @@ namespace RedBeetle.Forms
 		int longitudAtras = 0;
 		int longitudSiguiente = 0;
 
-
         public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
         {
             this.caller = caller;
@@ -66,25 +65,18 @@ namespace RedBeetle.Forms
 			dgvListaSeguidos.ClearSelection();
 
 			//Rellenar picturebox
-            if (listaImagenes.Count > 0) {
-                for (int i = 0; i < listaImagenes.Count; i++) {
-                    try
-                    {
-						if(pic1.BackgroundImage == null)
-						{
-							pic1.BackgroundImage = listaImagenes[i];
-						}
-						if (pic2.BackgroundImage == null)
-						{
-							pic2.BackgroundImage = listaImagenes[i+1];
-						}
-                    }
-                    catch {
 
-                    }
-                }
+            if (listaImagenes.Count > 0)
+			{
+				if (pic1.BackgroundImage == null)
+				{
+					pic1.BackgroundImage = listaImagenes[0];
+				}
+				if (pic2.BackgroundImage == null)
+				{
+					pic2.BackgroundImage = listaImagenes[1];
+				}
             }
-
 		}
 
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
@@ -197,8 +189,11 @@ namespace RedBeetle.Forms
 				//Si intentas buscar con el campo vacio no haces nada
 			}
 			else if (esta) //Si el nombre de usuario suministrado por el txtbox existe en la base de datos, procedes
-			{   //Si es el enter hace la busqueda
-				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller);
+			{   
+				imagenesByte = AccesoDatos.DevolverImagenes(txtBuscar.Text);
+				listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+
+				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller, imagenesByte, listaImagenes);
 				perfilUsuario.Show();
 			}
 		}

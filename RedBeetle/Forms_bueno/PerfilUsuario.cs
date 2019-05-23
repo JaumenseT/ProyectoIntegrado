@@ -15,11 +15,20 @@ namespace RedBeetle.Forms_bueno
 	{
 		Form caller;
 		string nombreUsuario;
-		public PerfilUsuario(string nomUsu, Form caller)
+
+		List<byte[]> imagenesByte = null;
+		List<Image> listaImagenes = null;
+		int longitudAtras = 0;
+		int longitudSiguiente = 0;
+
+		public PerfilUsuario(string nomUsu, Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
 		{
 			InitializeComponent();
 			this.caller = caller;
 			nombreUsuario = nomUsu;
+
+			imagenesByte = imagenByte;
+			this.listaImagenes = listaImagenes;
 		}
 
 		private void PerfilUsuario_Load(object sender, EventArgs e)
@@ -104,6 +113,41 @@ namespace RedBeetle.Forms_bueno
 			var a = new AgregarImagen(this);
 			a.Show();
 			Close();
+		}
+
+		private void PicAnterior_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 0)
+			{
+				if (longitudAtras > 0)
+				{
+					pic5.BackgroundImage = pic4.BackgroundImage;
+					pic4.BackgroundImage = pic3.BackgroundImage;
+					pic3.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = pic1.BackgroundImage;
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					longitudAtras--;
+					longitudSiguiente--;
+				}
+			}
+		}
+
+		private void PicSiguiente_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 0)
+			{
+				var lastElement = listaImagenes[listaImagenes.Count - 1];
+				if (pic5.BackgroundImage != lastElement)
+				{
+					pic1.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = pic3.BackgroundImage;
+					pic3.BackgroundImage = pic4.BackgroundImage;
+					pic4.BackgroundImage = pic5.BackgroundImage;
+					pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5];
+					longitudSiguiente++;
+					longitudAtras++;
+				}
+			}
 		}
 	}
 }
