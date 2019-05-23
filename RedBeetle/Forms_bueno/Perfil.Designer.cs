@@ -181,7 +181,6 @@
             this.picPerfil.Size = new System.Drawing.Size(80, 74);
             this.picPerfil.TabIndex = 27;
             this.picPerfil.TabStop = false;
-            this.picPerfil.Click += new System.EventHandler(this.PicPerfil_Click);
             // 
             // picSubir
             // 

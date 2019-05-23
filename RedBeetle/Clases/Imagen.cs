@@ -77,10 +77,6 @@ namespace RedBeetle.Clases {
 		/// <returns>Array de imagenes para la picturebox</returns>
         public static List<Image> ConvertirArrayAImagen(List<byte[]> byteAvatar)
         {
-			// MemoryStream ms = new MemoryStream(byteAvatar);
-			// Image devolverImagen = Image.FromStream(ms);
-			// return devolverImagen;
-
 			var listaImagenes = new List<Image>();
 
 			for (int i = 0; i < byteAvatar.Count; i++)
@@ -92,10 +88,8 @@ namespace RedBeetle.Clases {
 			return listaImagenes;
         }
 
-        public static Image ConvertirImagen(byte[] byteAvatar) {
-            // MemoryStream ms = new MemoryStream(byteAvatar);
-            // Image devolverImagen = Image.FromStream(ms);
-            // return devolverImagen;
+        public static Image ConvertirImagen(byte[] byteAvatar)
+		{
             if (byteAvatar == null) {
                 return null;
             } else {

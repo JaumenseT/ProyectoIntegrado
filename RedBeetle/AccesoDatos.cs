@@ -102,6 +102,25 @@ namespace RedBeetle
 			else return null;
 		}
 
+		/// <summary>
+		/// Metodo que devuelve un array de bytes con todas las imagenes de todos los usuarios menos del logeado
+		/// </summary>
+		/// <param name="nomUsu"></param>
+		/// <returns></returns>
+		public static List<byte[]> DevolverTodasImagenes(string nomUsu)
+		{
+			var dbCon = DBConnection.Instancia();
+			if (dbCon.Conectado())
+			{
+				using (IDbConnection conexion = dbCon.Conexion)
+				{
+					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario != '{ nomUsu }' ORDER BY RAND();").ToList();
+					return output;
+				}
+			}
+			else return null;
+		}
+
 		public static void AgregarUsuario(Usuario usu) //EJEMPLO DE FUNCION USANDO DAPPER
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.

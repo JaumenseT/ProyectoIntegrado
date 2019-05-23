@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.dgvListaSeguidos = new System.Windows.Forms.DataGridView();
             this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +51,18 @@
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.picLove2 = new System.Windows.Forms.PictureBox();
+            this.picLove1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSeguidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -66,6 +76,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLove2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLove1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaSeguidos
@@ -74,33 +94,33 @@
             this.dgvListaSeguidos.AllowUserToDeleteRows = false;
             this.dgvListaSeguidos.AllowUserToResizeColumns = false;
             this.dgvListaSeguidos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.dgvListaSeguidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvListaSeguidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaSeguidos.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaSeguidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListaSeguidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListaSeguidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaSeguidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvListaSeguidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaSeguidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_usuario});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.GhostWhite;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.GhostWhite;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaSeguidos.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvListaSeguidos.EnableHeadersVisualStyles = false;
             this.dgvListaSeguidos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvListaSeguidos.Location = new System.Drawing.Point(981, 228);
@@ -115,8 +135,8 @@
             // 
             // nombre_usuario
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_usuario.DefaultCellStyle = dataGridViewCellStyle15;
             this.nombre_usuario.HeaderText = "Following";
             this.nombre_usuario.Name = "nombre_usuario";
             this.nombre_usuario.ReadOnly = true;
@@ -138,7 +158,7 @@
             // 
             this.pic1.BackColor = System.Drawing.Color.Transparent;
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic1.Location = new System.Drawing.Point(80, 255);
+            this.pic1.Location = new System.Drawing.Point(80, 147);
             this.pic1.Margin = new System.Windows.Forms.Padding(4);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(400, 369);
@@ -149,7 +169,7 @@
             // 
             this.pic2.BackColor = System.Drawing.Color.Transparent;
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic2.Location = new System.Drawing.Point(544, 255);
+            this.pic2.Location = new System.Drawing.Point(544, 147);
             this.pic2.Margin = new System.Windows.Forms.Padding(4);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(400, 369);
@@ -339,32 +359,166 @@
             this.pictureBox4.TabIndex = 38;
             this.pictureBox4.TabStop = false;
             // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.Location = new System.Drawing.Point(900, 632);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
-            this.btnSiguiente.TabIndex = 39;
-            this.btnSiguiente.Text = "button1";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(80, 632);
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.Location = new System.Drawing.Point(191, 640);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 40;
-            this.btnAtras.Text = "button2";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Size = new System.Drawing.Size(160, 58);
+            this.btnAtras.TabIndex = 101;
+            this.btnAtras.Text = "Anterior";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.BtnAtras_Click_1);
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.Location = new System.Drawing.Point(668, 639);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(160, 58);
+            this.btnSiguiente.TabIndex = 102;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox19.Location = new System.Drawing.Point(80, 142);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(400, 6);
+            this.pictureBox19.TabIndex = 188;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox1.Location = new System.Drawing.Point(544, 142);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 6);
+            this.pictureBox1.TabIndex = 189;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox2.Location = new System.Drawing.Point(544, 515);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(400, 6);
+            this.pictureBox2.TabIndex = 190;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox3.Location = new System.Drawing.Point(80, 515);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(400, 6);
+            this.pictureBox3.TabIndex = 191;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox21.Location = new System.Drawing.Point(75, 142);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(7, 379);
+            this.pictureBox21.TabIndex = 192;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox5.Location = new System.Drawing.Point(539, 142);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(7, 379);
+            this.pictureBox5.TabIndex = 193;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox7.Location = new System.Drawing.Point(479, 142);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(7, 379);
+            this.pictureBox7.TabIndex = 194;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.pictureBox8.Location = new System.Drawing.Point(943, 142);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(7, 379);
+            this.pictureBox8.TabIndex = 195;
+            this.pictureBox8.TabStop = false;
+            // 
+            // picLove2
+            // 
+            this.picLove2.BackColor = System.Drawing.Color.Transparent;
+            this.picLove2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLove2.BackgroundImage")));
+            this.picLove2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLove2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLove2.Location = new System.Drawing.Point(883, 529);
+            this.picLove2.Margin = new System.Windows.Forms.Padding(4);
+            this.picLove2.Name = "picLove2";
+            this.picLove2.Size = new System.Drawing.Size(67, 62);
+            this.picLove2.TabIndex = 196;
+            this.picLove2.TabStop = false;
+            this.picLove2.MouseEnter += new System.EventHandler(this.picLove2_MouseEnter);
+            this.picLove2.MouseLeave += new System.EventHandler(this.picLove2_MouseLeave);
+            // 
+            // picLove1
+            // 
+            this.picLove1.BackColor = System.Drawing.Color.Transparent;
+            this.picLove1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLove1.BackgroundImage")));
+            this.picLove1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLove1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLove1.Location = new System.Drawing.Point(413, 529);
+            this.picLove1.Margin = new System.Windows.Forms.Padding(4);
+            this.picLove1.Name = "picLove1";
+            this.picLove1.Size = new System.Drawing.Size(67, 62);
+            this.picLove1.TabIndex = 197;
+            this.picLove1.TabStop = false;
+            this.picLove1.MouseEnter += new System.EventHandler(this.picLove1_MouseEnter);
+            this.picLove1.MouseLeave += new System.EventHandler(this.picLove1_MouseLeave);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1365, 738);
-            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.picLove1);
+            this.Controls.Add(this.picLove2);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox21);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.picUsuario);
             this.Controls.Add(this.lblUsuario);
@@ -394,6 +548,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLove2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLove1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,7 +574,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.Label lblUsuario;
-		private System.Windows.Forms.PictureBox picLogo;
 		private System.Windows.Forms.PictureBox picLupa;
 		private System.Windows.Forms.PictureBox picPerfil;
 		private System.Windows.Forms.PictureBox picSubir;
@@ -418,7 +581,18 @@
 		private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_usuario;
 		private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnAtras;
+		private System.Windows.Forms.Button btnAtras;
+		private System.Windows.Forms.Button btnSiguiente;
+		private System.Windows.Forms.PictureBox pictureBox19;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.PictureBox pictureBox21;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox picLove2;
+        private System.Windows.Forms.PictureBox picLove1;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

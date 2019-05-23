@@ -46,16 +46,25 @@ namespace RedBeetle.Forms_bueno {
             Prenda p_bottom = new Prenda(txtNameBottom.Text, txtLinkBottom.Text, img, bottom);
             Prenda p_accesories = new Prenda(txtNameAccesories.Text, txtLinkAccesories.Text, img, accesories);
             Prenda p_shoes = new Prenda(txtNameShoes.Text, txtLinkShoes.Text, img, shoes);
-            AccesoDatos.AgregarPrenda(p_top);
-            AccesoDatos.AgregarPrenda(p_bottom);
-            AccesoDatos.AgregarPrenda(p_accesories);
-            AccesoDatos.AgregarPrenda(p_shoes);
+            if (txtNameTop.Text != "" && txtLinkTop.Text != "") {
+                AccesoDatos.AgregarPrenda(p_top);
+            }
+            if (txtNameBottom.Text != "" && txtLinkBottom.Text != "") {
+                AccesoDatos.AgregarPrenda(p_bottom);
+            }
+            if (txtNameAccesories.Text != "" && txtLinkAccesories.Text != "") {
+                AccesoDatos.AgregarPrenda(p_accesories);
+            }
+            if (txtNameShoes.Text != "" && txtLinkShoes.Text != "") {
+                AccesoDatos.AgregarPrenda(p_shoes);
+            }
         }
 
         private void btnSubirFoto_Click_1(object sender, EventArgs e) {
             using (var pEspera = new PantallaEspera(SubirFoto)) {
                 pEspera.ShowDialog(this);
                 this.Close();
+                caller.Refresh();
                 caller.Show();
             }
         }
@@ -82,6 +91,8 @@ namespace RedBeetle.Forms_bueno {
 
         private void picPerfil_Click(object sender, EventArgs e) {
             Perfil p1 = new Perfil(this.caller);
+            this.Close();
+            p1.Show();
         }
     }
 }

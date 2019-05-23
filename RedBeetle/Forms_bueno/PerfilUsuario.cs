@@ -15,12 +15,21 @@ namespace RedBeetle.Forms_bueno
 	{
 		Form caller;
 		string nombreUsuario;
-		public PerfilUsuario(string nomUsu, Form caller)
+        Usuario usu;
+		List<byte[]> imagenesByte = null;
+		List<Image> listaImagenes = null;
+		int longitudAtras = 0;
+		int longitudSiguiente = 0;
+
+		public PerfilUsuario(string nomUsu, Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
 		{
 			InitializeComponent();
 			this.caller = caller;
 			nombreUsuario = nomUsu;
-		}
+			imagenesByte = imagenByte;
+			this.listaImagenes = listaImagenes;
+            usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+        }
 
 		private void PerfilUsuario_Load(object sender, EventArgs e)
 		{
@@ -61,8 +70,8 @@ namespace RedBeetle.Forms_bueno
 					}
 				}
 			}
-			//Rellenar los datos
-			var usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+            //Rellenar los datos
+            picUsuario.Image = Imagen.ConvertirImagen(usu.Foto_Perfil);
 			lblNombre.Text = usu.Nombre;
 			lblNombreUsuario.Text = usu.Nombre_usuario;
 			txtDescripcion.Text = usu.Biografia;
@@ -95,15 +104,50 @@ namespace RedBeetle.Forms_bueno
 		private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			Close();
-			Perfil p1 = new Perfil(this);
+			Perfil p1 = new Perfil(this.caller);
 			p1.Show();
 		}
 
 		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var a = new AgregarImagen(this);
+			var a = new AgregarImagen(this.caller);
 			a.Show();
 			Close();
+		}
+
+		private void PicAnterior_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 0)
+			{
+				if (longitudAtras > 0)
+				{
+					pic5.BackgroundImage = pic4.BackgroundImage;
+					pic4.BackgroundImage = pic3.BackgroundImage;
+					pic3.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = pic1.BackgroundImage;
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					longitudAtras--;
+					longitudSiguiente--;
+				}
+			}
+		}
+
+		private void PicSiguiente_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 5)
+			{
+				var lastElement = listaImagenes[listaImagenes.Count - 1];
+				if (pic5.BackgroundImage != lastElement)
+				{
+					pic1.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = pic3.BackgroundImage;
+					pic3.BackgroundImage = pic4.BackgroundImage;
+					pic4.BackgroundImage = pic5.BackgroundImage;
+					pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5];
+					longitudSiguiente++;
+					longitudAtras++;
+				}
+			}
 		}
 	}
 }

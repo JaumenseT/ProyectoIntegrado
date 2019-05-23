@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Forms_bueno;
 using RedBeetle.Clases;
+using RedBeetle.Properties;
 
 namespace RedBeetle.Forms
 {
@@ -19,21 +20,23 @@ namespace RedBeetle.Forms
 		List<string> usuarios = new List<string>();
         List<byte[]> imagenesByte = null;
         List<Image> listaImagenes = null;
-
+		int longitudAtras = 0;
+		int longitudSiguiente = 0;
 
         public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
         {
             this.caller = caller;
-            this.imagenesByte = imagenesByte;
+            this.imagenesByte = imagenByte;
             this.listaImagenes = listaImagenes;
+			//longitudAtras = listaImagenes.Count;
+
             InitializeComponent();
-			user = Aplicacion.User;
-            
+			user = Aplicacion.User;   
         }
 
 		private void Home_Load(object sender, EventArgs e) {
-			lblUsuario.Text = user.Nombre_usuario;
-            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            RefrescarUsuario();
+
             //Para que conforme vayas buscando te salgan resultados en el textbox
             var nombres = AccesoDatos.DevolverNombresUsuario(); 
 			var lista = new AutoCompleteStringCollection();
@@ -61,45 +64,30 @@ namespace RedBeetle.Forms
 			dgvListaSeguidos.ClearSelection();
 
 			//Rellenar picturebox
-			
-            
-            if (listaImagenes.Count > 0) {
-                for (int i = 0; i < listaImagenes.Count; i++) {
-                    try
-                    {
-						if(pic1.BackgroundImage == null)
-						{
-							pic1.BackgroundImage = listaImagenes[i];
-						}
-						if (pic2.BackgroundImage == null)
-						{
-							pic2.BackgroundImage = listaImagenes[i+1];
-						}
-                    }
-                    catch {
 
-                    }
-                }
+            if (listaImagenes.Count > 0)
+			{
+				if (pic1.BackgroundImage == null)
+				{
+					pic1.BackgroundImage = listaImagenes[0];
+				}
+				if (pic2.BackgroundImage == null)
+				{
+					pic2.BackgroundImage = listaImagenes[1];
+				}
             }
-
 		}
+
+        public void RefrescarUsuario() {
+            user = Aplicacion.User;
+            lblUsuario.Text = user.Nombre_usuario;
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+        }
 
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()
 		{
 			usuarios = AccesoDatos.DevolverNombresUsuario();
-		}
-
-		private void CrearFormPerfil()
-		{
-			Perfil p1 = new Perfil(this);
-			p1.Show();
-		}
-		///Funcion para la pantalla de carga
-		private void CrearFormSubirImagen()
-		{
-			var a = new AgregarImagen(this);
-			a.Show();
 		}
 		
 		private void PicSubir_Click(object sender, EventArgs e)
@@ -145,12 +133,12 @@ namespace RedBeetle.Forms
 		//Inacabado
 		private void PicLogo_MouseEnter(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
+            picLogo.BackgroundImage = Resources.beetle_gris;
 		}
 
 		private void PicLogo_MouseLeave(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
+            picLogo.BackgroundImage = Resources.beetle_blanco;
 		}
 
 		private void PicLikes_Click(object sender, EventArgs e)
@@ -177,13 +165,13 @@ namespace RedBeetle.Forms
 		
 
         private void lblUsuario_Click_1(object sender, EventArgs e) {
-            Perfil p1 = new Perfil(this.caller);
+            Perfil p1 = new Perfil(this);
             p1.Show();
             this.Hide();
         }
 
         private void picUsuario_Click(object sender, EventArgs e) {
-            Perfil p1 = new Perfil(this.caller);
+            Perfil p1 = new Perfil(this);
             p1.Show();
             this.Hide();
         }
@@ -206,8 +194,11 @@ namespace RedBeetle.Forms
 				//Si intentas buscar con el campo vacio no haces nada
 			}
 			else if (esta) //Si el nombre de usuario suministrado por el txtbox existe en la base de datos, procedes
-			{   //Si es el enter hace la busqueda
-				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller);
+			{   
+				imagenesByte = AccesoDatos.DevolverImagenes(txtBuscar.Text);
+				listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+
+				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, this, imagenesByte, listaImagenes);
 				perfilUsuario.Show();
 			}
 		}
@@ -221,35 +212,49 @@ namespace RedBeetle.Forms
 			}*/
 			if (txtBuscar.Text != "" && txtBuscar.Hint == "") Hide();
 		}
-
-        /*private void btnSiguiente_Click(object sender, EventArgs e) 
+		
+		private void BtnAtras_Click_1(object sender, EventArgs e)
 		{
 			if (listaImagenes.Count > 0)
 			{
-				var longitud = listaImagenes.Count;
-
-				if (longitud > 0)
-				{
-					pic2.BackgroundImage = pic1.BackGroundImage;
-					pic1.BackGroundImage = longitud - 2;
-					longitud--;
-				}
-			}
-		}*/
-
-        /*private void btnAtras_Click(object sender, EventArgs e) 
-		{ 
-			if (l.Count > 0)
-			{
-				var longitud = imagenes.Count;
-
-				if (longitud > 0)
+				if (longitudAtras > 0)
 				{
 					pic2.BackgroundImage = pic1.BackgroundImage;
-					pic1.BackgroundImage = imagenes[longitud - 2];
-					longitud--;
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					longitudAtras--;
+					longitudSiguiente--;
 				}
 			}
-		}*/
+		}
+
+		private void BtnSiguiente_Click(object sender, EventArgs e)
+		{
+			if (listaImagenes.Count > 0)
+			{
+				if (longitudSiguiente < listaImagenes.Count - 2)
+				{
+					pic1.BackgroundImage = pic2.BackgroundImage;
+					pic2.BackgroundImage = listaImagenes[longitudSiguiente + 2];
+					longitudSiguiente++;
+					longitudAtras++;
+				}
+			}
+		}
+
+        private void picLove1_MouseEnter(object sender, EventArgs e) {
+            picLove1.BackgroundImage = Resources.corazon_relleno;
+        }
+
+        private void picLove1_MouseLeave(object sender, EventArgs e) {
+            picLove1.BackgroundImage = Resources.corazon_rojo;
+        }
+
+        private void picLove2_MouseEnter(object sender, EventArgs e) {
+            picLove2.BackgroundImage = Resources.corazon_relleno;
+        }
+
+        private void picLove2_MouseLeave(object sender, EventArgs e) {
+            picLove2.BackgroundImage = Resources.corazon_rojo;
+        }
     }
 }
