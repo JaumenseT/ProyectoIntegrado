@@ -62,37 +62,37 @@ namespace RedBeetle
 		/// Comprueba que no haya ningun campo vacio y que no hayan caracteres especiales
 		/// </summary>
 		/// <returns>Devuelve true si hay error o false</returns>
-		private bool ValidarDatos()
+		private bool ValidarDatos(/*string nomUsu, string nom, string cor, string pass*/)
 		{
 			var error = false;
 			var mensaje = "";
 
-			if (txtUsuario.Text == "")
+			if (txtUsuario.Text/*nomUsu*/ == "")
 			{
 				error = true;
 				mensaje = "El campo \"Nombre de usuario\" no puede estar vacio. \n";
 			}
-			if (txtNombre.Text == "")
+			if (txtNombre.Text/*nom*/ == "")
 			{
 				error = true;
 				mensaje += "El campo \"Nombre\" no puede estar vacio. \n";
 			}
-			if (txtCorreo.Text == "")
+			if (txtCorreo.Text/*cor*/ == "")
 			{
 				error = true;
 				mensaje += "El campo \"Correo electrónico\" no puede estar vacio. \n";
 			}
-			if (txtContrasenya.Text == "")
+			if (txtContrasenya.Text/*pass*/ == "")
 			{
 				error = true;
 				mensaje += "El campo \"Contraseña\" no puede estar vacio. \n";
 			}
-			if(txtContrasenya.TextLength < 6)
+			if(txtContrasenya.TextLength/*pass.Length*/ < 6)
 			{
 				error = true;
 				mensaje += "La contraseña debe tener al menos 6 caracteres. \n";
 			}
-			if(txtContrasenya.TextLength > 18)
+			if(txtContrasenya.TextLength/*pass.Length*/ > 18)
 			{
 				mensaje += "La contraseña no puede superar los 18 caracteres. \n";
 			}
@@ -121,10 +121,10 @@ namespace RedBeetle
 			caller.Show();
 		}
 
-		/*private void EjecutarRegistro()
+		private void EjecutarRegistro()
 		{
 			var mensaje = "";
-			if (ValidarDatos()) //Este if esta vacio para que se llame al metodo ValidarDatos y si el error es true te muestre el MessageBox
+			if (ValidarDatos(/*txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, txtCorreo.Text*/)) //Este if esta vacio para que se llame al metodo ValidarDatos y si el error es true te muestre el MessageBox
 			{
 				//ValidarDatos automaticamente te muestra un message box por lo que aqui no hay que hacer nada.
 			}
@@ -152,12 +152,13 @@ namespace RedBeetle
 					AccesoDatos.AgregarUsuario(usuario);
 					var formInicio = new InicioSesion();
 					formInicio.Show();
-
-					Close();
+					cerrar = true;
+					//Close();
 				}
 			}
-		}*/
+		}
 
+		bool cerrar = false;
 		/// <summary>
 		/// Registra un nuevo usuario en la base de datos
 		/// </summary>
@@ -168,7 +169,9 @@ namespace RedBeetle
 			/*using (var pEspera = new PantallaEspera(EjecutarRegistro))
 			{
 				pEspera.ShowDialog(this);
-			}*/
+			}
+			if (cerrar == true) Close();
+			*/
 			var mensaje = "";
 			if (ValidarDatos()) //Este if esta vacio para que se llame al metodo ValidarDatos y si el error es true te muestre el MessageBox
 			{
