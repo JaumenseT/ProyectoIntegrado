@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Forms_bueno;
 using RedBeetle.Clases;
+using RedBeetle.Properties;
 
 namespace RedBeetle.Forms
 {
@@ -25,7 +26,6 @@ namespace RedBeetle.Forms
         public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
         {
             this.caller = caller;
-
             this.imagenesByte = imagenByte;
             this.listaImagenes = listaImagenes;
 			//longitudAtras = listaImagenes.Count;
@@ -35,8 +35,7 @@ namespace RedBeetle.Forms
         }
 
 		private void Home_Load(object sender, EventArgs e) {
-			lblUsuario.Text = user.Nombre_usuario;
-            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            RefrescarUsuario();
 
             //Para que conforme vayas buscando te salgan resultados en el textbox
             var nombres = AccesoDatos.DevolverNombresUsuario(); 
@@ -78,6 +77,12 @@ namespace RedBeetle.Forms
 				}
             }
 		}
+
+        public void RefrescarUsuario() {
+            user = Aplicacion.User;
+            lblUsuario.Text = user.Nombre_usuario;
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+        }
 
 		//NO BORRAR ESTO, SE NECESITARA MAS ADELANTE PARA HACER PANTALLA DE CARGA
 		private void RellenarSeguidos()
@@ -128,12 +133,12 @@ namespace RedBeetle.Forms
 		//Inacabado
 		private void PicLogo_MouseEnter(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_gris.png");
+            picLogo.BackgroundImage = Resources.beetle_gris;
 		}
 
 		private void PicLogo_MouseLeave(object sender, EventArgs e)
 		{
-			//picLogo.BackgroundImage = Image.FromFile("Logo_nombre_blanco.png");
+            picLogo.BackgroundImage = Resources.beetle_blanco;
 		}
 
 		private void PicLikes_Click(object sender, EventArgs e)
@@ -160,13 +165,13 @@ namespace RedBeetle.Forms
 		
 
         private void lblUsuario_Click_1(object sender, EventArgs e) {
-            Perfil p1 = new Perfil(this.caller);
+            Perfil p1 = new Perfil(this);
             p1.Show();
             this.Hide();
         }
 
         private void picUsuario_Click(object sender, EventArgs e) {
-            Perfil p1 = new Perfil(this.caller);
+            Perfil p1 = new Perfil(this);
             p1.Show();
             this.Hide();
         }
@@ -193,7 +198,7 @@ namespace RedBeetle.Forms
 				imagenesByte = AccesoDatos.DevolverImagenes(txtBuscar.Text);
 				listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
 
-				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, caller, imagenesByte, listaImagenes);
+				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, this, imagenesByte, listaImagenes);
 				perfilUsuario.Show();
 			}
 		}
@@ -235,5 +240,21 @@ namespace RedBeetle.Forms
 				}
 			}
 		}
-	}
+
+        private void picLove1_MouseEnter(object sender, EventArgs e) {
+            picLove1.BackgroundImage = Resources.corazon_relleno;
+        }
+
+        private void picLove1_MouseLeave(object sender, EventArgs e) {
+            picLove1.BackgroundImage = Resources.corazon_rojo;
+        }
+
+        private void picLove2_MouseEnter(object sender, EventArgs e) {
+            picLove2.BackgroundImage = Resources.corazon_relleno;
+        }
+
+        private void picLove2_MouseLeave(object sender, EventArgs e) {
+            picLove2.BackgroundImage = Resources.corazon_rojo;
+        }
+    }
 }

@@ -79,6 +79,12 @@
     <Compile Include="Forms_bueno\AgregarImagen.Designer.cs">
       <DependentUpon>AgregarImagen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_bueno\FormImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_bueno\FormImagen.Designer.cs">
+      <DependentUpon>FormImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_bueno\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <EmbeddedResource Include="Forms_bueno\AgregarImagen.resx">
       <DependentUpon>AgregarImagen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_bueno\FormImagen.resx">
+      <DependentUpon>FormImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_bueno\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +184,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\beetle gris.png" />
+    <None Include="Resources\beetle blanco.png" />
+    <None Include="Resources\corazon rojo.png" />
+    <None Include="Resources\corazon relleno.png" />
     <Content Include="Resources\pantallaCarga.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

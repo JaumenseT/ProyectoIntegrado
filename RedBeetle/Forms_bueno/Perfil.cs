@@ -25,14 +25,11 @@ namespace RedBeetle.Forms_bueno
         }
 
         private void Perfil_Load(object sender, EventArgs e) {
-            lblNombreUsuario.Text = user.Nombre_usuario;
-            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            RefrescarDatos();
+            var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
+            var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
 
-			//Rellenar picturebox
-			var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
-			var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
-
-			if (listaImagenes.Count > 0)
+            if (listaImagenes.Count > 0)
 			{
 				for (int i = 0; i < listaImagenes.Count; i++)
 				{
@@ -65,15 +62,22 @@ namespace RedBeetle.Forms_bueno
 					}
 				}
 			}
-            //Rellenar los datos
-            lblNombreUsuario.Text = user.Nombre_usuario;
-			txtDescripcion.Text = user.Biografia;
-			txtDescripcion.ForeColor = Color.FromArgb(64, 64, 64);
-			txtDescripcion.BackColor = Color.White;
+            
 		}
+        public void RefrescarDatos() {
+            //Rellenar los datos
+            user = Aplicacion.User;
+            lblNombreUsuario.Text = user.Nombre_usuario;
+            txtDescripcion.Text = user.Biografia;
+            txtDescripcion.ForeColor = Color.FromArgb(64, 64, 64);
+            txtDescripcion.BackColor = Color.White;
+            lblNombreUsuario.Text = user.Nombre_usuario;
+            picUsuario.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            ((Home)caller).RefrescarUsuario();
+        }
 
         private void lblCerrar_Click_1(object sender, EventArgs e) {
-            Close();
+            this.Close();
             caller.Show();
         }
 
@@ -99,28 +103,11 @@ namespace RedBeetle.Forms_bueno
 			lblCerrar.ForeColor = Color.White;
 		}
 
-        private void ptbCamara2_Click(object sender, EventArgs e) {
-            var a = new AgregarImagen(this.caller);
-            a.Show();
-            this.Hide();
-        }
-
-		private void IrAgregar()
-		{
-			var a = new AgregarImagen(this);
-			a.Show();
-		}
-
         private void picSubir_Click(object sender, EventArgs e)
 		{
 			var a = new AgregarImagen(this.caller);
 			a.Show();
 			Hide();
-		}
-
-		private void PicPerfil_Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

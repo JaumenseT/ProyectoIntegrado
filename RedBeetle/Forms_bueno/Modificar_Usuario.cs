@@ -15,10 +15,10 @@ namespace RedBeetle.Forms_bueno
     public partial class Modificar_Usuario : Form
     {
         byte[] imagen = null;
-        Form caller;
+        Perfil caller;
         Usuario user; //instanciamos un atributo nombreUsuario para cargar desde inicio sesión y determinar que usuario esta logueado.
 
-        public Modificar_Usuario(Form caller)
+        public Modificar_Usuario(Perfil caller)
         {
             this.caller = caller;
             InitializeComponent();
@@ -32,20 +32,17 @@ namespace RedBeetle.Forms_bueno
 		/// <param name="e"></param>
 		private void Modificar_Usuario_Load(object sender, EventArgs e)
 		{
-            pbFoto.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
-            imagen = user.Foto_Perfil;
-
 			//Para que conforme vayas buscando te salgan resultados en el textbox
 			var nombres = AccesoDatos.DevolverNombresUsuario();
 			var lista = new AutoCompleteStringCollection();
-
-			foreach (string elem in nombres)
+            imagen = user.Foto_Perfil;
+            foreach (string elem in nombres)
 			{
 				lista.Add(elem);
 			}
 			txtBuscar.AutoCompleteCustomSource = lista;
-
-			txtNombreUsuario.Text = user.Nombre_usuario;
+            pbFoto.Image = Imagen.ConvertirImagen(user.Foto_Perfil);
+            txtNombreUsuario.Text = user.Nombre_usuario;
 			txtNombre.Text = user.Nombre;
 			txtContrasenya.Text = user.Contrasenya;
 			txtCorreo.Text = user.Correo;
@@ -108,7 +105,9 @@ namespace RedBeetle.Forms_bueno
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             AccesoDatos.ModificarUsuario(txtNombreUsuario.Text, txtNombre.Text, txtBiografia.Text, txtPaginaWeb.Text, user.Id_Usuario, imagen);
+            Aplicacion.User = AccesoDatos.DevolverUsuario(txtNombreUsuario.Text);
             this.Close();
+            caller.RefrescarDatos();
             caller.Show();
         }
 

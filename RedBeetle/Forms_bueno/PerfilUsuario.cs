@@ -15,7 +15,7 @@ namespace RedBeetle.Forms_bueno
 	{
 		Form caller;
 		string nombreUsuario;
-
+        Usuario usu;
 		List<byte[]> imagenesByte = null;
 		List<Image> listaImagenes = null;
 		int longitudAtras = 0;
@@ -26,10 +26,10 @@ namespace RedBeetle.Forms_bueno
 			InitializeComponent();
 			this.caller = caller;
 			nombreUsuario = nomUsu;
-
 			imagenesByte = imagenByte;
 			this.listaImagenes = listaImagenes;
-		}
+            usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+        }
 
 		private void PerfilUsuario_Load(object sender, EventArgs e)
 		{
@@ -70,8 +70,8 @@ namespace RedBeetle.Forms_bueno
 					}
 				}
 			}
-			//Rellenar los datos
-			var usu = AccesoDatos.DevolverUsuario(nombreUsuario);
+            //Rellenar los datos
+            picUsuario.Image = Imagen.ConvertirImagen(usu.Foto_Perfil);
 			lblNombre.Text = usu.Nombre;
 			lblNombreUsuario.Text = usu.Nombre_usuario;
 			txtDescripcion.Text = usu.Biografia;
@@ -104,13 +104,13 @@ namespace RedBeetle.Forms_bueno
 		private void PicPerfil_Click(object sender, EventArgs e)
 		{
 			Close();
-			Perfil p1 = new Perfil(this);
+			Perfil p1 = new Perfil(this.caller);
 			p1.Show();
 		}
 
 		private void PicSubir_Click(object sender, EventArgs e)
 		{
-			var a = new AgregarImagen(this);
+			var a = new AgregarImagen(this.caller);
 			a.Show();
 			Close();
 		}
@@ -134,7 +134,7 @@ namespace RedBeetle.Forms_bueno
 
 		private void PicSiguiente_Click(object sender, EventArgs e)
 		{
-			if (listaImagenes.Count > 0)
+			if (listaImagenes.Count > 5)
 			{
 				var lastElement = listaImagenes[listaImagenes.Count - 1];
 				if (pic5.BackgroundImage != lastElement)

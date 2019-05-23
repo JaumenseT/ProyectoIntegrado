@@ -263,6 +263,32 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="picLove2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        nQAADp0B1dOxOQAAAAd0SU1FB+MFFREBCY4Aq/MAAAGjSURBVGhD7ZpBboQwEASR8v/H5UVJOmkjwxRg
+        A2btaEuqi7s9Hs6705tR+Zw+vo50tRiasdbVa9DgUj0iQN1SPaIOGlSrR81Qp1aPKoMG9KTX3IYu5f7g
+        ZoT6Jfp6QG9RP9fVCJWl4yLoPul6EXRfOl5CRem4CpqT61oVNEc6/oMK0vEpaJ50fAqaJx1zwdElnpg5
+        z90MbqLlzNzmH9IC3DkcDELYOxwMQtg7HAxC2DscDELYOxwMQtg7HAxC2DscDELYOxwMQth7ffB72Dm4
+        Mx52zubOeNgxm/uug0XYGbu77oadcbjrYaEDinakknT8cmg36XhJcfEFVO9WfeEBTu1El6Tjx6FdpON9
+        6KJ0/Bi0g3RcBg2QjptDb0vHddAg6bgZ9KZ0fA4aKB3fDr0lHV+DBkvHt0FvSMf3QA9Ix5eh2dLxvdBD
+        0vFpaKZ03AZ6MOlKMTQj6Upb6OGkK4fQ3aQrz0ALJF3ZhO4kXXkWWiTXtRnq5Lr2GmihXNf6/ogcWq5E
+        X+8LWnRPX+sXWjrXtTGgD5COxyL/0X/vzwZv/h/T9A0I0WxDJFxzywAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="picLove1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        nQAADp0B1dOxOQAAAAd0SU1FB+MFFREBCY4Aq/MAAAGjSURBVGhD7ZpBboQwEASR8v/H5UVJOmkjwxRg
+        A2btaEuqi7s9Hs6705tR+Zw+vo50tRiasdbVa9DgUj0iQN1SPaIOGlSrR81Qp1aPKoMG9KTX3IYu5f7g
+        ZoT6Jfp6QG9RP9fVCJWl4yLoPul6EXRfOl5CRem4CpqT61oVNEc6/oMK0vEpaJ50fAqaJx1zwdElnpg5
+        z90MbqLlzNzmH9IC3DkcDELYOxwMQtg7HAxC2DscDELYOxwMQtg7HAxC2DscDELYOxwMQth7ffB72Dm4
+        Mx52zubOeNgxm/uug0XYGbu77oadcbjrYaEDinakknT8cmg36XhJcfEFVO9WfeEBTu1El6Tjx6FdpON9
+        6KJ0/Bi0g3RcBg2QjptDb0vHddAg6bgZ9KZ0fA4aKB3fDr0lHV+DBkvHt0FvSMf3QA9Ix5eh2dLxvdBD
+        0vFpaKZ03AZ6MOlKMTQj6Upb6OGkK4fQ3aQrz0ALJF3ZhO4kXXkWWiTXtRnq5Lr2GmihXNf6/ogcWq5E
+        X+8LWnRPX+sXWjrXtTGgD5COxyL/0X/vzwZv/h/T9A0I0WxDJFxzywAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

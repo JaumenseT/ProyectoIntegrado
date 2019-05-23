@@ -147,6 +147,8 @@ namespace RedBeetle
                 Home r1 = new Home(this, imagenesByte, listaImagenes);
                 r1.Show();
 				Hide();
+                txtNombreUsuario.Clear();
+                txtContrasenya.Clear();
 			}
 			else //Si no, si hay algun error, solo seteas el error global instanciado al principio de la clase a false para que cuando vuelvas a intentarlo no tengas ningun error de primeras.
 			{
