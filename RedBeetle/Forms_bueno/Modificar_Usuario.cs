@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedBeetle.Clases;
 using RedBeetle.Forms;
+using RedBeetle.Properties;
 
 namespace RedBeetle.Forms_bueno
 {
@@ -136,6 +137,38 @@ namespace RedBeetle.Forms_bueno
                 pbFoto.ImageLocation = picPath;
                 imagen = System.IO.File.ReadAllBytes(picPath);
             }
+        }
+
+        private void picInicio_MouseEnter(object sender, EventArgs e) {
+            picInicio.BackgroundImage = Resources.beetle_gris;
+        }
+
+        private void picInicio_MouseLeave(object sender, EventArgs e) {
+            picInicio.BackgroundImage = Resources.beetle_blanco;
+        }
+
+        private void picLikes_MouseEnter(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_gris;
+        }
+
+        private void picLikes_MouseLeave(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_blanco;
+        }
+
+        private void picPerfil_MouseEnter(object sender, EventArgs e) {
+            picPerfil.BackgroundImage = Resources.perfil_gris;
+        }
+
+        private void picPerfil_MouseLeave(object sender, EventArgs e) {
+            picPerfil.BackgroundImage = Resources.perfil_blanco;
+        }
+
+        private void picSubir_MouseEnter(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_gris;
+        }
+
+        private void picSubir_MouseLeave(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_blanca;
         }
     }
 }

@@ -130,17 +130,6 @@ namespace RedBeetle.Forms
 			if(txtBuscar.Text == "") picLupa.Show();
         }
 
-		//Inacabado
-		private void PicLogo_MouseEnter(object sender, EventArgs e)
-		{
-            picLogo.BackgroundImage = Resources.beetle_gris;
-		}
-
-		private void PicLogo_MouseLeave(object sender, EventArgs e)
-		{
-            picLogo.BackgroundImage = Resources.beetle_blanco;
-		}
-
 		private void PicLikes_Click(object sender, EventArgs e)
 		{
 			
@@ -241,6 +230,15 @@ namespace RedBeetle.Forms
 			}
 		}
 
+        // Hovers del form
+
+        private void PicLogo_MouseEnter(object sender, EventArgs e) {
+            picLogo.BackgroundImage = Resources.beetle_gris;
+        }
+
+        private void PicLogo_MouseLeave(object sender, EventArgs e) {
+            picLogo.BackgroundImage = Resources.beetle_blanco;
+        }
         private void picLove1_MouseEnter(object sender, EventArgs e) {
             picLove1.BackgroundImage = Resources.corazon_relleno;
         }
@@ -255,6 +253,30 @@ namespace RedBeetle.Forms
 
         private void picLove2_MouseLeave(object sender, EventArgs e) {
             picLove2.BackgroundImage = Resources.corazon_rojo;
+        }
+
+        private void picPerfil_MouseEnter(object sender, EventArgs e) {
+            picPerfil.BackgroundImage = Resources.perfil_gris;
+        }
+
+        private void picPerfil_MouseLeave(object sender, EventArgs e) {
+            picPerfil.BackgroundImage = Resources.perfil_blanco;
+        }
+
+        private void picSubir_MouseEnter(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_gris;
+        }
+
+        private void picSubir_MouseLeave(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_blanca;
+        }
+
+        private void picLikes_MouseEnter(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_gris;
+        }
+
+        private void picLikes_MouseLeave(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_blanco;
         }
     }
 }

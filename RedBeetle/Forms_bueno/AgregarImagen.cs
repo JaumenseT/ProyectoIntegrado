@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RedBeetle.Forms;
 using RedBeetle.Forms_bueno;
 using RedBeetle.Clases;
+using RedBeetle.Properties;
 
 namespace RedBeetle.Forms_bueno {
     public partial class AgregarImagen : Form {
@@ -93,6 +94,40 @@ namespace RedBeetle.Forms_bueno {
             Perfil p1 = new Perfil(this.caller);
             this.Close();
             p1.Show();
+        }
+
+        // Hovers del form
+
+        private void picInicio_MouseEnter(object sender, EventArgs e) {
+            picInicio.BackgroundImage = Resources.beetle_gris;
+        }
+
+        private void picInicio_MouseLeave(object sender, EventArgs e) {
+            picInicio.BackgroundImage = Resources.beetle_blanco;
+        }
+
+        private void picLikes_MouseEnter(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_gris;
+        }
+
+        private void picLikes_MouseLeave(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.corazon_blanco;
+        }
+
+        private void picPerfil_MouseEnter(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.perfil_gris;
+        }
+
+        private void picPerfil_MouseLeave(object sender, EventArgs e) {
+            picLikes.BackgroundImage = Resources.perfil_blanco;
+        }
+
+        private void picSubir_MouseEnter(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_gris;
+        }
+
+        private void picSubir_MouseLeave(object sender, EventArgs e) {
+            picSubir.BackgroundImage = Resources.camara_blanca;
         }
     }
 }

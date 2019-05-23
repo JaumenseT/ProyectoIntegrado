@@ -212,6 +212,8 @@
             this.picPerfil.TabIndex = 27;
             this.picPerfil.TabStop = false;
             this.picPerfil.Click += new System.EventHandler(this.picPerfil_Click);
+            this.picPerfil.MouseEnter += new System.EventHandler(this.picPerfil_MouseEnter);
+            this.picPerfil.MouseLeave += new System.EventHandler(this.picPerfil_MouseLeave);
             // 
             // picSubir
             // 
@@ -225,6 +227,8 @@
             this.picSubir.Size = new System.Drawing.Size(67, 62);
             this.picSubir.TabIndex = 26;
             this.picSubir.TabStop = false;
+            this.picSubir.MouseEnter += new System.EventHandler(this.picSubir_MouseEnter);
+            this.picSubir.MouseLeave += new System.EventHandler(this.picSubir_MouseLeave);
             // 
             // picLikes
             // 
@@ -238,6 +242,8 @@
             this.picLikes.Size = new System.Drawing.Size(67, 62);
             this.picLikes.TabIndex = 25;
             this.picLikes.TabStop = false;
+            this.picLikes.MouseEnter += new System.EventHandler(this.picLikes_MouseEnter);
+            this.picLikes.MouseLeave += new System.EventHandler(this.picLikes_MouseLeave);
             // 
             // pictureBox11
             // 
@@ -269,7 +275,7 @@
             // picInicio
             // 
             this.picInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInicio.Image = ((System.Drawing.Image)(resources.GetObject("picInicio.Image")));
+            this.picInicio.Image = global::RedBeetle.Properties.Resources.beetle_blanco;
             this.picInicio.Location = new System.Drawing.Point(29, 27);
             this.picInicio.Margin = new System.Windows.Forms.Padding(4);
             this.picInicio.Name = "picInicio";
@@ -278,6 +284,8 @@
             this.picInicio.TabIndex = 0;
             this.picInicio.TabStop = false;
             this.picInicio.Click += new System.EventHandler(this.ptbInicio_Click);
+            this.picInicio.MouseEnter += new System.EventHandler(this.picInicio_MouseEnter);
+            this.picInicio.MouseLeave += new System.EventHandler(this.picInicio_MouseLeave);
             // 
             // btnSeleccionar
             // 

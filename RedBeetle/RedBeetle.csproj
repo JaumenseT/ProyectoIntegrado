@@ -184,10 +184,25 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\siguiente roja.png" />
+    <None Include="Resources\perfil blanco.png" />
+    <None Include="Resources\siguiente oscura.png" />
+    <None Include="Resources\perfil gris.png" />
     <None Include="Resources\beetle gris.png" />
     <None Include="Resources\beetle blanco.png" />
     <None Include="Resources\corazon rojo.png" />
     <None Include="Resources\corazon relleno.png" />
+    <None Include="Resources\corazon gris.png" />
+    <None Include="Resources\camara gris.png" />
+    <None Include="Resources\anterior oscura.png" />
+    <None Include="Resources\corazon blanco.png" />
+    <None Include="Resources\camara blanca.png" />
+    <None Include="Resources\anterior roja.png" />
+    <None Include="Resources\corazon oscuro.png" />
+    <None Include="Resources\fotos roja.png" />
+    <None Include="Resources\fotos oscura.png" />
+    <None Include="Resources\link rojo.png" />
+    <None Include="Resources\link oscuro.png" />
     <Content Include="Resources\pantallaCarga.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
