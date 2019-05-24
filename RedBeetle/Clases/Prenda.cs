@@ -11,6 +11,7 @@ namespace RedBeetle.Clases {
         private int id_imagen;
         private Categoria c;
 
+
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Link { get { return link; } set { link = value; } }
         public int Id_Imagen { get { return id_imagen; } set { id_imagen = value; } }
@@ -21,6 +22,12 @@ namespace RedBeetle.Clases {
             this.link = link;
             this.id_imagen = id_imagen;
             this.c = c;
+        }
+
+        public Prenda(string nombre, string link, int id_imagen) {
+            this.nombre = nombre;
+            this.link = link;
+            this.id_imagen = id_imagen;
         }
     }
 }

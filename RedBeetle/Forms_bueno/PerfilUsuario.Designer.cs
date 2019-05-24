@@ -401,6 +401,7 @@
             this.picSiguiente.BackColor = System.Drawing.Color.Transparent;
             this.picSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSiguiente.BackgroundImage")));
             this.picSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSiguiente.Location = new System.Drawing.Point(1175, 690);
             this.picSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.picSiguiente.Name = "picSiguiente";
@@ -416,6 +417,7 @@
             this.picAnterior.BackColor = System.Drawing.Color.Transparent;
             this.picAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAnterior.BackgroundImage")));
             this.picAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAnterior.Location = new System.Drawing.Point(159, 689);
             this.picAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.picAnterior.Name = "picAnterior";
@@ -894,6 +896,7 @@
             this.Controls.Add(this.picLogoBeetle);
             this.Controls.Add(this.picUsuario);
             this.Controls.Add(this.panel2);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PerfilUsuario";

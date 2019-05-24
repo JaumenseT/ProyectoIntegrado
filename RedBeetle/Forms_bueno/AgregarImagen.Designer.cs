@@ -27,7 +27,6 @@
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new RedBeetle.ExTextBox();
             this.picPerfil = new System.Windows.Forms.PictureBox();
             this.picSubir = new System.Windows.Forms.PictureBox();
             this.picLikes = new System.Windows.Forms.PictureBox();
@@ -49,12 +48,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.txtLinkTop = new RedBeetle.ExTextBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.txtDescripcion = new RedBeetle.ExTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -64,37 +61,40 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.txtNameTop = new RedBeetle.ExTextBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.txtNameBottom = new RedBeetle.ExTextBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.txtLinkBottom = new RedBeetle.ExTextBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.txtNameAccesories = new RedBeetle.ExTextBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
-            this.txtLinkAccesories = new RedBeetle.ExTextBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
             this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.txtNameShoes = new RedBeetle.ExTextBox();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
             this.pictureBox44 = new System.Windows.Forms.PictureBox();
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
             this.txtLinkShoes = new RedBeetle.ExTextBox();
+            this.txtNameShoes = new RedBeetle.ExTextBox();
+            this.txtLinkAccesories = new RedBeetle.ExTextBox();
+            this.txtNameAccesories = new RedBeetle.ExTextBox();
+            this.txtLinkBottom = new RedBeetle.ExTextBox();
+            this.txtNameBottom = new RedBeetle.ExTextBox();
+            this.txtNameTop = new RedBeetle.ExTextBox();
+            this.txtDescripcion = new RedBeetle.ExTextBox();
+            this.txtLinkTop = new RedBeetle.ExTextBox();
+            this.txtBuscar = new RedBeetle.ExTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
@@ -186,18 +186,6 @@
             this.picLupa.Size = new System.Drawing.Size(39, 36);
             this.picLupa.TabIndex = 29;
             this.picLupa.TabStop = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Hint = "     Buscar usuario...";
-            this.txtBuscar.Location = new System.Drawing.Point(504, 37);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
-            this.txtBuscar.TabIndex = 28;
             // 
             // picPerfil
             // 
@@ -458,16 +446,6 @@
             this.pictureBox6.TabIndex = 102;
             this.pictureBox6.TabStop = false;
             // 
-            // txtLinkTop
-            // 
-            this.txtLinkTop.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkTop.Hint = "Link...";
-            this.txtLinkTop.Location = new System.Drawing.Point(1021, 443);
-            this.txtLinkTop.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLinkTop.Name = "txtLinkTop";
-            this.txtLinkTop.Size = new System.Drawing.Size(251, 34);
-            this.txtLinkTop.TabIndex = 100;
-            // 
             // pictureBox22
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
@@ -506,20 +484,10 @@
             this.pictureBox25.TabIndex = 113;
             this.pictureBox25.TabStop = false;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Hint = "Explain us your style!";
-            this.txtDescripcion.Location = new System.Drawing.Point(705, 233);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(521, 114);
-            this.txtDescripcion.TabIndex = 112;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -616,16 +584,6 @@
             this.pictureBox12.TabIndex = 130;
             this.pictureBox12.TabStop = false;
             // 
-            // txtNameTop
-            // 
-            this.txtNameTop.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameTop.Hint = "Name...";
-            this.txtNameTop.Location = new System.Drawing.Point(747, 444);
-            this.txtNameTop.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNameTop.Name = "txtNameTop";
-            this.txtNameTop.Size = new System.Drawing.Size(251, 34);
-            this.txtNameTop.TabIndex = 129;
-            // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
@@ -663,16 +621,6 @@
             this.pictureBox18.Size = new System.Drawing.Size(11, 48);
             this.pictureBox18.TabIndex = 135;
             this.pictureBox18.TabStop = false;
-            // 
-            // txtNameBottom
-            // 
-            this.txtNameBottom.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameBottom.Hint = "Name...";
-            this.txtNameBottom.Location = new System.Drawing.Point(747, 497);
-            this.txtNameBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNameBottom.Name = "txtNameBottom";
-            this.txtNameBottom.Size = new System.Drawing.Size(251, 34);
-            this.txtNameBottom.TabIndex = 134;
             // 
             // pictureBox27
             // 
@@ -712,16 +660,6 @@
             this.pictureBox30.TabIndex = 140;
             this.pictureBox30.TabStop = false;
             // 
-            // txtLinkBottom
-            // 
-            this.txtLinkBottom.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkBottom.Hint = "Link...";
-            this.txtLinkBottom.Location = new System.Drawing.Point(1021, 497);
-            this.txtLinkBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLinkBottom.Name = "txtLinkBottom";
-            this.txtLinkBottom.Size = new System.Drawing.Size(251, 34);
-            this.txtLinkBottom.TabIndex = 139;
-            // 
             // pictureBox31
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
@@ -759,16 +697,6 @@
             this.pictureBox34.Size = new System.Drawing.Size(11, 48);
             this.pictureBox34.TabIndex = 145;
             this.pictureBox34.TabStop = false;
-            // 
-            // txtNameAccesories
-            // 
-            this.txtNameAccesories.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameAccesories.Hint = "Name...";
-            this.txtNameAccesories.Location = new System.Drawing.Point(747, 555);
-            this.txtNameAccesories.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNameAccesories.Name = "txtNameAccesories";
-            this.txtNameAccesories.Size = new System.Drawing.Size(251, 34);
-            this.txtNameAccesories.TabIndex = 144;
             // 
             // pictureBox35
             // 
@@ -808,16 +736,6 @@
             this.pictureBox38.TabIndex = 150;
             this.pictureBox38.TabStop = false;
             // 
-            // txtLinkAccesories
-            // 
-            this.txtLinkAccesories.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkAccesories.Hint = "Link...";
-            this.txtLinkAccesories.Location = new System.Drawing.Point(1021, 555);
-            this.txtLinkAccesories.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLinkAccesories.Name = "txtLinkAccesories";
-            this.txtLinkAccesories.Size = new System.Drawing.Size(251, 34);
-            this.txtLinkAccesories.TabIndex = 149;
-            // 
             // pictureBox39
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
@@ -855,16 +773,6 @@
             this.pictureBox42.Size = new System.Drawing.Size(11, 48);
             this.pictureBox42.TabIndex = 155;
             this.pictureBox42.TabStop = false;
-            // 
-            // txtNameShoes
-            // 
-            this.txtNameShoes.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameShoes.Hint = "Name...";
-            this.txtNameShoes.Location = new System.Drawing.Point(747, 618);
-            this.txtNameShoes.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNameShoes.Name = "txtNameShoes";
-            this.txtNameShoes.Size = new System.Drawing.Size(251, 34);
-            this.txtNameShoes.TabIndex = 154;
             // 
             // pictureBox43
             // 
@@ -913,6 +821,99 @@
             this.txtLinkShoes.Name = "txtLinkShoes";
             this.txtLinkShoes.Size = new System.Drawing.Size(251, 34);
             this.txtLinkShoes.TabIndex = 159;
+            // 
+            // txtNameShoes
+            // 
+            this.txtNameShoes.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameShoes.Hint = "Name...";
+            this.txtNameShoes.Location = new System.Drawing.Point(747, 618);
+            this.txtNameShoes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameShoes.Name = "txtNameShoes";
+            this.txtNameShoes.Size = new System.Drawing.Size(251, 34);
+            this.txtNameShoes.TabIndex = 154;
+            // 
+            // txtLinkAccesories
+            // 
+            this.txtLinkAccesories.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLinkAccesories.Hint = "Link...";
+            this.txtLinkAccesories.Location = new System.Drawing.Point(1021, 555);
+            this.txtLinkAccesories.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLinkAccesories.Name = "txtLinkAccesories";
+            this.txtLinkAccesories.Size = new System.Drawing.Size(251, 34);
+            this.txtLinkAccesories.TabIndex = 149;
+            // 
+            // txtNameAccesories
+            // 
+            this.txtNameAccesories.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameAccesories.Hint = "Name...";
+            this.txtNameAccesories.Location = new System.Drawing.Point(747, 555);
+            this.txtNameAccesories.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameAccesories.Name = "txtNameAccesories";
+            this.txtNameAccesories.Size = new System.Drawing.Size(251, 34);
+            this.txtNameAccesories.TabIndex = 144;
+            // 
+            // txtLinkBottom
+            // 
+            this.txtLinkBottom.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLinkBottom.Hint = "Link...";
+            this.txtLinkBottom.Location = new System.Drawing.Point(1021, 497);
+            this.txtLinkBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLinkBottom.Name = "txtLinkBottom";
+            this.txtLinkBottom.Size = new System.Drawing.Size(251, 34);
+            this.txtLinkBottom.TabIndex = 139;
+            // 
+            // txtNameBottom
+            // 
+            this.txtNameBottom.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameBottom.Hint = "Name...";
+            this.txtNameBottom.Location = new System.Drawing.Point(747, 497);
+            this.txtNameBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameBottom.Name = "txtNameBottom";
+            this.txtNameBottom.Size = new System.Drawing.Size(251, 34);
+            this.txtNameBottom.TabIndex = 134;
+            // 
+            // txtNameTop
+            // 
+            this.txtNameTop.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameTop.Hint = "Name...";
+            this.txtNameTop.Location = new System.Drawing.Point(747, 444);
+            this.txtNameTop.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameTop.Name = "txtNameTop";
+            this.txtNameTop.Size = new System.Drawing.Size(251, 34);
+            this.txtNameTop.TabIndex = 129;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Hint = "Explain us your style!";
+            this.txtDescripcion.Location = new System.Drawing.Point(705, 233);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(521, 114);
+            this.txtDescripcion.TabIndex = 112;
+            // 
+            // txtLinkTop
+            // 
+            this.txtLinkTop.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLinkTop.Hint = "Link...";
+            this.txtLinkTop.Location = new System.Drawing.Point(1021, 443);
+            this.txtLinkTop.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLinkTop.Name = "txtLinkTop";
+            this.txtLinkTop.Size = new System.Drawing.Size(251, 34);
+            this.txtLinkTop.TabIndex = 100;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Hint = "     Buscar usuario...";
+            this.txtBuscar.Location = new System.Drawing.Point(504, 37);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(357, 37);
+            this.txtBuscar.TabIndex = 28;
             // 
             // AgregarImagen
             // 

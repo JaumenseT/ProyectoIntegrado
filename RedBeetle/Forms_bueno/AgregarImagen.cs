@@ -115,11 +115,11 @@ namespace RedBeetle.Forms_bueno {
         }
 
         private void picPerfil_MouseEnter(object sender, EventArgs e) {
-            picLikes.BackgroundImage = Resources.perfil_gris;
+            picPerfil.BackgroundImage = Resources.perfil_gris;
         }
 
         private void picPerfil_MouseLeave(object sender, EventArgs e) {
-            picLikes.BackgroundImage = Resources.perfil_blanco;
+            picPerfil.BackgroundImage = Resources.perfil_blanco;
         }
 
         private void picSubir_MouseEnter(object sender, EventArgs e) {

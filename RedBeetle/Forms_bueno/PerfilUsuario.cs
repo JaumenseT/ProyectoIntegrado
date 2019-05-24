@@ -17,28 +17,25 @@ namespace RedBeetle.Forms_bueno
 		Form caller;
 		string nombreUsuario;
         Usuario usu;
-		List<byte[]> imagenesByte = null;
-		List<Image> listaImagenes = null;
+		List<Imagen> listaImagenes = null;
 		int longitudAtras = 0;
 		int longitudSiguiente = 0;
 
-		public PerfilUsuario(string nomUsu, Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
+		public PerfilUsuario(string nomUsu, Form caller, List<Imagen> listaImagenes)
 		{
 			InitializeComponent();
 			this.caller = caller;
 			nombreUsuario = nomUsu;
-			imagenesByte = imagenByte;
-			this.listaImagenes = listaImagenes;
+            this.listaImagenes = listaImagenes;
             usu = AccesoDatos.DevolverUsuario(nombreUsuario);
         }
 
 		private void PerfilUsuario_Load(object sender, EventArgs e)
 		{
 			//Rellenar las imagenes
-			var listaBytes = AccesoDatos.DevolverImagenes(nombreUsuario);
-			var listaImagenes = Imagen.ConvertirArrayAImagen(listaBytes);
+			var listaImagenes = AccesoDatos.DevolverImagenes(nombreUsuario);
 
-			if (listaImagenes.Count > 0)
+            if (listaImagenes.Count > 0)
 			{
 				for (int i = 0; i < listaImagenes.Count; i++)
 				{
@@ -46,23 +43,23 @@ namespace RedBeetle.Forms_bueno
 					{
 						if(pic1.BackgroundImage == null)
 						{
-							pic1.BackgroundImage = listaImagenes[i];
+							pic1.BackgroundImage = listaImagenes[i].NewImage;
 						}
 						if (pic2.BackgroundImage == null)
 						{
-							pic2.BackgroundImage = listaImagenes[i+1];
+							pic2.BackgroundImage = listaImagenes[i+1].NewImage;
 						}
 						if (pic3.BackgroundImage == null)
 						{
-							pic3.BackgroundImage = listaImagenes[i+2];
+							pic3.BackgroundImage = listaImagenes[i+2].NewImage;
 						}
 						if (pic4.BackgroundImage == null)
 						{
-							pic4.BackgroundImage = listaImagenes[i+3];
+							pic4.BackgroundImage = listaImagenes[i+3].NewImage;
 						}
 						if (pic5.BackgroundImage == null)
 						{
-							pic5.BackgroundImage = listaImagenes[i+4];
+							pic5.BackgroundImage = listaImagenes[i+4].NewImage;
 						}
 					}
 					catch
@@ -126,7 +123,7 @@ namespace RedBeetle.Forms_bueno
 					pic4.BackgroundImage = pic3.BackgroundImage;
 					pic3.BackgroundImage = pic2.BackgroundImage;
 					pic2.BackgroundImage = pic1.BackgroundImage;
-					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1].NewImage;
 					longitudAtras--;
 					longitudSiguiente--;
 				}
@@ -138,13 +135,13 @@ namespace RedBeetle.Forms_bueno
 			if (listaImagenes.Count > 5)
 			{
 				var lastElement = listaImagenes[listaImagenes.Count - 1];
-				if (pic5.BackgroundImage != lastElement)
+				if (pic5.BackgroundImage != lastElement.NewImage)
 				{
 					pic1.BackgroundImage = pic2.BackgroundImage;
 					pic2.BackgroundImage = pic3.BackgroundImage;
 					pic3.BackgroundImage = pic4.BackgroundImage;
 					pic4.BackgroundImage = pic5.BackgroundImage;
-					pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5];
+					pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5].NewImage;
 					longitudSiguiente++;
 					longitudAtras++;
 				}

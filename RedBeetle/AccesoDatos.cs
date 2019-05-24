@@ -45,12 +45,27 @@ namespace RedBeetle
             } else return null;
         }
 
-		/// <summary>
-		/// Metodo que comprueba si existe un correo
-		/// </summary>
-		/// <param name="correo"></param>
-		/// <returns></returns>
-		public static bool ExisteCorreo(string correo)
+        public static Usuario DevolverUsuario(int id_usuario) {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
+                using (IDbConnection conexion = dbCon.Conexion) {
+                    var output = conexion.Query<Usuario>($"SELECT * FROM usuario WHERE id_usuario = '{ id_usuario }';").ToList();
+                    if (output.Count != 0) {
+                        Usuario usu = output[0];
+                        return usu;
+
+                    } else return null;
+
+                }
+            } else return null;
+        }
+
+        /// <summary>
+        /// Metodo que comprueba si existe un correo
+        /// </summary>
+        /// <param name="correo"></param>
+        /// <returns></returns>
+        public static bool ExisteCorreo(string correo)
 		{
 			var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
 			if (dbCon.Conectado())
@@ -88,14 +103,14 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="nomUsu"></param>
 		/// <returns></returns>
-		public static List<byte[]> DevolverImagenes(string nomUsu)
+		public static List<Imagen> DevolverImagenes(string nomUsu)
 		{
 			var dbCon = DBConnection.Instancia();
 			if (dbCon.Conectado())
 			{
 				using (IDbConnection conexion = dbCon.Conexion)
 				{
-					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario = '{ nomUsu }';").ToList();
+					var output = conexion.Query<Imagen>($"SELECT i.id_imagen, i.descripcion, i.imagenes, i.id_usuario FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario = '{ nomUsu }';").ToList();
 					return output;
 				}
 			}
@@ -107,14 +122,14 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="nomUsu"></param>
 		/// <returns></returns>
-		public static List<byte[]> DevolverTodasImagenes(string nomUsu)
+		public static List<Imagen> DevolverTodasImagenes(string nomUsu)
 		{
 			var dbCon = DBConnection.Instancia();
 			if (dbCon.Conectado())
 			{
 				using (IDbConnection conexion = dbCon.Conexion)
 				{
-					var output = conexion.Query<byte[]>($"SELECT i.imagenes FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario != '{ nomUsu }' ORDER BY RAND();").ToList();
+					var output = conexion.Query<Imagen>($"SELECT  i.id_imagen, i.descripcion, i.imagenes, i.id_usuario FROM imagen i INNER JOIN usuario u ON i.id_usuario = u.id_usuario WHERE u.nombre_usuario != '{ nomUsu }' ORDER BY RAND();").ToList();
 					return output;
 				}
 			}
@@ -211,6 +226,21 @@ namespace RedBeetle
                     } else return 0;
                 }
             } else return 0;
+        }
+
+        public static Prenda DevolverPrenda(int idImagen, int idCategoria) {
+            var dbCon = DBConnection.Instancia(); //Instanciamos la conexión con la base de datos usando la clase DBConnection.
+            if (dbCon.Conectado()) { //Abrimos la conexión con la base de datos 
+                using (IDbConnection conexion = dbCon.Conexion) {
+                    var output = conexion.Query<Prenda>($"SELECT nombre, link, id_imagen FROM prenda WHERE id_imagen = @id_imagen AND id_categoria = @id_categoria", new { id_imagen = idImagen, id_categoria = idCategoria }).ToList();
+                    if (output.Count != 0) {
+                        Prenda p = output[0];
+                        return p;
+
+                    } else return null;
+
+                }
+            } else return null;
         }
     }
 }

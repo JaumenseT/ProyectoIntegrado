@@ -27,8 +27,7 @@ namespace RedBeetle.Forms_bueno
 
         private void Perfil_Load(object sender, EventArgs e) {
             RefrescarDatos();
-            var imagenesByte = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
-            var listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+            var listaImagenes = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
 
             if (listaImagenes.Count > 0)
 			{
@@ -38,23 +37,23 @@ namespace RedBeetle.Forms_bueno
 					{
 						if (pic1.BackgroundImage == null)
 						{
-							pic1.BackgroundImage = listaImagenes[i];
+							pic1.BackgroundImage = listaImagenes[i].NewImage;
 						}
 						if (pic2.BackgroundImage == null)
 						{
-							pic2.BackgroundImage = listaImagenes[i + 1];
+							pic2.BackgroundImage = listaImagenes[i + 1].NewImage;
 						}
 						if (pic3.BackgroundImage == null)
 						{
-							pic3.BackgroundImage = listaImagenes[i + 2];
+							pic3.BackgroundImage = listaImagenes[i + 2].NewImage;
 						}
 						if (pic4.BackgroundImage == null)
 						{
-							pic4.BackgroundImage = listaImagenes[i + 3];
+							pic4.BackgroundImage = listaImagenes[i + 3].NewImage;
 						}
 						if (pic5.BackgroundImage == null)
 						{
-							pic5.BackgroundImage = listaImagenes[i + 4];
+							pic5.BackgroundImage = listaImagenes[i + 4].NewImage;
 						}
 					}
 					catch

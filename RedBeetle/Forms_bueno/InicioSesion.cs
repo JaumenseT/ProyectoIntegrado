@@ -18,8 +18,7 @@ namespace RedBeetle
     public partial class InicioSesion : Form
     {
 		private static bool error = false; //atributo que decidira si se hace el login o no, indicando si hay algun error en los metodos Login() y btn_Entrar()
-        List<byte[]> imagenesByte = null;
-        List<Image> listaImagenes = null;
+        List<Imagen> listaImagenes = null;
 
         public InicioSesion()
         {
@@ -129,8 +128,7 @@ namespace RedBeetle
 				error = true; //Si hay algun campo vacio, seteamos error a true
 			}
             if (!error) {
-                imagenesByte = AccesoDatos.DevolverTodasImagenes(Aplicacion.User.Nombre_usuario);
-                listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+                listaImagenes = AccesoDatos.DevolverTodasImagenes(Aplicacion.User.Nombre_usuario);
             }
            
         }
@@ -144,7 +142,7 @@ namespace RedBeetle
 			
 			if (!error) //Si no hay errores pasas al siguiente form
 			{
-                Home r1 = new Home(this, imagenesByte, listaImagenes);
+                Home r1 = new Home(this, listaImagenes);
                 r1.Show();
 				Hide();
                 txtNombreUsuario.Clear();

@@ -177,6 +177,7 @@
             this.picPerfil.BackColor = System.Drawing.Color.Transparent;
             this.picPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPerfil.BackgroundImage")));
             this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPerfil.Location = new System.Drawing.Point(1116, 17);
             this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picPerfil.Name = "picPerfil";
@@ -192,6 +193,7 @@
             this.picSubir.BackColor = System.Drawing.Color.Transparent;
             this.picSubir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubir.BackgroundImage")));
             this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSubir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSubir.Location = new System.Drawing.Point(1224, 27);
             this.picSubir.Margin = new System.Windows.Forms.Padding(4);
             this.picSubir.Name = "picSubir";
@@ -207,6 +209,7 @@
             this.picLikes.BackColor = System.Drawing.Color.Transparent;
             this.picLikes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLikes.BackgroundImage")));
             this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLikes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLikes.Location = new System.Drawing.Point(1021, 27);
             this.picLikes.Margin = new System.Windows.Forms.Padding(4);
             this.picLikes.Name = "picLikes";
@@ -270,6 +273,7 @@
             // 
             // picInicio
             // 
+            this.picInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picInicio.Image = ((System.Drawing.Image)(resources.GetObject("picInicio.Image")));
             this.picInicio.Location = new System.Drawing.Point(29, 27);
             this.picInicio.Margin = new System.Windows.Forms.Padding(4);

@@ -15,18 +15,17 @@ namespace RedBeetle.Forms
 {
     public partial class Home : Form
     {
+        int offset = 0;
         Form caller;
 	    Usuario user;
 		List<string> usuarios = new List<string>();
-        List<byte[]> imagenesByte = null;
-        List<Image> listaImagenes = null;
+        List<Imagen> listaImagenes = null;
 		int longitudAtras = 0;
 		int longitudSiguiente = 0;
 
-        public Home(Form caller, List<byte[]> imagenByte, List<Image> listaImagenes)
+        public Home(Form caller, List<Imagen> listaImagenes)
         {
             this.caller = caller;
-            this.imagenesByte = imagenByte;
             this.listaImagenes = listaImagenes;
 			//longitudAtras = listaImagenes.Count;
 
@@ -69,11 +68,11 @@ namespace RedBeetle.Forms
 			{
 				if (pic1.BackgroundImage == null)
 				{
-					pic1.BackgroundImage = listaImagenes[0];
+					pic1.BackgroundImage = listaImagenes[0].NewImage;
 				}
 				if (pic2.BackgroundImage == null)
 				{
-					pic2.BackgroundImage = listaImagenes[1];
+					pic2.BackgroundImage = listaImagenes[1].NewImage;
 				}
             }
 		}
@@ -184,10 +183,9 @@ namespace RedBeetle.Forms
 			}
 			else if (esta) //Si el nombre de usuario suministrado por el txtbox existe en la base de datos, procedes
 			{   
-				imagenesByte = AccesoDatos.DevolverImagenes(txtBuscar.Text);
-				listaImagenes = Imagen.ConvertirArrayAImagen(imagenesByte);
+				listaImagenes = AccesoDatos.DevolverImagenes(txtBuscar.Text);
 
-				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, this, imagenesByte, listaImagenes);
+				var perfilUsuario = new PerfilUsuario(txtBuscar.Text, this, listaImagenes);
 				perfilUsuario.Show();
 			}
 		}
@@ -209,9 +207,10 @@ namespace RedBeetle.Forms
 				if (longitudAtras > 0)
 				{
 					pic2.BackgroundImage = pic1.BackgroundImage;
-					pic1.BackgroundImage = listaImagenes[longitudAtras - 1];
+					pic1.BackgroundImage = listaImagenes[longitudAtras - 1].NewImage;
 					longitudAtras--;
 					longitudSiguiente--;
+                    offset--;
 				}
 			}
 		}
@@ -223,9 +222,10 @@ namespace RedBeetle.Forms
 				if (longitudSiguiente < listaImagenes.Count - 2)
 				{
 					pic1.BackgroundImage = pic2.BackgroundImage;
-					pic2.BackgroundImage = listaImagenes[longitudSiguiente + 2];
+					pic2.BackgroundImage = listaImagenes[longitudSiguiente + 2].NewImage;
 					longitudSiguiente++;
 					longitudAtras++;
+                    offset++;
 				}
 			}
 		}
@@ -277,6 +277,23 @@ namespace RedBeetle.Forms
 
         private void picLikes_MouseLeave(object sender, EventArgs e) {
             picLikes.BackgroundImage = Resources.corazon_blanco;
+        }
+
+        // Onclick fotos
+
+        private void AbrirFoto(int index) {
+            if (index+offset < listaImagenes.Count) {
+                FormImagen fm = new FormImagen(this, listaImagenes[index + offset]);
+                fm.Show();
+                this.Hide();
+            }
+        }
+        private void pic1_Click(object sender, EventArgs e) {
+            AbrirFoto(0);
+        }
+
+        private void pic2_Click(object sender, EventArgs e) {
+            AbrirFoto(1);
         }
     }
 }

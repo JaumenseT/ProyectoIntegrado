@@ -10,26 +10,38 @@ using System.IO;
 namespace RedBeetle.Clases {
     public class Imagen {
 
+        private int id_imagen;
         private string descripcion;
         Image newImage = null;
         byte[] imageBytes = null;
         int id_usuario;
 
+        public int Id_Imagen { get { return id_imagen; } }
         public string Descripcion { get { return descripcion; } }
         public int IdUsuario { get { return id_usuario; } }
         public Image NewImage { get { return newImage; } }
         public byte[] ImageBytes { get { return imageBytes; } }
 
         public Imagen(int id_imagen, string descripcion, Image image, int id_usuario) {
+            this.id_imagen = id_imagen;
             this.descripcion = descripcion;
             newImage = image;
             this.id_usuario = id_usuario;
+        }
+
+        public Imagen(int id_imagen, string descripcion, byte[] imagenes, int id_usuario) {
+            this.id_imagen = id_imagen;
+            this.descripcion = descripcion;
+            this.imageBytes = imagenes;
+            this.id_usuario = id_usuario;
+            newImage = ConvertirImagen(imageBytes);
         }
 
         public Imagen(string descripcion, byte[] imageBytes, int id_usuario) {
             this.descripcion = descripcion;
             this.imageBytes = imageBytes;
             this.id_usuario = id_usuario;
+            newImage = ConvertirImagen(imageBytes);
         }
 
         /*Subir imagen a sql convertida.
@@ -54,7 +66,7 @@ namespace RedBeetle.Clases {
 
             return avatar;
         }*/
-		/*
+        /*
         //Para recoger la imagen de mysql y mostrarla en un picturebox.
         byte[] avatarByte = cargarAvatardesdeMYSQL();
         Imagen image = byteArrayToImage(avatarByte);
@@ -70,11 +82,11 @@ namespace RedBeetle.Clases {
             }
             return null;
         }*/
-		/// <summary>
-		/// Convierte el array de bytes donde estan las imagenes a avatares usables para la picturebox
-		/// </summary>
-		/// <param name="byteAvatar"></param>
-		/// <returns>Array de imagenes para la picturebox</returns>
+        /// <summary>
+        /// Convierte el array de bytes donde estan las imagenes a avatares usables para la picturebox
+        /// </summary>
+        /// <param name="byteAvatar"></param>
+        /// <returns>Array de imagenes para la picturebox</returns>
         public static List<Image> ConvertirArrayAImagen(List<byte[]> byteAvatar)
         {
 			var listaImagenes = new List<Image>();
