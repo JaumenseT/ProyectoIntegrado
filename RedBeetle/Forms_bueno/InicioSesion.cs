@@ -48,7 +48,7 @@ namespace RedBeetle
 		/// Metodo privado de la clase para validar si hay campos vacios y para comprobar que no se sobrepasen longitud de caracteres o haya caracteres especiales
 		/// </summary>
 		/// <returns>Devuelve un boolean indicando si ha habido errores</returns>
-		private bool ValidarInicioSesion(string nomUsu, string pass)
+		public static bool ValidarInicioSesion(string nomUsu, string pass)
 		{
 			bool correcto = true;
 			string mensaje = "";

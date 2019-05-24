@@ -32,7 +32,7 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void CheckEnter(object sender, KeyPressEventArgs e)
+		public void CheckEnter(object sender, KeyPressEventArgs e)
 		{
 			if (e.KeyChar == (char)13)
 			{
@@ -45,7 +45,7 @@ namespace RedBeetle
 		/// </summary>
 		/// <param name="email"></param>
 		/// <returns>Devuelve true si es valido o false</returns>
-		private bool EmailValido(string email)
+		public bool EmailValido(string email)
 		{
 			try
 			{
