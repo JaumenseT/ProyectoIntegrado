@@ -18,6 +18,9 @@ namespace RedBeetle.Forms_bueno
     {
         Form caller;
 		Usuario user;
+        List<Imagen> listaImagenes = null;
+        int longitudAtras = 0;
+        int longitudSiguiente = 0;
         public Perfil(Form caller)
         {
             this.caller = caller;
@@ -110,6 +113,36 @@ namespace RedBeetle.Forms_bueno
 			Hide();
 		}
 
+        /*private void PicAnterior_Click(object sender, EventArgs e) {
+            if (listaImagenes.Count > 0) {
+                if (longitudAtras > 0) {
+                    pic5.BackgroundImage = pic4.BackgroundImage;
+                    pic4.BackgroundImage = pic3.BackgroundImage;
+                    pic3.BackgroundImage = pic2.BackgroundImage;
+                    pic2.BackgroundImage = pic1.BackgroundImage;
+                    pic1.BackgroundImage = listaImagenes[longitudAtras - 1].NewImage;
+                    longitudAtras--;
+                    longitudSiguiente--;
+                }
+            }
+        }
+
+        private void PicSiguiente_Click(object sender, EventArgs e) {
+            if (listaImagenes.Count > 5) {
+                var lastElement = listaImagenes[listaImagenes.Count - 1];
+                if (pic5.BackgroundImage != lastElement.NewImage) {
+                    pic1.BackgroundImage = pic2.BackgroundImage;
+                    pic2.BackgroundImage = pic3.BackgroundImage;
+                    pic3.BackgroundImage = pic4.BackgroundImage;
+                    pic4.BackgroundImage = pic5.BackgroundImage;
+                    pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5].NewImage;
+                    longitudSiguiente++;
+                    longitudAtras++;
+                }
+            }
+        }*/
+
+
         // Hovers del form
 
         private void picAnterior_MouseEnter(object sender, EventArgs e) {
@@ -174,6 +207,26 @@ namespace RedBeetle.Forms_bueno
 
         private void picFotos_MouseLeave(object sender, EventArgs e) {
             picFotos.BackgroundImage = Resources.fotos_roja;
+        }
+
+        private void pic1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pic2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pic3_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pic4_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pic5_Click(object sender, EventArgs e) {
+
         }
     }
 }

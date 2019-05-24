@@ -25,7 +25,12 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picPerfil = new System.Windows.Forms.PictureBox();
+            this.picSubir = new System.Windows.Forms.PictureBox();
+            this.picLikes = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lblCerrar = new System.Windows.Forms.Label();
+            this.picInicio = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -77,14 +82,14 @@
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.picPerfil = new System.Windows.Forms.PictureBox();
-            this.picSubir = new System.Windows.Forms.PictureBox();
-            this.picLikes = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.picInicio = new System.Windows.Forms.PictureBox();
             this.picLogoBeetle = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSiguiente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -125,11 +130,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSubir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLikes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             this.SuspendLayout();
@@ -150,6 +150,63 @@
             this.panel2.Size = new System.Drawing.Size(1365, 110);
             this.panel2.TabIndex = 40;
             // 
+            // picPerfil
+            // 
+            this.picPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.picPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPerfil.BackgroundImage")));
+            this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPerfil.Location = new System.Drawing.Point(1116, 17);
+            this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.picPerfil.Name = "picPerfil";
+            this.picPerfil.Size = new System.Drawing.Size(80, 74);
+            this.picPerfil.TabIndex = 27;
+            this.picPerfil.TabStop = false;
+            this.picPerfil.MouseEnter += new System.EventHandler(this.picPerfil_MouseEnter);
+            this.picPerfil.MouseLeave += new System.EventHandler(this.picPerfil_MouseLeave);
+            // 
+            // picSubir
+            // 
+            this.picSubir.BackColor = System.Drawing.Color.Transparent;
+            this.picSubir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubir.BackgroundImage")));
+            this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSubir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSubir.Location = new System.Drawing.Point(1224, 27);
+            this.picSubir.Margin = new System.Windows.Forms.Padding(4);
+            this.picSubir.Name = "picSubir";
+            this.picSubir.Size = new System.Drawing.Size(67, 62);
+            this.picSubir.TabIndex = 26;
+            this.picSubir.TabStop = false;
+            this.picSubir.Click += new System.EventHandler(this.picSubir_Click);
+            this.picSubir.MouseEnter += new System.EventHandler(this.picSubir_MouseEnter);
+            this.picSubir.MouseLeave += new System.EventHandler(this.picSubir_MouseLeave);
+            // 
+            // picLikes
+            // 
+            this.picLikes.BackColor = System.Drawing.Color.Transparent;
+            this.picLikes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLikes.BackgroundImage")));
+            this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLikes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLikes.Location = new System.Drawing.Point(1021, 27);
+            this.picLikes.Margin = new System.Windows.Forms.Padding(4);
+            this.picLikes.Name = "picLikes";
+            this.picLikes.Size = new System.Drawing.Size(67, 62);
+            this.picLikes.TabIndex = 25;
+            this.picLikes.TabStop = false;
+            this.picLikes.MouseEnter += new System.EventHandler(this.picLikes_MouseEnter);
+            this.picLikes.MouseLeave += new System.EventHandler(this.picLikes_MouseLeave);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox11.Location = new System.Drawing.Point(-1, 135);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(1361, 2);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 20;
+            this.pictureBox11.TabStop = false;
+            // 
             // lblCerrar
             // 
             this.lblCerrar.AutoSize = true;
@@ -165,6 +222,22 @@
             this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click_1);
             this.lblCerrar.MouseEnter += new System.EventHandler(this.lblCerrar_MouseEnter);
             this.lblCerrar.MouseLeave += new System.EventHandler(this.lblCerrar_MouseLeave);
+            // 
+            // picInicio
+            // 
+            this.picInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picInicio.ErrorImage = global::RedBeetle.Properties.Resources.beetle_blanco;
+            this.picInicio.Image = ((System.Drawing.Image)(resources.GetObject("picInicio.Image")));
+            this.picInicio.Location = new System.Drawing.Point(29, 27);
+            this.picInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.picInicio.Name = "picInicio";
+            this.picInicio.Size = new System.Drawing.Size(288, 54);
+            this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInicio.TabIndex = 0;
+            this.picInicio.TabStop = false;
+            this.picInicio.Click += new System.EventHandler(this.picInicio_Click);
+            this.picInicio.MouseEnter += new System.EventHandler(this.picInicio_MouseEnter);
+            this.picInicio.MouseLeave += new System.EventHandler(this.picInicio_MouseLeave);
             // 
             // linkLabel1
             // 
@@ -546,6 +619,7 @@
             this.pic5.Size = new System.Drawing.Size(200, 185);
             this.pic5.TabIndex = 130;
             this.pic5.TabStop = false;
+            this.pic5.Click += new System.EventHandler(this.pic5_Click);
             // 
             // pic4
             // 
@@ -556,6 +630,7 @@
             this.pic4.Size = new System.Drawing.Size(200, 185);
             this.pic4.TabIndex = 129;
             this.pic4.TabStop = false;
+            this.pic4.Click += new System.EventHandler(this.pic4_Click);
             // 
             // pic3
             // 
@@ -566,6 +641,7 @@
             this.pic3.Size = new System.Drawing.Size(200, 185);
             this.pic3.TabIndex = 128;
             this.pic3.TabStop = false;
+            this.pic3.Click += new System.EventHandler(this.pic3_Click);
             // 
             // pic2
             // 
@@ -576,6 +652,7 @@
             this.pic2.Size = new System.Drawing.Size(200, 185);
             this.pic2.TabIndex = 127;
             this.pic2.TabStop = false;
+            this.pic2.Click += new System.EventHandler(this.pic2_Click);
             // 
             // pic1
             // 
@@ -586,6 +663,7 @@
             this.pic1.Size = new System.Drawing.Size(200, 185);
             this.pic1.TabIndex = 126;
             this.pic1.TabStop = false;
+            this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
             // picFotos
             // 
@@ -725,79 +803,6 @@
             this.pictureBox8.TabIndex = 95;
             this.pictureBox8.TabStop = false;
             // 
-            // picPerfil
-            // 
-            this.picPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.picPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPerfil.BackgroundImage")));
-            this.picPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPerfil.Location = new System.Drawing.Point(1116, 17);
-            this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
-            this.picPerfil.Name = "picPerfil";
-            this.picPerfil.Size = new System.Drawing.Size(80, 74);
-            this.picPerfil.TabIndex = 27;
-            this.picPerfil.TabStop = false;
-            this.picPerfil.MouseEnter += new System.EventHandler(this.picPerfil_MouseEnter);
-            this.picPerfil.MouseLeave += new System.EventHandler(this.picPerfil_MouseLeave);
-            // 
-            // picSubir
-            // 
-            this.picSubir.BackColor = System.Drawing.Color.Transparent;
-            this.picSubir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubir.BackgroundImage")));
-            this.picSubir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSubir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSubir.Location = new System.Drawing.Point(1224, 27);
-            this.picSubir.Margin = new System.Windows.Forms.Padding(4);
-            this.picSubir.Name = "picSubir";
-            this.picSubir.Size = new System.Drawing.Size(67, 62);
-            this.picSubir.TabIndex = 26;
-            this.picSubir.TabStop = false;
-            this.picSubir.Click += new System.EventHandler(this.picSubir_Click);
-            this.picSubir.MouseEnter += new System.EventHandler(this.picSubir_MouseEnter);
-            this.picSubir.MouseLeave += new System.EventHandler(this.picSubir_MouseLeave);
-            // 
-            // picLikes
-            // 
-            this.picLikes.BackColor = System.Drawing.Color.Transparent;
-            this.picLikes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLikes.BackgroundImage")));
-            this.picLikes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLikes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLikes.Location = new System.Drawing.Point(1021, 27);
-            this.picLikes.Margin = new System.Windows.Forms.Padding(4);
-            this.picLikes.Name = "picLikes";
-            this.picLikes.Size = new System.Drawing.Size(67, 62);
-            this.picLikes.TabIndex = 25;
-            this.picLikes.TabStop = false;
-            this.picLikes.MouseEnter += new System.EventHandler(this.picLikes_MouseEnter);
-            this.picLikes.MouseLeave += new System.EventHandler(this.picLikes_MouseLeave);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox11.Location = new System.Drawing.Point(-1, 135);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(1361, 2);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 20;
-            this.pictureBox11.TabStop = false;
-            // 
-            // picInicio
-            // 
-            this.picInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInicio.ErrorImage = global::RedBeetle.Properties.Resources.beetle_blanco;
-            this.picInicio.Image = ((System.Drawing.Image)(resources.GetObject("picInicio.Image")));
-            this.picInicio.Location = new System.Drawing.Point(29, 27);
-            this.picInicio.Margin = new System.Windows.Forms.Padding(4);
-            this.picInicio.Name = "picInicio";
-            this.picInicio.Size = new System.Drawing.Size(288, 54);
-            this.picInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInicio.TabIndex = 0;
-            this.picInicio.TabStop = false;
-            this.picInicio.Click += new System.EventHandler(this.picInicio_Click);
-            this.picInicio.MouseEnter += new System.EventHandler(this.picInicio_MouseEnter);
-            this.picInicio.MouseLeave += new System.EventHandler(this.picInicio_MouseLeave);
-            // 
             // picLogoBeetle
             // 
             this.picLogoBeetle.BackColor = System.Drawing.Color.Transparent;
@@ -889,6 +894,11 @@
             this.Load += new System.EventHandler(this.Perfil_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSiguiente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnterior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
@@ -929,11 +939,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSubir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLikes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBeetle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             this.ResumeLayout(false);

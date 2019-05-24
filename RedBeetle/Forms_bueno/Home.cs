@@ -20,8 +20,8 @@ namespace RedBeetle.Forms
 	    Usuario user;
 		List<string> usuarios = new List<string>();
         List<Imagen> listaImagenes = null;
-		int longitudAtras = 0;
-		int longitudSiguiente = 0;
+        int longitudAtras = 0;
+        int longitudSiguiente = 0;
 
         public Home(Form caller, List<Imagen> listaImagenes)
         {
@@ -111,13 +111,6 @@ namespace RedBeetle.Forms
 			Hide();
         }
 
-        private void lblUsuario_Click(object sender, EventArgs e)
-		{
-            Hide();
-            Perfil p1 = new Perfil(this);
-            p1.Show();
-        }
-
 		private void TxtBuscar_Enter(object sender, EventArgs e)
 		{
 			picLupa.Hide();
@@ -149,8 +142,6 @@ namespace RedBeetle.Forms
 		{
 			lblCerrar.ForeColor = Color.White;
 		}
-
-		
 
         private void lblUsuario_Click_1(object sender, EventArgs e) {
             Perfil p1 = new Perfil(this);

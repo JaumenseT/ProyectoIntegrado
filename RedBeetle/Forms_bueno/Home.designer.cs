@@ -288,7 +288,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.lblUsuario.Location = new System.Drawing.Point(1085, 182);
+            this.lblUsuario.Location = new System.Drawing.Point(1092, 171);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(68, 33);
@@ -441,7 +441,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.pictureBox4.Location = new System.Drawing.Point(1089, 214);
+            this.pictureBox4.Location = new System.Drawing.Point(1096, 203);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(236, 6);
