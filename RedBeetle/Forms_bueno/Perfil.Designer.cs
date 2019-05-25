@@ -387,12 +387,14 @@
             this.picSiguiente.BackColor = System.Drawing.Color.Transparent;
             this.picSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSiguiente.BackgroundImage")));
             this.picSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSiguiente.Location = new System.Drawing.Point(1168, 689);
             this.picSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.picSiguiente.Name = "picSiguiente";
             this.picSiguiente.Size = new System.Drawing.Size(40, 37);
             this.picSiguiente.TabIndex = 209;
             this.picSiguiente.TabStop = false;
+            this.picSiguiente.Click += new System.EventHandler(this.picSiguiente_Click);
             this.picSiguiente.MouseEnter += new System.EventHandler(this.picSiguiente_MouseEnter);
             this.picSiguiente.MouseLeave += new System.EventHandler(this.picSiguiente_MouseLeave);
             // 
@@ -401,12 +403,14 @@
             this.picAnterior.BackColor = System.Drawing.Color.Transparent;
             this.picAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAnterior.BackgroundImage")));
             this.picAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAnterior.Location = new System.Drawing.Point(152, 688);
             this.picAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.picAnterior.Name = "picAnterior";
             this.picAnterior.Size = new System.Drawing.Size(40, 37);
             this.picAnterior.TabIndex = 208;
             this.picAnterior.TabStop = false;
+            this.picAnterior.Click += new System.EventHandler(this.picAnterior_Click);
             this.picAnterior.MouseEnter += new System.EventHandler(this.picAnterior_MouseEnter);
             this.picAnterior.MouseLeave += new System.EventHandler(this.picAnterior_MouseLeave);
             // 
@@ -613,6 +617,7 @@
             // pic5
             // 
             this.pic5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic5.Location = new System.Drawing.Point(1089, 482);
             this.pic5.Margin = new System.Windows.Forms.Padding(4);
             this.pic5.Name = "pic5";
@@ -624,6 +629,7 @@
             // pic4
             // 
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic4.Location = new System.Drawing.Point(837, 482);
             this.pic4.Margin = new System.Windows.Forms.Padding(4);
             this.pic4.Name = "pic4";
@@ -635,6 +641,7 @@
             // pic3
             // 
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic3.Location = new System.Drawing.Point(585, 482);
             this.pic3.Margin = new System.Windows.Forms.Padding(4);
             this.pic3.Name = "pic3";
@@ -646,6 +653,7 @@
             // pic2
             // 
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic2.Location = new System.Drawing.Point(333, 482);
             this.pic2.Margin = new System.Windows.Forms.Padding(4);
             this.pic2.Name = "pic2";
@@ -657,6 +665,7 @@
             // pic1
             // 
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic1.Location = new System.Drawing.Point(81, 482);
             this.pic1.Margin = new System.Windows.Forms.Padding(4);
             this.pic1.Name = "pic1";

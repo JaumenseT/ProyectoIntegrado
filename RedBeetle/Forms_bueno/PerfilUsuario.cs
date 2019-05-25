@@ -14,6 +14,7 @@ namespace RedBeetle.Forms_bueno
 {
 	public partial class PerfilUsuario : Form
 	{
+        int offset = 0;
 		Form caller;
 		string nombreUsuario;
         Usuario usu;
@@ -117,7 +118,7 @@ namespace RedBeetle.Forms_bueno
 		{
 			if (listaImagenes.Count > 0)
 			{
-				if (longitudAtras > 0)
+				if (offset > 0)
 				{
 					pic5.BackgroundImage = pic4.BackgroundImage;
 					pic4.BackgroundImage = pic3.BackgroundImage;
@@ -126,6 +127,7 @@ namespace RedBeetle.Forms_bueno
 					pic1.BackgroundImage = listaImagenes[longitudAtras - 1].NewImage;
 					longitudAtras--;
 					longitudSiguiente--;
+                    offset--;
 				}
 			}
 		}
@@ -144,9 +146,18 @@ namespace RedBeetle.Forms_bueno
 					pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5].NewImage;
 					longitudSiguiente++;
 					longitudAtras++;
+                    offset++;
 				}
 			}
 		}
+
+        private void AbrirFoto(int index) {
+            if (index + offset < listaImagenes.Count) {
+                FormImagen fm = new FormImagen(this, listaImagenes[index + offset]);
+                fm.Show();
+                this.Hide();
+            }
+        }
 
         // Hovers del form
 
@@ -204,6 +215,26 @@ namespace RedBeetle.Forms_bueno
 
         private void picFotos_MouseLeave(object sender, EventArgs e) {
             picFotos.BackgroundImage = Resources.fotos_roja;
+        }
+
+        private void pic1_Click(object sender, EventArgs e) {
+            AbrirFoto(0);
+        }
+
+        private void pic2_Click(object sender, EventArgs e) {
+            AbrirFoto(1);
+        }
+
+        private void pic3_Click(object sender, EventArgs e) {
+            AbrirFoto(2);
+        }
+
+        private void pic4_Click(object sender, EventArgs e) {
+            AbrirFoto(3);
+        }
+
+        private void pic5_Click(object sender, EventArgs e) {
+            AbrirFoto(4);
         }
     }
 }

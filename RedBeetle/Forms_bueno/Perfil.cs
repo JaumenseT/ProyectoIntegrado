@@ -16,11 +16,10 @@ namespace RedBeetle.Forms_bueno
 {
     public partial class Perfil : Form
     {
+        int offset = 0;
         Form caller;
 		Usuario user;
         List<Imagen> listaImagenes = null;
-        int longitudAtras = 0;
-        int longitudSiguiente = 0;
         public Perfil(Form caller)
         {
             this.caller = caller;
@@ -30,7 +29,7 @@ namespace RedBeetle.Forms_bueno
 
         private void Perfil_Load(object sender, EventArgs e) {
             RefrescarDatos();
-            var listaImagenes = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
+            listaImagenes = AccesoDatos.DevolverImagenes(user.Nombre_usuario);
 
             if (listaImagenes.Count > 0)
 			{
@@ -113,34 +112,13 @@ namespace RedBeetle.Forms_bueno
 			Hide();
 		}
 
-        /*private void PicAnterior_Click(object sender, EventArgs e) {
-            if (listaImagenes.Count > 0) {
-                if (longitudAtras > 0) {
-                    pic5.BackgroundImage = pic4.BackgroundImage;
-                    pic4.BackgroundImage = pic3.BackgroundImage;
-                    pic3.BackgroundImage = pic2.BackgroundImage;
-                    pic2.BackgroundImage = pic1.BackgroundImage;
-                    pic1.BackgroundImage = listaImagenes[longitudAtras - 1].NewImage;
-                    longitudAtras--;
-                    longitudSiguiente--;
-                }
+        private void AbrirFoto(int index) {
+            if (index + offset < listaImagenes.Count) {
+                FormImagen fm = new FormImagen(this, listaImagenes[index + offset]);
+                fm.Show();
+                this.Hide();
             }
         }
-
-        private void PicSiguiente_Click(object sender, EventArgs e) {
-            if (listaImagenes.Count > 5) {
-                var lastElement = listaImagenes[listaImagenes.Count - 1];
-                if (pic5.BackgroundImage != lastElement.NewImage) {
-                    pic1.BackgroundImage = pic2.BackgroundImage;
-                    pic2.BackgroundImage = pic3.BackgroundImage;
-                    pic3.BackgroundImage = pic4.BackgroundImage;
-                    pic4.BackgroundImage = pic5.BackgroundImage;
-                    pic5.BackgroundImage = listaImagenes[longitudSiguiente + 5].NewImage;
-                    longitudSiguiente++;
-                    longitudAtras++;
-                }
-            }
-        }*/
 
 
         // Hovers del form
@@ -210,23 +188,45 @@ namespace RedBeetle.Forms_bueno
         }
 
         private void pic1_Click(object sender, EventArgs e) {
-
+            AbrirFoto(0);
         }
 
         private void pic2_Click(object sender, EventArgs e) {
-
+            AbrirFoto(1);
         }
 
         private void pic3_Click(object sender, EventArgs e) {
-
+            AbrirFoto(2);
         }
 
         private void pic4_Click(object sender, EventArgs e) {
-
+            AbrirFoto(3);
         }
 
         private void pic5_Click(object sender, EventArgs e) {
+            AbrirFoto(4);
+        }
 
+        private void picSiguiente_Click(object sender, EventArgs e) {
+            if (offset + 5 <listaImagenes.Count) {
+                offset++;
+                pic1.BackgroundImage = listaImagenes[offset].NewImage;
+                pic2.BackgroundImage = listaImagenes[offset+1].NewImage;
+                pic3.BackgroundImage = listaImagenes[offset+2].NewImage;
+                pic4.BackgroundImage = listaImagenes[offset+3].NewImage;
+                pic5.BackgroundImage = listaImagenes[offset+4].NewImage;
+            }
+        }
+
+        private void picAnterior_Click(object sender, EventArgs e) {
+            if (offset > 0) {
+                offset--;
+                pic1.BackgroundImage = listaImagenes[offset].NewImage;
+                pic2.BackgroundImage = listaImagenes[offset + 1].NewImage;
+                pic3.BackgroundImage = listaImagenes[offset + 2].NewImage;
+                pic4.BackgroundImage = listaImagenes[offset + 3].NewImage;
+                pic5.BackgroundImage = listaImagenes[offset + 4].NewImage;
+            }
         }
     }
 }

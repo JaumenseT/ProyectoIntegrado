@@ -52,9 +52,10 @@ namespace RedBeetle
 			{
 				try
 				{
-					//Query de la base de datos remota
-					string consulta = string.Format("Server=3.15.23.32; port=3306; database=proyecto_integrado; user=redbeetle; pwd=ZUlxPGKUV4; old guids=true");
-					conexion = new MySqlConnection(consulta); //Pasamos la query 
+                    //Query de la base de datos remota
+                    string consulta = string.Format("Server=3.15.23.32; port=3306; database=proyecto_integrado; user=redbeetle; pwd=ZUlxPGKUV4; old guids=true");
+                    //string consulta = string.Format("Server=localhost; port=3306; database=proyecto_integrado; user=root; pwd=; old guids=true");
+                    conexion = new MySqlConnection(consulta); //Pasamos la query 
 					conexion.Open(); //Abrimos conexión
 				}
 				catch //Si no se puede abrir la conexión
